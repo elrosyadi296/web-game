@@ -1,0 +1,38 @@
+// Ambil semua link game dari halaman HTMLGames
+// Gunakan querySelectorAll untuk memilih semua elemen <a> yang memiliki href yang dimulai dengan "/game/"
+// Kemudian gunakan map untuk mengubah setiap elemen <a> menjadi
+// objek game dengan properti id, game, title, category, thumbnail, dan provider
+// Gunakan replace untuk menghapus "/game/" dari href dan mengganti "+" dengan spasi untuk mendapatkan judul asli
+// Gunakan replace lagi untuk menghapus spasi dari judul untuk mendapatkan nama game
+// Gunakan toLowerCase dan replace untuk membuat ID SEO dari judul
+// Gunakan template literal untuk membuat URL thumbnail dari ID SEO
+const games = [...document.querySelectorAll('a[href^="/game/"]')]
+  .map(a => {
+    const raw = a.getAttribute("href").replace("/game/", "");
+
+    // Judul asli
+    const title = raw.replace(/\+/g, " ");
+
+    // Nama game untuk HTMLGames
+    const game = title.replace(/\s+/g, "");
+
+    // ID SEO
+    const id = title
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+
+    return {
+      id,
+      game,
+      title,
+      category: "",
+      thumbnail: `assets/thumbs/${id}.webp`,
+      provider: "htmlgames"
+    };
+  });
+
+// Tampilkan di console
+console.log(JSON.stringify(games, null, 2));
+
+// Copy otomatis ke clipboard (Chrome/Edge)
+copy(JSON.stringify(games, null, 2));
