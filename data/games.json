@@ -1528,14 +1528,6 @@
     "provider": "htmlgames"
   },
   {
-    "id": "texas-hold'em-poker",
-    "game": "TexasHold'emPoker",
-    "title": "Texas Hold'em Poker",
-    "category": "Card",
-    "thumbnail": "assets/thumbs/texas-hold'em-poker.webp",
-    "provider": "htmlgames"
-  },
-  {
     "id": "tower-of-hanoi-solitaire",
     "game": "TowerofHanoiSolitaire",
     "title": "Tower of Hanoi Solitaire",
@@ -1709,14 +1701,6 @@
     "title": "Classic Freecell Solitaire",
     "category": "Solitaire",
     "thumbnail": "assets/thumbs/classic-freecell-solitaire.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "baker's-game",
-    "game": "Baker'sGame",
-    "title": "Baker's Game",
-    "category": "Solitaire",
-    "thumbnail": "assets/thumbs/baker's-game.webp",
     "provider": "htmlgames"
   },
   {
