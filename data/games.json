@@ -24,75 +24,11 @@
     "provider": "htmlgames"
   },
   {
-    "id": "2048",
-    "game": "2048",
-    "title": "2048",
-    "category": "Puzzle",
-    "thumbnail": "assets/thumbs/2048.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "solitaire-klondike",
-    "game": "SolitaireKlondike",
-    "title": "Solitaire Klondike",
-    "category": "Card",
-    "thumbnail": "assets/thumbs/solitaire-klondike.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "fruit-slice",
-    "game": "FruitSlice",
-    "title": "Fruit Slice",
-    "category": "Arcade",
-    "thumbnail": "assets/thumbs/fruit-slice.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "tetris-classic",
-    "game": "TetrisClassic",
-    "title": "Tetris Classic",
-    "category": "Puzzle",
-    "thumbnail": "assets/thumbs/tetris-classic.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "chess-online",
-    "game": "ChessOnline",
-    "title": "Chess Online",
-    "category": "Board",
-    "thumbnail": "assets/thumbs/chess-online.webp",
-    "provider": "htmlgames"
-  },
-  {
     "id": "word-search",
     "game": "WordSearch",
     "title": "Word Search",
     "category": "Puzzle",
     "thumbnail": "assets/thumbs/word-search.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "pacman-classic",
-    "game": "PacManClassic",
-    "title": "Pac-Man Classic",
-    "category": "Arcade",
-    "thumbnail": "assets/thumbs/pacman-classic.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "candy-match-3",
-    "game": "CandyMatch3",
-    "title": "Candy Match 3",
-    "category": "Puzzle",
-    "thumbnail": "assets/thumbs/candy-match-3.webp",
-    "provider": "htmlgames"
-  },
-  {
-    "id": "snake-arena",
-    "game": "SnakeArena",
-    "title": "Snake Arena",
-    "category": "Arcade",
-    "thumbnail": "assets/thumbs/snake-arena.webp",
     "provider": "htmlgames"
   },
   {
@@ -102,6 +38,1926 @@
     "category": "Arcade",
     "thumbnail": "assets/thumbs/endless-dimensions.webp",
     "provider": "htmlgames"
-  }
+  },
+  {
+    "id": "animal-cubes",
+    "game": "AnimalCubes",
+    "title": "Animal Cubes",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/animal-cubes.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "black-and-white-dimensions",
+    "game": "BlackandWhiteDimensions",
+    "title": "Black and White Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/black-and-white-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "christmas-dimensions",
+    "game": "ChristmasDimensions",
+    "title": "Christmas Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/christmas-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "connect-dimensions",
+    "game": "ConnectDimensions",
+    "title": "Connect Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/connect-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "cube-zoobies",
+    "game": "CubeZoobies",
+    "title": "Cube Zoobies",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/cube-zoobies.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "dream-pet-dimensions",
+    "game": "DreamPetDimensions",
+    "title": "Dream Pet Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/dream-pet-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "egypt-mahjong---triple-dimensions",
+    "game": "EgyptMahjong-TripleDimensions",
+    "title": "Egypt Mahjong - Triple Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/egypt-mahjong---triple-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "flower-dimensions",
+    "game": "FlowerDimensions",
+    "title": "Flower Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/flower-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "letter-dimensions",
+    "game": "LetterDimensions",
+    "title": "Letter Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/letter-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-3d",
+    "game": "Mahjong3D",
+    "title": "Mahjong 3D",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-3d.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-3d-connect",
+    "game": "Mahjong3DConnect",
+    "title": "Mahjong 3D Connect",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-3d-connect.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-3d-time",
+    "game": "Mahjong3DTime",
+    "title": "Mahjong 3D Time",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-3d-time.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-collection",
+    "game": "MahjongCollection",
+    "title": "Mahjong Collection",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-collection.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-cubes",
+    "game": "MahjongCubes",
+    "title": "Mahjong Cubes",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-cubes.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjong-triple-dimensions",
+    "game": "MahjongTripleDimensions",
+    "title": "Mahjong Triple Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjong-triple-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mahjongg-3-dimensions",
+    "game": "Mahjongg3Dimensions",
+    "title": "Mahjongg 3 Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/mahjongg-3-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "match-3d",
+    "game": "Match3D",
+    "title": "Match 3D",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/match-3d.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "neonjong-3d",
+    "game": "NeonJong3D",
+    "title": "NeonJong 3D",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/neonjong-3d.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "space-cubes",
+    "game": "SpaceCubes",
+    "title": "Space Cubes",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/space-cubes.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spooky-dimensions",
+    "game": "SpookyDimensions",
+    "title": "Spooky Dimensions",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/spooky-dimensions.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tile-stack",
+    "game": "TileStack",
+    "title": "Tile Stack",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/tile-stack.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "travelers-quest",
+    "game": "TravelersQuest",
+    "title": "Travelers Quest",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/travelers-quest.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "triple-dimensions---ice-age",
+    "game": "TripleDimensions-IceAge",
+    "title": "Triple Dimensions - Ice Age",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/triple-dimensions---ice-age.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "valentine-3d-mahjong",
+    "game": "Valentine3DMahjong",
+    "title": "Valentine 3D Mahjong",
+    "category": "Mahjong",
+    "thumbnail": "assets/thumbs/valentine-3d-mahjong.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "park-and-ride-solitaire",
+    "game": "ParkandRideSolitaire",
+    "title": "Park and Ride Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/park-and-ride-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spider-freecell",
+    "game": "SpiderFreecell",
+    "title": "Spider Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spider-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "yukon-solitaire",
+    "game": "YukonSolitaire",
+    "title": "Yukon Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/yukon-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "yukon-freecell",
+    "game": "YukonFreecell",
+    "title": "Yukon Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/yukon-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spider-solitaire-2-suits",
+    "game": "SpiderSolitaire2suits",
+    "title": "Spider Solitaire 2 suits",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spider-solitaire-2-suits.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "gargantua-double-klondike",
+    "game": "GargantuaDoubleKlondike",
+    "title": "Gargantua Double Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/gargantua-double-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "flower-solitaire",
+    "game": "FlowerSolitaire",
+    "title": "Flower Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/flower-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "indian-solitaire",
+    "game": "IndianSolitaire",
+    "title": "Indian Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/indian-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "totem-solitaire",
+    "game": "TotemSolitaire",
+    "title": "Totem Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/totem-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "scorpion-solitaire",
+    "game": "ScorpionSolitaire",
+    "title": "Scorpion Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/scorpion-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "klaverjassen",
+    "game": "Klaverjassen",
+    "title": "Klaverjassen",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/klaverjassen.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "two-cell",
+    "game": "TwoCell",
+    "title": "Two Cell",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/two-cell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "skip-cards",
+    "game": "SkipCards",
+    "title": "Skip Cards",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/skip-cards.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "planet-solitaire",
+    "game": "PlanetSolitaire",
+    "title": "Planet Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/planet-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell",
+    "game": "Freecell",
+    "title": "Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spike-solitaire",
+    "game": "SpikeSolitaire",
+    "title": "Spike Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spike-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "alien-pyramid-solitaire",
+    "game": "AlienPyramidSolitaire",
+    "title": "Alien Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/alien-pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-farm",
+    "game": "TripeaksFarm",
+    "title": "Tripeaks Farm",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-farm.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spite-and-malice",
+    "game": "SpiteandMalice",
+    "title": "Spite and Malice",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/spite-and-malice.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spite-and-malice-extreme",
+    "game": "SpiteandMaliceExtreme",
+    "title": "Spite and Malice Extreme",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/spite-and-malice-extreme.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "christmas-solitaire",
+    "game": "ChristmasSolitaire",
+    "title": "Christmas Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/christmas-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "jungle-solitaire",
+    "game": "JungleSolitaire",
+    "title": "Jungle Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/jungle-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "hartenjagen",
+    "game": "Hartenjagen",
+    "title": "Hartenjagen",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/hartenjagen.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-christmas",
+    "game": "FreecellChristmas",
+    "title": "Freecell Christmas",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-christmas.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "canfield-solitaire",
+    "game": "CanfieldSolitaire",
+    "title": "Canfield Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/canfield-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "big-spider-solitaire",
+    "game": "BigSpiderSolitaire",
+    "title": "Big Spider Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/big-spider-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "inca-pyramid-solitaire",
+    "game": "IncaPyramidSolitaire",
+    "title": "Inca Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/inca-pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "crescent-solitaire",
+    "game": "CrescentSolitaire",
+    "title": "Crescent Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/crescent-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ace-of-spades",
+    "game": "AceofSpades",
+    "title": "Ace of Spades",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/ace-of-spades.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mountain-solitaire",
+    "game": "MountainSolitaire",
+    "title": "Mountain Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/mountain-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "crazy-eights",
+    "game": "CrazyEights",
+    "title": "Crazy Eights",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/crazy-eights.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "mau-mau",
+    "game": "MauMau",
+    "title": "Mau Mau",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/mau-mau.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "gold-coast-klondike",
+    "game": "GoldCoastKlondike",
+    "title": "Gold Coast Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/gold-coast-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "magic-castle-solitaire",
+    "game": "MagicCastleSolitaire",
+    "title": "Magic Castle Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/magic-castle-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "russian-solitaire",
+    "game": "RussianSolitaire",
+    "title": "Russian Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/russian-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ali-baba-solitaire",
+    "game": "AliBabaSolitaire",
+    "title": "Ali Baba Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/ali-baba-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "taj-mahal-solitaire",
+    "game": "TajMahalSolitaire",
+    "title": "Taj Mahal Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/taj-mahal-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "snowy-peaks-solitaire",
+    "game": "SnowyPeaksSolitaire",
+    "title": "Snowy Peaks Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/snowy-peaks-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "sea-tower-solitaire",
+    "game": "SeaTowerSolitaire",
+    "title": "Sea Tower Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/sea-tower-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pirate-klondike",
+    "game": "PirateKlondike",
+    "title": "Pirate Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pirate-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "jumping-spider",
+    "game": "JumpingSpider",
+    "title": "Jumping Spider",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/jumping-spider.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-creatures",
+    "game": "TripeaksCreatures",
+    "title": "Tripeaks Creatures",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-creatures.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ace-of-hearts",
+    "game": "AceofHearts",
+    "title": "Ace of Hearts",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/ace-of-hearts.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "christmas-tripeaks",
+    "game": "ChristmasTripeaks",
+    "title": "Christmas Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/christmas-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "secret-russian",
+    "game": "SecretRussian",
+    "title": "Secret Russian",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/secret-russian.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "alhambra-solitaire",
+    "game": "AlhambraSolitaire",
+    "title": "Alhambra Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/alhambra-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "aladdin-solitaire",
+    "game": "AladdinSolitaire",
+    "title": "Aladdin Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/aladdin-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "blind-freecell",
+    "game": "BlindFreecell",
+    "title": "Blind Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/blind-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "halloween-klondike",
+    "game": "HalloweenKlondike",
+    "title": "Halloween Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/halloween-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "hearts",
+    "game": "Hearts",
+    "title": "Hearts",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/hearts.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "huge-spider-solitaire",
+    "game": "HugeSpiderSolitaire",
+    "title": "Huge Spider Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/huge-spider-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "troy-solitaire",
+    "game": "TroySolitaire",
+    "title": "Troy Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/troy-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "classic-klondike",
+    "game": "ClassicKlondike",
+    "title": "Classic Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/classic-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spider-solitaire",
+    "game": "SpiderSolitaire",
+    "title": "Spider Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spider-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "thirty-one",
+    "game": "ThirtyOne",
+    "title": "Thirty One",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/thirty-one.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-summer-holiday",
+    "game": "FreecellSummerHoliday",
+    "title": "Freecell Summer Holiday",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-summer-holiday.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spidike-solitaire",
+    "game": "SpidikeSolitaire",
+    "title": "Spidike Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spidike-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-collection",
+    "game": "SolitaireCollection",
+    "title": "Solitaire Collection",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/solitaire-collection.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "amsterdams-klaverjassen",
+    "game": "AmsterdamsKlaverjassen",
+    "title": "Amsterdams Klaverjassen",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/amsterdams-klaverjassen.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "three-cell",
+    "game": "ThreeCell",
+    "title": "Three Cell",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/three-cell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-tripeaks",
+    "game": "PyramidTripeaks",
+    "title": "Pyramid Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-harvest",
+    "game": "SolitaireHarvest",
+    "title": "Solitaire Harvest",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/solitaire-harvest.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "classic-gin-rummy",
+    "game": "ClassicGinRummy",
+    "title": "Classic Gin Rummy",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/classic-gin-rummy.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "steps-solitaire",
+    "game": "StepsSolitaire",
+    "title": "Steps Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/steps-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-extreme",
+    "game": "FreecellExtreme",
+    "title": "Freecell Extreme",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-extreme.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "classic-solitaire",
+    "game": "ClassicSolitaire",
+    "title": "Classic Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/classic-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "forty-thieves-solitaire",
+    "game": "FortyThievesSolitaire",
+    "title": "Forty Thieves Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/forty-thieves-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "firemen-solitaire",
+    "game": "FiremenSolitaire",
+    "title": "Firemen Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/firemen-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "lightning-solitaire",
+    "game": "LightningSolitaire",
+    "title": "Lightning Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/lightning-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "wasp-solitaire",
+    "game": "WaspSolitaire",
+    "title": "Wasp Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/wasp-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "3-pyramid-tripeaks",
+    "game": "3PyramidTripeaks",
+    "title": "3 Pyramid Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/3-pyramid-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "paris-tripeaks",
+    "game": "ParisTripeaks",
+    "title": "Paris Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/paris-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "gaps-solitaire",
+    "game": "GapsSolitaire",
+    "title": "Gaps Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/gaps-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "3-pyramid-tripeaks-2",
+    "game": "3PyramidTripeaks2",
+    "title": "3 Pyramid Tripeaks 2",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/3-pyramid-tripeaks-2.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ancient-rome-solitaire",
+    "game": "AncientRomeSolitaire",
+    "title": "Ancient Rome Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/ancient-rome-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "egypt-pyramid-solitaire",
+    "game": "EgyptPyramidSolitaire",
+    "title": "Egypt Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/egypt-pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "double-freecell",
+    "game": "DoubleFreecell",
+    "title": "Double Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/double-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "maya-pyramid-solitaire",
+    "game": "MayaPyramidSolitaire",
+    "title": "Maya Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/maya-pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-klondike-solitaire",
+    "game": "FreecellKlondikeSolitaire",
+    "title": "Freecell Klondike Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-klondike-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "stronghold-solitaire",
+    "game": "StrongholdSolitaire",
+    "title": "Stronghold Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/stronghold-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "flower-garden-solitaire",
+    "game": "FlowerGardenSolitaire",
+    "title": "Flower Garden Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/flower-garden-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "casino-blackjack",
+    "game": "CasinoBlackjack",
+    "title": "Casino Blackjack",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/casino-blackjack.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-connect",
+    "game": "SolitaireConnect",
+    "title": "Solitaire Connect",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/solitaire-connect.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "montana-solitaire",
+    "game": "MontanaSolitaire",
+    "title": "Montana Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/montana-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "5-stack-blackjack",
+    "game": "5StackBlackjack",
+    "title": "5 Stack Blackjack",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/5-stack-blackjack.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "halloween-card-connect",
+    "game": "HalloweenCardConnect",
+    "title": "Halloween Card Connect",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/halloween-card-connect.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "president",
+    "game": "President",
+    "title": "President",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/president.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "double-tower-of-hanoi-solitaire",
+    "game": "DoubleTowerofHanoiSolitaire",
+    "title": "Double Tower of Hanoi Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/double-tower-of-hanoi-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "santa-tripeaks",
+    "game": "SantaTripeaks",
+    "title": "Santa Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/santa-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "thieves-of-egypt",
+    "game": "ThievesofEgypt",
+    "title": "Thieves of Egypt",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/thieves-of-egypt.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "kings-klondike",
+    "game": "KingsKlondike",
+    "title": "Kings Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/kings-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "3-keys-solitaire",
+    "game": "3KeysSolitaire",
+    "title": "3 Keys Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/3-keys-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire",
+    "game": "PyramidSolitaire",
+    "title": "Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "klondike-solitaire",
+    "game": "KlondikeSolitaire",
+    "title": "Klondike Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/klondike-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "wild-west-klondike",
+    "game": "WildWestKlondike",
+    "title": "Wild West Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/wild-west-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-solitaire",
+    "game": "TripeaksSolitaire",
+    "title": "Tripeaks Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "santa-solitaire",
+    "game": "SantaSolitaire",
+    "title": "Santa Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/santa-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "russian-freecell",
+    "game": "RussianFreecell",
+    "title": "Russian Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/russian-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "cup-of-tea-solitaire",
+    "game": "CupofTeaSolitaire",
+    "title": "Cup of Tea Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/cup-of-tea-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "gin-rummy",
+    "game": "GinRummy",
+    "title": "Gin Rummy",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/gin-rummy.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pesten",
+    "game": "Pesten",
+    "title": "Pesten",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/pesten.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tri-fruit-solitaire",
+    "game": "Tri-FruitSolitaire",
+    "title": "Tri-Fruit Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tri-fruit-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "egypt-solitaire",
+    "game": "EgyptSolitaire",
+    "title": "Egypt Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/egypt-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire---ancient-china",
+    "game": "PyramidSolitaire-AncientChina",
+    "title": "Pyramid Solitaire - Ancient China",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire---ancient-china.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "easter-island-solitaire",
+    "game": "EasterIslandSolitaire",
+    "title": "Easter Island Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/easter-island-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-solitaire",
+    "game": "FreecellSolitaire",
+    "title": "Freecell Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "skyscraper-solitaire",
+    "game": "SkyscraperSolitaire",
+    "title": "Skyscraper Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/skyscraper-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "hawaiian-solitaire",
+    "game": "HawaiianSolitaire",
+    "title": "Hawaiian Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/hawaiian-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spider-solitaire-1-suit",
+    "game": "SpiderSolitaire1suit",
+    "title": "Spider Solitaire 1 suit",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spider-solitaire-1-suit.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "la-belle-lucie",
+    "game": "LaBelleLucie",
+    "title": "La Belle Lucie",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/la-belle-lucie.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-giza-solitaire",
+    "game": "FreecellGizaSolitaire",
+    "title": "Freecell Giza Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-giza-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spades",
+    "game": "Spades",
+    "title": "Spades",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/spades.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "algerian-patience",
+    "game": "AlgerianPatience",
+    "title": "Algerian Patience",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/algerian-patience.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "halloween-tripeaks",
+    "game": "HalloweenTripeaks",
+    "title": "Halloween Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/halloween-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "bunny-solitaire",
+    "game": "BunnySolitaire",
+    "title": "Bunny Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/bunny-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "queenie-solitaire",
+    "game": "QueenieSolitaire",
+    "title": "Queenie Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/queenie-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "thieves-of-egypt-solitaire",
+    "game": "ThievesofEgyptSolitaire",
+    "title": "Thieves of Egypt Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/thieves-of-egypt-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tower-solitaire",
+    "game": "TowerSolitaire",
+    "title": "Tower Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tower-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "blackjack-chain",
+    "game": "BlackJackChain",
+    "title": "BlackJack Chain",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/blackjack-chain.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tower-of-london-solitaire",
+    "game": "TowerofLondonSolitaire",
+    "title": "Tower of London Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tower-of-london-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-mania",
+    "game": "TripeaksMania",
+    "title": "Tripeaks Mania",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-mania.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "chinese-freecell",
+    "game": "ChineseFreecell",
+    "title": "Chinese Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/chinese-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "spades-spider-solitaire",
+    "game": "SpadesSpiderSolitaire",
+    "title": "Spades Spider Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/spades-spider-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire---ancient-rome",
+    "game": "PyramidSolitaire-AncientRome",
+    "title": "Pyramid Solitaire - Ancient Rome",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire---ancient-rome.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-castle",
+    "game": "TripeaksCastle",
+    "title": "Tripeaks Castle",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-castle.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "twenty-one",
+    "game": "TwentyOne",
+    "title": "Twenty One",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/twenty-one.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "clock-solitaire",
+    "game": "ClockSolitaire",
+    "title": "Clock Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/clock-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "klootzakken",
+    "game": "Klootzakken",
+    "title": "Klootzakken",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/klootzakken.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tripeaks-halloween",
+    "game": "TripeaksHalloween",
+    "title": "Tripeaks Halloween",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tripeaks-halloween.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "winter-solitaire",
+    "game": "WinterSolitaire",
+    "title": "Winter Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/winter-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "freecell-duplex",
+    "game": "FreecellDuplex",
+    "title": "Freecell Duplex",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/freecell-duplex.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "rummi",
+    "game": "Rummi",
+    "title": "Rummi",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/rummi.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "saratoga-solitaire",
+    "game": "SaratogaSolitaire",
+    "title": "Saratoga Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/saratoga-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "secret-double-klondike",
+    "game": "SecretDoubleKlondike",
+    "title": "Secret Double Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/secret-double-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "frozen-castle-solitaire",
+    "game": "FrozenCastleSolitaire",
+    "title": "Frozen Castle Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/frozen-castle-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "chinese-solitaire",
+    "game": "ChineseSolitaire",
+    "title": "Chinese Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/chinese-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "black-widow-solitaire",
+    "game": "BlackWidowSolitaire",
+    "title": "Black Widow Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/black-widow-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "golf-solitaire-pro",
+    "game": "GolfSolitairePro",
+    "title": "Golf Solitaire Pro",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/golf-solitaire-pro.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-mountains",
+    "game": "PyramidMountains",
+    "title": "Pyramid Mountains",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-mountains.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "castles-in-spain",
+    "game": "CastlesinSpain",
+    "title": "Castles in Spain",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/castles-in-spain.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "kraken",
+    "game": "Kraken",
+    "title": "Kraken",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/kraken.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "double-solitaire",
+    "game": "DoubleSolitaire",
+    "title": "Double Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/double-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pantagruel-double-klondike",
+    "game": "PantagruelDoubleKlondike",
+    "title": "Pantagruel Double Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pantagruel-double-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-reverse",
+    "game": "SolitaireReverse",
+    "title": "Solitaire Reverse",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/solitaire-reverse.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "rotterdams-klaverjassen",
+    "game": "RotterdamsKlaverjassen",
+    "title": "Rotterdams Klaverjassen",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/rotterdams-klaverjassen.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "christmas-tree-solitaire",
+    "game": "ChristmasTreeSolitaire",
+    "title": "Christmas Tree Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/christmas-tree-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire---great-pyramid",
+    "game": "PyramidSolitaire-GreatPyramid",
+    "title": "Pyramid Solitaire - Great Pyramid",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire---great-pyramid.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-collection-2",
+    "game": "SolitaireCollection2",
+    "title": "Solitaire Collection 2",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/solitaire-collection-2.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "glow-solitaire",
+    "game": "GlowSolitaire",
+    "title": "Glow Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/glow-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "giza-solitaire",
+    "game": "GizaSolitaire",
+    "title": "Giza Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/giza-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ancient-wonders-solitaire",
+    "game": "AncientWondersSolitaire",
+    "title": "Ancient Wonders Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/ancient-wonders-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-of-love",
+    "game": "PyramidofLove",
+    "title": "Pyramid of Love",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-of-love.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "black-hole-solitaire",
+    "game": "BlackHoleSolitaire",
+    "title": "Black Hole Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/black-hole-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "house-of-cards",
+    "game": "HouseofCards",
+    "title": "House of Cards",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/house-of-cards.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "daily-freecell",
+    "game": "DailyFreecell",
+    "title": "Daily Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/daily-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "scottish-solitaire",
+    "game": "ScottishSolitaire",
+    "title": "Scottish Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/scottish-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "wild-west-solitaire",
+    "game": "WildWestSolitaire",
+    "title": "Wild West Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/wild-west-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire---ancient-aztec",
+    "game": "PyramidSolitaire-AncientAztec",
+    "title": "Pyramid Solitaire - Ancient Aztec",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire---ancient-aztec.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "luxor-tri-peaks",
+    "game": "LuxorTriPeaks",
+    "title": "Luxor Tri Peaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/luxor-tri-peaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "river-solitaire",
+    "game": "RiverSolitaire",
+    "title": "River Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/river-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "double-klondike",
+    "game": "DoubleKlondike",
+    "title": "Double Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/double-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-solitaire---ancient-egypt",
+    "game": "PyramidSolitaire-AncientEgypt",
+    "title": "Pyramid Solitaire - Ancient Egypt",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-solitaire---ancient-egypt.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "texas-hold'em-poker",
+    "game": "TexasHold'emPoker",
+    "title": "Texas Hold'em Poker",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/texas-hold'em-poker.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tower-of-hanoi-solitaire",
+    "game": "TowerofHanoiSolitaire",
+    "title": "Tower of Hanoi Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tower-of-hanoi-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "jungle-pyramid-solitaire",
+    "game": "JunglePyramidSolitaire",
+    "title": "Jungle Pyramid Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/jungle-pyramid-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "eliminator-solitaire",
+    "game": "EliminatorSolitaire",
+    "title": "Eliminator Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/eliminator-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "circus-solitaire",
+    "game": "CircusSolitaire",
+    "title": "Circus Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/circus-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "granada-solitaire",
+    "game": "GranadaSolitaire",
+    "title": "Granada Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/granada-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "vegas-poker",
+    "game": "VegasPoker",
+    "title": "Vegas Poker",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/vegas-poker.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "neptune-solitaire",
+    "game": "NeptuneSolitaire",
+    "title": "Neptune Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/neptune-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "free-cell",
+    "game": "FreeCell",
+    "title": "Free Cell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/free-cell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "penguin-solitaire",
+    "game": "PenguinSolitaire",
+    "title": "Penguin Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/penguin-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "beetle-solitaire",
+    "game": "BeetleSolitaire",
+    "title": "Beetle Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/beetle-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tri-towers-solitaire",
+    "game": "TriTowersSolitaire",
+    "title": "Tri Towers Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tri-towers-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "paganini-solitaire",
+    "game": "PaganiniSolitaire",
+    "title": "Paganini Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/paganini-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "frozen-freecell",
+    "game": "FrozenFreecell",
+    "title": "Frozen Freecell",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/frozen-freecell.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "glacier-solitaire",
+    "game": "GlacierSolitaire",
+    "title": "Glacier Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/glacier-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "achilles-solitaire",
+    "game": "AchillesSolitaire",
+    "title": "Achilles Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/achilles-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "stonehenge-tripeaks",
+    "game": "StonehengeTripeaks",
+    "title": "Stonehenge Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/stonehenge-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "big-tripeaks",
+    "game": "BigTripeaks",
+    "title": "Big Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/big-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "ride-the-bus",
+    "game": "RidetheBus",
+    "title": "Ride the Bus",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/ride-the-bus.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pyramid-klondike",
+    "game": "PyramidKlondike",
+    "title": "Pyramid Klondike",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/pyramid-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tarantula-solitaire",
+    "game": "TarantulaSolitaire",
+    "title": "Tarantula Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/tarantula-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "shithead",
+    "game": "Shithead",
+    "title": "Shithead",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/shithead.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "classic-freecell-solitaire",
+    "game": "ClassicFreecellSolitaire",
+    "title": "Classic Freecell Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/classic-freecell-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "baker's-game",
+    "game": "Baker'sGame",
+    "title": "Baker's Game",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/baker's-game.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "portuguese-solitaire",
+    "game": "PortugueseSolitaire",
+    "title": "Portuguese Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/portuguese-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "euchre",
+    "game": "Euchre",
+    "title": "Euchre",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/euchre.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "eight-off",
+    "game": "EightOff",
+    "title": "Eight Off",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/eight-off.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "xmas-card-connect",
+    "game": "XmasCardConnect",
+    "title": "Xmas Card Connect",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/xmas-card-connect.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "gate-solitaire",
+    "game": "GateSolitaire",
+    "title": "Gate Solitaire",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/gate-solitaire.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "holiday-tripeaks",
+    "game": "HolidayTripeaks",
+    "title": "Holiday Tripeaks",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/holiday-tripeaks.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "monkey-in-trouble",
+    "game": "MonkeyinTrouble",
+    "title": "Monkey in Trouble",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/monkey-in-trouble.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "dutch-shuffleboard",
+    "game": "DutchShuffleboard",
+    "title": "Dutch Shuffleboard",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/dutch-shuffleboard.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "traffic-control",
+    "game": "TrafficControl",
+    "title": "Traffic Control",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/traffic-control.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "cube-block",
+    "game": "CubeBlock",
+    "title": "Cube Block",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/cube-block.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "archer",
+    "game": "Archer",
+    "title": "Archer",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/archer.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "airport-sniper",
+    "game": "AirportSniper",
+    "title": "Airport Sniper",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/airport-sniper.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "fruit-collector",
+    "game": "FruitCollector",
+    "title": "Fruit Collector",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/fruit-collector.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "galaxy-shooter",
+    "game": "GalaxyShooter",
+    "title": "Galaxy Shooter",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/galaxy-shooter.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "color-catch",
+    "game": "ColorCatch",
+    "title": "Color Catch",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/color-catch.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "jungle-jump",
+    "game": "JungleJump",
+    "title": "Jungle Jump",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/jungle-jump.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "fishing-trip",
+    "game": "FishingTrip",
+    "title": "Fishing Trip",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/fishing-trip.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "soldier-attack-2",
+    "game": "SoldierAttack2",
+    "title": "Soldier Attack 2",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/soldier-attack-2.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "frozen-for-christmas",
+    "game": "FrozenforChristmas",
+    "title": "Frozen for Christmas",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/frozen-for-christmas.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "maya-golf-2",
+    "game": "MayaGolf2",
+    "title": "Maya Golf 2",
+    "category": "Solitaire",
+    "thumbnail": "assets/thumbs/maya-golf-2.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "medieval-defense",
+    "game": "MedievalDefense",
+    "title": "Medieval Defense",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/medieval-defense.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "acid-rain",
+    "game": "AcidRain",
+    "title": "Acid Rain",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/acid-rain.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "soldier-attack-1",
+    "game": "SoldierAttack1",
+    "title": "Soldier Attack 1",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/soldier-attack-1.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "frenzy-farm",
+    "game": "FrenzyFarm",
+    "title": "Frenzy Farm",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/frenzy-farm.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "red-and-green-2",
+    "game": "RedandGreen2",
+    "title": "Red and Green 2",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/red-and-green-2.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "bottle-shooter",
+    "game": "BottleShooter",
+    "title": "Bottle Shooter",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/bottle-shooter.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "soccer-pinball",
+    "game": "SoccerPinball",
+    "title": "Soccer Pinball",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/soccer-pinball.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "medieval-castle-defense",
+    "game": "MedievalCastleDefense",
+    "title": "Medieval Castle Defense",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/medieval-castle-defense.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "downhill",
+    "game": "Downhill",
+    "title": "Downhill",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/downhill.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "archery-training",
+    "game": "ArcheryTraining",
+    "title": "Archery Training",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/archery-training.webp",
+    "provider": "htmlgames"
+  },
 
 ]
