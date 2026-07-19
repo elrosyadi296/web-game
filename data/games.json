@@ -1,0 +1,107 @@
+[
+  {
+    "id": "mahjong-collapse",
+    "game": "MahjongCollapse",
+    "title": "Mahjong Collapse",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/mahjong-collapse.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "bubble-shooter",
+    "game": "BubbleShooter",
+    "title": "Bubble Shooter",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/bubble-shooter.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "sudoku",
+    "game": "Sudoku",
+    "title": "Sudoku",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/sudoku.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "2048",
+    "game": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/2048.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "solitaire-klondike",
+    "game": "SolitaireKlondike",
+    "title": "Solitaire Klondike",
+    "category": "Card",
+    "thumbnail": "assets/thumbs/solitaire-klondike.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "fruit-slice",
+    "game": "FruitSlice",
+    "title": "Fruit Slice",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/fruit-slice.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "tetris-classic",
+    "game": "TetrisClassic",
+    "title": "Tetris Classic",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/tetris-classic.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "chess-online",
+    "game": "ChessOnline",
+    "title": "Chess Online",
+    "category": "Board",
+    "thumbnail": "assets/thumbs/chess-online.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "word-search",
+    "game": "WordSearch",
+    "title": "Word Search",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/word-search.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "pacman-classic",
+    "game": "PacManClassic",
+    "title": "Pac-Man Classic",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/pacman-classic.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "candy-match-3",
+    "game": "CandyMatch3",
+    "title": "Candy Match 3",
+    "category": "Puzzle",
+    "thumbnail": "assets/thumbs/candy-match-3.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "snake-arena",
+    "game": "SnakeArena",
+    "title": "Snake Arena",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/snake-arena.webp",
+    "provider": "htmlgames"
+  },
+  {
+    "id": "Endless-Dimensions",
+    "game": "EndlessDimensions",
+    "title": "Endless Dimensions",
+    "category": "Arcade",
+    "thumbnail": "assets/thumbs/endless-dimensions.webp",
+    "provider": "htmlgames"
+  }
+
+]

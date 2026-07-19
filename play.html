@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+
+  <!-- ===== SEO META (default, akan ditimpa router.js secara dinamis) ===== -->
+  <title id="pageTitle">Memuat Game... — 296 GAME</title>
+  <meta id="pageDescription" name="description" content="Mainkan game HTML5 gratis langsung di browser dengan 296 GAME." />
+  <meta name="robots" content="index, follow" />
+  <link id="canonicalLink" rel="canonical" href="https://296.web.id/play.html" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta id="ogTitle" property="og:type" content="website" />
+  <meta property="og:site_name" content="296 GAME" />
+  <meta id="ogTitleTag" property="og:title" content="296 GAME" />
+  <meta id="ogDescTag" property="og:description" content="Mainkan game HTML5 gratis langsung di browser." />
+  <meta id="ogUrlTag" property="og:url" content="https://296.web.id/play.html" />
+  <meta property="og:image" content="./assets/logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="twTitleTag" name="twitter:title" content="296 GAME" />
+  <meta id="twDescTag" name="twitter:description" content="Mainkan game HTML5 gratis langsung di browser." />
+  <meta name="twitter:image" content="./assets/logo.png" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon.png" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://cdn.htmlgames.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.htmlgames.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body class="play-page">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header player-header" role="banner">
+    <div class="header-inner">
+      <a href="./index.html" class="brand" aria-label="296 GAME - Beranda">
+        <img src="./assets/logo.png" alt="Logo 296 GAME" class="brand-logo" width="32" height="32" />
+        <span class="brand-name brand-name-sm">296<span class="accent">GAME</span></span>
+      </a>
+
+      <div class="player-toolbar" role="toolbar" aria-label="Kontrol game">
+        <button id="btnBack" class="icon-btn ripple" aria-label="Kembali ke beranda" title="Kembali">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="btnRefresh" class="icon-btn ripple" aria-label="Muat ulang game" title="Refresh Game">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.13-3.36L23 10M1 14l5.36 4.36A9 9 0 0020.49 15"/></svg>
+        </button>
+        <button id="btnFullscreen" class="icon-btn ripple" aria-label="Fullscreen" title="Fullscreen">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+        </button>
+        <button id="btnCopyLink" class="icon-btn ripple" aria-label="Salin tautan game" title="Copy Link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.07 0l2.83-2.83a5 5 0 00-7.07-7.07L11.5 4.5M14 11a5 5 0 00-7.07 0L4.1 13.83a5 5 0 007.07 7.07L12.5 19.5"/></svg>
+        </button>
+        <button id="btnShare" class="icon-btn ripple" aria-label="Bagikan game" title="Share">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51L8.59 10.49"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN PLAYER ============ -->
+  <main id="playerMain" class="player-main">
+
+    <!-- Loading state -->
+    <div id="loadingState" class="loading-state" role="status" aria-live="polite">
+      <img src="./assets/loading.svg" alt="" class="loading-spinner" width="64" height="64" />
+      <p class="loading-text">Memuat game<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+      <div class="loading-progress"><div id="loadingBar" class="loading-progress-bar"></div></div>
+    </div>
+
+    <!-- Empty state: tidak ada parameter game -->
+    <div id="emptyState" class="state-panel hidden" role="alert">
+      <div class="state-icon">🎮</div>
+      <h2>Belum Ada Game Dipilih</h2>
+      <p>Silakan pilih salah satu game dari katalog untuk mulai bermain.</p>
+      <a href="./index.html" class="btn btn-primary">Lihat Katalog Game</a>
+    </div>
+
+    <!-- Error state: game tidak ditemukan / provider tidak didukung / gagal dimuat -->
+    <div id="errorState" class="state-panel hidden" role="alert">
+      <div class="state-icon">⚠️</div>
+      <h2 id="errorTitle">Game Tidak Tersedia</h2>
+      <p id="errorMessage">Terjadi kendala saat memuat game ini. Coba muat ulang atau pilih game lain.</p>
+      <div class="state-actions">
+        <button id="btnRetry" class="btn btn-primary">Coba Lagi</button>
+        <a href="./index.html" class="btn btn-ghost">Kembali ke Katalog</a>
+      </div>
+    </div>
+
+    <!-- Game container -->
+    <div id="gameContainer" class="game-container hidden" aria-label="Area permainan"></div>
+
+  </main>
+
+  <!-- Scroll to top -->
+  <button id="scrollTopBtn" class="scroll-top-btn ripple hidden" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Toast container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts (urutan mengikuti alur arsitektur: router → database → provider → player → main) -->
+  <script src="./js/router.js" defer></script>
+  <script src="./js/database.js" defer></script>
+  <script src="./js/provider.js" defer></script>
+  <script src="./js/player.js" defer></script>
+  <script src="./js/fullscreen.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

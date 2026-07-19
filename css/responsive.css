@@ -1,0 +1,97 @@
+/* ==========================================================================
+   296 GAME — responsive.css
+   Mobile-first breakpoints. Tidak boleh ada horizontal scroll.
+   ========================================================================== */
+
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* ===== Tablet (<= 1024px) ===== */
+@media (max-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+
+  .hero { padding: 80px 20px 64px; }
+}
+
+/* ===== Small tablet / large phone (<= 768px) ===== */
+@media (max-width: 768px) {
+  .header-inner { padding: 0 16px; }
+
+  .main-nav { gap: 18px; }
+
+  .brand-name { font-size: 1rem; }
+
+  .hero { padding: 64px 18px 52px; }
+  .hero-title { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+  .hero-desc { font-size: 0.95rem; }
+
+  .catalog { padding: 30px 16px 70px; }
+  .section-head h2 { font-size: 1.5rem; }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .game-card-thumb { font-size: 1.8rem; }
+
+  .about { padding: 54px 18px; }
+  .about-inner h2 { font-size: 1.35rem; }
+
+  .player-main { padding: 14px; }
+  .game-container { border-radius: 14px; }
+
+  .player-toolbar { gap: 4px; }
+  .icon-btn { width: 36px; height: 36px; }
+}
+
+/* ===== Mobile (<= 480px) ===== */
+@media (max-width: 480px) {
+  :root { --header-h: 60px; }
+
+  .header-inner { padding: 0 12px; }
+
+  .main-nav { display: none; } /* nav disembunyikan di layar sangat kecil, hero tetap dapat diakses via scroll */
+
+  .brand-logo { width: 30px; height: 30px; }
+  .brand-name { font-size: 0.95rem; }
+
+  .eyebrow { font-size: 0.68rem; padding: 5px 12px; }
+  .hero-title { font-size: clamp(1.5rem, 8vw, 2rem); }
+  .hero-desc { font-size: 0.9rem; margin-bottom: 26px; }
+
+  .btn { padding: 12px 22px; font-size: 0.88rem; width: 100%; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .game-card-body { padding: 10px 12px 12px; }
+  .game-card-title { font-size: 0.82rem; }
+
+  .player-main { padding: 8px; }
+  .game-container { border-radius: 10px; aspect-ratio: 3 / 4; }
+
+  .state-panel { padding: 32px 20px; }
+
+  .scroll-top-btn { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+
+  .toast { width: calc(100% - 32px); text-align: center; bottom: 18px; }
+}
+
+/* ===== Landscape phones (short height) ===== */
+@media (max-height: 480px) and (orientation: landscape) {
+  .game-container { aspect-ratio: 16 / 9; max-height: calc(100vh - var(--header-h) - 20px); }
+  .player-main { padding: 8px; }
+  .hero { padding: 40px 20px; }
+}
+
+/* ===== Large desktop ===== */
+@media (min-width: 1400px) {
+  .header-inner, .catalog { max-width: 1320px; }
+  .game-container { max-width: 980px; }
+}

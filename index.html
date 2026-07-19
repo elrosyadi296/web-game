@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ===== SEO META ===== -->
+  <title>296 GAME — Mainkan Game HTML5 Gratis Langsung di Browser</title>
+  <meta name="description" content="296 GAME adalah game player HTML5 ringan dan cepat. Mainkan ratusan game seru langsung di browser tanpa install, dari puzzle hingga arcade." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://296.web.id/" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="296 GAME" />
+  <meta property="og:title" content="296 GAME — Mainkan Game HTML5 Gratis Langsung di Browser" />
+  <meta property="og:description" content="Ratusan game HTML5 siap mainkan tanpa install. Ringan, cepat, dan bisa dimainkan di semua perangkat." />
+  <meta property="og:url" content="https://296.web.id/" />
+  <meta property="og:image" content="./assets/logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="296 GAME — Mainkan Game HTML5 Gratis Langsung di Browser" />
+  <meta name="twitter:description" content="Ratusan game HTML5 siap mainkan tanpa install. Ringan, cepat, dan bisa dimainkan di semua perangkat." />
+  <meta name="twitter:image" content="./assets/logo.png" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon.png" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- Performance: preconnect ke CDN game -->
+  <link rel="preconnect" href="https://cdn.htmlgames.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.htmlgames.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="./index.html" class="brand" aria-label="296 GAME - Beranda">
+        <img src="./assets/logo.png" alt="Logo 296 GAME" class="brand-logo" width="36" height="36" />
+        <span class="brand-name">296<span class="accent">GAME</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#catalog" class="nav-link">Katalog</a>
+        <a href="#about" class="nav-link">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Game Player Berbasis Browser</p>
+        <h1 class="hero-title">Main game, <span class="accent">tanpa</span> install apa pun.</h1>
+        <p class="hero-desc">296 GAME memuat game HTML5 langsung di browser kamu — cepat, ringan, dan bisa dimainkan di HP maupun laptop kapan saja.</p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">
+            <span>Mulai Main</span>
+          </a>
+          <a href="#about" class="btn btn-ghost">Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section id="catalog" class="catalog" aria-label="Katalog Game">
+      <div class="section-head">
+        <h2>Pilih Game</h2>
+        <p>Klik salah satu game untuk langsung memainkannya.</p>
+      </div>
+
+      <div class="game-grid" id="gameGrid" role="list">
+        <!-- Game cards di-generate oleh main.js -->
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-label="Tentang 296 GAME">
+      <div class="about-inner">
+        <h2>Ringan. Cepat. Tanpa Ribet.</h2>
+        <p>296 GAME dibangun murni dengan HTML, CSS, dan JavaScript — tanpa framework, tanpa proses build yang berat. Setiap game dimuat langsung dari sumbernya saat kamu memilih untuk memainkannya, sehingga halaman tetap ringan dan cepat diakses dari perangkat apa pun.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> 296 GAME — <a href="https://296.web.id" target="_blank" rel="noopener">296.web.id</a></p>
+  </footer>
+
+  <!-- Toast container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="./js/database.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
