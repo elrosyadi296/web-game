@@ -5,7 +5,7 @@
    terhubung ke internet untuk konten game.
    ========================================================================== */
 
-const CACHE_NAME = "296game-shell-v2";
+const CACHE_NAME = "296game-shell-v3";
 
 const APP_SHELL = [
   "./index.html",
@@ -57,11 +57,30 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // Data game (data/games.json dkk) sering di-update — network-first,
+  // cache cuma jadi cadangan kalau user sedang offline. Kalau ini juga
+  // dibiarkan cache-first seperti app shell, perubahan pada games.json
+  // tidak akan pernah terlihat oleh user sampai cache dibersihkan manual.
+  if (url.pathname.includes("/data/")) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.ok && request.method === "GET") {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+ 
   // Cache-first untuk app shell, fallback ke offline.html untuk navigasi.
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) return cached;
-
+ 
       return fetch(request)
         .then((response) => {
           if (response.ok && request.method === "GET") {
@@ -78,3 +97,4 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+ 
