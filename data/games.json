@@ -4,7 +4,7 @@
     "game": "TokyoMahjong",
     "title": "Tokyo Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tokyo-mahjong-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tokyo-mahjong-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -12,7 +12,7 @@
     "game": "TrioMahjong",
     "title": "Trio Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/triomahjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/triomahjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -20,7 +20,7 @@
     "game": "10Mahjong",
     "title": "10 Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/10mahjong300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/10mahjong300.webp",
     "provider": "htmlgames"
   },
   {
@@ -28,7 +28,7 @@
     "game": "ABCTiles",
     "title": "ABC Tiles",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/abctiles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/abctiles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -36,7 +36,7 @@
     "game": "AfricanSavannah",
     "title": "African Savannah",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/africansavannah300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/africansavannah300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -44,7 +44,7 @@
     "game": "AlchemistSymbols",
     "title": "Alchemist Symbols",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alchemistsymbols300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alchemistsymbols300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -52,7 +52,7 @@
     "game": "AlienSlide",
     "title": "Alien Slide",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alienslide300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alienslide300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -60,7 +60,7 @@
     "game": "AncientEgyptMahjong",
     "title": "Ancient Egypt Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ancientegyptmahjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ancientegyptmahjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -68,7 +68,7 @@
     "game": "AncientMahjong",
     "title": "Ancient Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ancientmahjong300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ancientmahjong300.webp",
     "provider": "htmlgames"
   },
   {
@@ -76,7 +76,7 @@
     "game": "AnimalCubes",
     "title": "Animal Cubes",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animalcubes300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animalcubes300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -84,7 +84,7 @@
     "game": "AnimalMahjong",
     "title": "Animal Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animalmahjong-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animalmahjong-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -92,7 +92,7 @@
     "game": "AnimalsConnect",
     "title": "Animals Connect",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect300.webp",
     "provider": "htmlgames"
   },
   {
@@ -100,7 +100,7 @@
     "game": "AnimalsConnect2",
     "title": "Animals Connect 2",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -108,7 +108,7 @@
     "game": "AnimalsConnect3",
     "title": "Animals Connect 3",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect3300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animalsconnect3300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -116,7 +116,7 @@
     "game": "BeachMahjong",
     "title": "Beach Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/beachmahjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/beachmahjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -124,7 +124,7 @@
     "game": "BirdsKyodai",
     "title": "Birds Kyodai",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/birdskyodai300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/birdskyodai300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -132,7 +132,7 @@
     "game": "Black%26WhiteMahjong",
     "title": "Black %26 White Mahjong",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blackwhitemahjong300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blackwhitemahjong300.webp",
     "provider": "htmlgames"
   },
   {
@@ -140,7 +140,7 @@
     "game": "BlackandWhiteDimensions",
     "title": "Black and White Dimensions",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blackandwhitedimensions300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blackandwhitedimensions300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -148,7 +148,7 @@
     "game": "BlackandWhiteMahjong2Untimed",
     "title": "Black and White Mahjong 2 Untimed",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mahjongblackwhite2untimed300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mahjongblackwhite2untimed300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -156,7 +156,7 @@
     "game": "BlackandWhiteMahjong3",
     "title": "Black and White Mahjong 3",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blackandwhitemahjong3300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blackandwhitemahjong3300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -164,7 +164,7 @@
     "game": "BugConnect",
     "title": "Bug Connect",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bugconnect300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bugconnect300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -172,7 +172,7 @@
     "game": "BugsKyodai",
     "title": "Bugs Kyodai",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bugskyodai300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bugskyodai300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -180,7 +180,7 @@
     "game": "ButterflyKyodai",
     "title": "Butterfly Kyodai",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/butterflykyodai300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/butterflykyodai300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -188,7 +188,7 @@
     "game": "CandyConnect",
     "title": "Candy Connect",
     "category": "Mahjong",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/candyconnect300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/candyconnect300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -196,7 +196,7 @@
     "game": "SpiderFreecell",
     "title": "Spider Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spiderfreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spiderfreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -204,7 +204,7 @@
     "game": "YukonSolitaire",
     "title": "Yukon Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/yukonsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/yukonsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -212,7 +212,7 @@
     "game": "YukonFreecell",
     "title": "Yukon Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/yukonfreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/yukonfreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -220,7 +220,7 @@
     "game": "SpiderSolitaire2suits",
     "title": "Spider Solitaire 2 suits",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire2suits300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire2suits300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -228,7 +228,7 @@
     "game": "GargantuaDoubleKlondike",
     "title": "Gargantua Double Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gargantuadoubleklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gargantuadoubleklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -236,7 +236,7 @@
     "game": "FlowerSolitaire",
     "title": "Flower Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowersolitaire-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowersolitaire-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -244,7 +244,7 @@
     "game": "IndianSolitaire",
     "title": "Indian Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/indiansolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/indiansolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -252,7 +252,7 @@
     "game": "TotemSolitaire",
     "title": "Totem Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/totemsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/totemsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -260,7 +260,7 @@
     "game": "ScorpionSolitaire",
     "title": "Scorpion Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/scorpionsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/scorpionsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -268,7 +268,7 @@
     "game": "Klaverjassen",
     "title": "Klaverjassen",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/klaverjassen300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/klaverjassen300.webp",
     "provider": "htmlgames"
   },
   {
@@ -276,7 +276,7 @@
     "game": "TwoCell",
     "title": "Two Cell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/twocell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/twocell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -284,7 +284,7 @@
     "game": "SkipCards",
     "title": "Skip Cards",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/skipcards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/skipcards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -292,7 +292,7 @@
     "game": "PlanetSolitaire",
     "title": "Planet Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/planetsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/planetsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -300,7 +300,7 @@
     "game": "Freecell",
     "title": "Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/free-cell-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/free-cell-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -308,7 +308,7 @@
     "game": "SpikeSolitaire",
     "title": "Spike Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spikesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spikesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -316,7 +316,7 @@
     "game": "AlienPyramidSolitaire",
     "title": "Alien Pyramid Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alien-pyramid-solitaire-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alien-pyramid-solitaire-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -324,7 +324,7 @@
     "game": "TripeaksFarm",
     "title": "Tripeaks Farm",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeaksfarm300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeaksfarm300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -332,7 +332,7 @@
     "game": "SpiteandMalice",
     "title": "Spite and Malice",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spiteandmalice300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spiteandmalice300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -340,7 +340,7 @@
     "game": "SpiteandMaliceExtreme",
     "title": "Spite and Malice Extreme",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spiteandmaliceextreme300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spiteandmaliceextreme300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -348,7 +348,7 @@
     "game": "ChristmasSolitaire",
     "title": "Christmas Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/christmassolitaire1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/christmassolitaire1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -356,7 +356,7 @@
     "game": "JungleSolitaire",
     "title": "Jungle Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/junglesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/junglesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -364,7 +364,7 @@
     "game": "Hartenjagen",
     "title": "Hartenjagen",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hartenjagen300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hartenjagen300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -372,7 +372,7 @@
     "game": "FreecellChristmas",
     "title": "Freecell Christmas",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellchristmas300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellchristmas300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -380,7 +380,7 @@
     "game": "CanfieldSolitaire",
     "title": "Canfield Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/canfieldsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/canfieldsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -388,7 +388,7 @@
     "game": "BigSpiderSolitaire",
     "title": "Big Spider Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bigspidersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bigspidersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -396,7 +396,7 @@
     "game": "IncaPyramidSolitaire",
     "title": "Inca Pyramid Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/incapyramidsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/incapyramidsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -404,7 +404,7 @@
     "game": "CrescentSolitaire",
     "title": "Crescent Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crescentsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crescentsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -412,7 +412,7 @@
     "game": "AceofSpades",
     "title": "Ace of Spades",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/aceofspades300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/aceofspades300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -420,7 +420,7 @@
     "game": "MountainSolitaire",
     "title": "Mountain Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mountainsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mountainsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -428,7 +428,7 @@
     "game": "CrazyEights",
     "title": "Crazy Eights",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crazyeights300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crazyeights300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -436,7 +436,7 @@
     "game": "MauMau",
     "title": "Mau Mau",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/maumau300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/maumau300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -444,7 +444,7 @@
     "game": "GoldCoastKlondike",
     "title": "Gold Coast Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/goldcoastklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/goldcoastklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -452,7 +452,7 @@
     "game": "MagicCastleSolitaire",
     "title": "Magic Castle Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/magiccastlesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/magiccastlesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -460,7 +460,7 @@
     "game": "RussianSolitaire",
     "title": "Russian Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/russiansolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/russiansolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -468,7 +468,7 @@
     "game": "AliBabaSolitaire",
     "title": "Ali Baba Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alibabasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alibabasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -476,7 +476,7 @@
     "game": "TajMahalSolitaire",
     "title": "Taj Mahal Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tajmahalsolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tajmahalsolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -484,7 +484,7 @@
     "game": "SnowyPeaksSolitaire",
     "title": "Snowy Peaks Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/snowypeakssolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/snowypeakssolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -492,7 +492,7 @@
     "game": "SeaTowerSolitaire",
     "title": "Sea Tower Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/seatowersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/seatowersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -500,7 +500,7 @@
     "game": "PirateKlondike",
     "title": "Pirate Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pirateklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pirateklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -508,7 +508,7 @@
     "game": "JumpingSpider",
     "title": "Jumping Spider",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/jumpingspider300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/jumpingspider300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -516,7 +516,7 @@
     "game": "TripeaksCreatures",
     "title": "Tripeaks Creatures",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeakscreatures300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeakscreatures300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -524,7 +524,7 @@
     "game": "AceofHearts",
     "title": "Ace of Hearts",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/aceofhearts300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/aceofhearts300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -532,7 +532,7 @@
     "game": "ChristmasTripeaks",
     "title": "Christmas Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/christmastripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/christmastripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -540,7 +540,7 @@
     "game": "SecretRussian",
     "title": "Secret Russian",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/secretrussian300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/secretrussian300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -548,7 +548,7 @@
     "game": "AlhambraSolitaire",
     "title": "Alhambra Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alhambrasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alhambrasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -556,7 +556,7 @@
     "game": "AladdinSolitaire",
     "title": "Aladdin Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/aladdinsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/aladdinsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -564,7 +564,7 @@
     "game": "BlindFreecell",
     "title": "Blind Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blindfreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blindfreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -572,7 +572,7 @@
     "game": "HalloweenKlondike",
     "title": "Halloween Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/halloweenklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/halloweenklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -580,7 +580,7 @@
     "game": "Hearts",
     "title": "Hearts",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hearts300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hearts300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -588,7 +588,7 @@
     "game": "HugeSpiderSolitaire",
     "title": "Huge Spider Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hugespidersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hugespidersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -596,7 +596,7 @@
     "game": "TroySolitaire",
     "title": "Troy Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/troysolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/troysolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -604,7 +604,7 @@
     "game": "ClassicKlondike",
     "title": "Classic Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -612,7 +612,7 @@
     "game": "SpiderSolitaire",
     "title": "Spider Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -620,7 +620,7 @@
     "game": "ThirtyOne",
     "title": "Thirty One",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thirtyone300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thirtyone300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -628,7 +628,7 @@
     "game": "FreecellSummerHoliday",
     "title": "Freecell Summer Holiday",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellsummerholiday300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellsummerholiday300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -636,7 +636,7 @@
     "game": "SpidikeSolitaire",
     "title": "Spidike Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spidikesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spidikesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -644,7 +644,7 @@
     "game": "SolitaireCollection",
     "title": "Solitaire Collection",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/solitairecollection300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/solitairecollection300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -652,7 +652,7 @@
     "game": "AmsterdamsKlaverjassen",
     "title": "Amsterdams Klaverjassen",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/amsterdamsklaverjassen300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/amsterdamsklaverjassen300.webp",
     "provider": "htmlgames"
   },
   {
@@ -660,7 +660,7 @@
     "game": "ThreeCell",
     "title": "Three Cell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/threecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/threecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -668,7 +668,7 @@
     "game": "PyramidTripeaks",
     "title": "Pyramid Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pyramidtripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pyramidtripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -676,7 +676,7 @@
     "game": "SolitaireHarvest",
     "title": "Solitaire Harvest",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/solitaireharvest300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/solitaireharvest300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -684,7 +684,7 @@
     "game": "ClassicGinRummy",
     "title": "Classic Gin Rummy",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicginrummy300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicginrummy300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -692,7 +692,7 @@
     "game": "StepsSolitaire",
     "title": "Steps Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/stepssolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/stepssolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -700,7 +700,7 @@
     "game": "FreecellExtreme",
     "title": "Freecell Extreme",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellextreme300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellextreme300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -708,7 +708,7 @@
     "game": "ClassicSolitaire",
     "title": "Classic Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -716,7 +716,7 @@
     "game": "FortyThievesSolitaire",
     "title": "Forty Thieves Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/fortythievessolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/fortythievessolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -724,7 +724,7 @@
     "game": "FiremenSolitaire",
     "title": "Firemen Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/firemansolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/firemansolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -732,7 +732,7 @@
     "game": "LightningSolitaire",
     "title": "Lightning Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/lightningsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/lightningsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -740,7 +740,7 @@
     "game": "WaspSolitaire",
     "title": "Wasp Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/waspsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/waspsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -748,7 +748,7 @@
     "game": "3PyramidTripeaks",
     "title": "3 Pyramid Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/3pyramidtripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/3pyramidtripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -756,7 +756,7 @@
     "game": "ParisTripeaks",
     "title": "Paris Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/paristripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/paristripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -764,7 +764,7 @@
     "game": "GapsSolitaire",
     "title": "Gaps Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gapssolitaire-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gapssolitaire-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -772,7 +772,7 @@
     "game": "3PyramidTripeaks2",
     "title": "3 Pyramid Tripeaks 2",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/3pyramidtripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/3pyramidtripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -780,7 +780,7 @@
     "game": "AncientRomeSolitaire",
     "title": "Ancient Rome Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ancientromesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ancientromesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -788,7 +788,7 @@
     "game": "EgyptPyramidSolitaire",
     "title": "Egypt Pyramid Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/egyptpyramidsolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/egyptpyramidsolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -796,7 +796,7 @@
     "game": "DoubleFreecell",
     "title": "Double Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/doublefreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/doublefreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -804,7 +804,7 @@
     "game": "MayaPyramidSolitaire",
     "title": "Maya Pyramid Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mayapyramidsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mayapyramidsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -812,7 +812,7 @@
     "game": "FreecellKlondikeSolitaire",
     "title": "Freecell Klondike Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellklondikesolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellklondikesolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -820,7 +820,7 @@
     "game": "StrongholdSolitaire",
     "title": "Stronghold Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/strongholdsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/strongholdsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -828,7 +828,7 @@
     "game": "FlowerGardenSolitaire",
     "title": "Flower Garden Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowergardensolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowergardensolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -836,7 +836,7 @@
     "game": "CasinoBlackjack",
     "title": "Casino Blackjack",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/casinoblackjack300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/casinoblackjack300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -844,7 +844,7 @@
     "game": "SolitaireConnect",
     "title": "Solitaire Connect",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/solitaireconnect300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/solitaireconnect300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -852,7 +852,7 @@
     "game": "MontanaSolitaire",
     "title": "Montana Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/montanasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/montanasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -860,7 +860,7 @@
     "game": "5StackBlackjack",
     "title": "5 Stack Blackjack",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/5stackblackjack300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/5stackblackjack300.webp",
     "provider": "htmlgames"
   },
   {
@@ -868,7 +868,7 @@
     "game": "HalloweenCardConnect",
     "title": "Halloween Card Connect",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/halloweencardconnect300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/halloweencardconnect300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -876,7 +876,7 @@
     "game": "President",
     "title": "President",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/president300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/president300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -884,7 +884,7 @@
     "game": "DoubleTowerofHanoiSolitaire",
     "title": "Double Tower of Hanoi Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/doubletowerofhanoisolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/doubletowerofhanoisolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -892,7 +892,7 @@
     "game": "SantaTripeaks",
     "title": "Santa Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/santatripeaks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/santatripeaks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -900,7 +900,7 @@
     "game": "ThievesofEgypt",
     "title": "Thieves of Egypt",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thievesofegypt300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thievesofegypt300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -908,7 +908,7 @@
     "game": "KingsKlondike",
     "title": "Kings Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/kingklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/kingklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -916,7 +916,7 @@
     "game": "3KeysSolitaire",
     "title": "3 Keys Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/3keyssolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/3keyssolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -924,7 +924,7 @@
     "game": "PyramidSolitaire",
     "title": "Pyramid Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -932,7 +932,7 @@
     "game": "KlondikeSolitaire",
     "title": "Klondike Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/klondikesolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/klondikesolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -940,7 +940,7 @@
     "game": "WildWestKlondike",
     "title": "Wild West Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/wildwestklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/wildwestklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -948,7 +948,7 @@
     "game": "TripeaksSolitaire",
     "title": "Tripeaks Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeakssolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeakssolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -956,7 +956,7 @@
     "game": "SantaSolitaire",
     "title": "Santa Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/santasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/santasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -964,7 +964,7 @@
     "game": "RussianFreecell",
     "title": "Russian Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/russianfreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/russianfreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -972,7 +972,7 @@
     "game": "CupofTeaSolitaire",
     "title": "Cup of Tea Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/cupofteasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/cupofteasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -980,7 +980,7 @@
     "game": "GinRummy",
     "title": "Gin Rummy",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ginrummy300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ginrummy300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -988,7 +988,7 @@
     "game": "Pesten",
     "title": "Pesten",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pesten-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pesten-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -996,7 +996,7 @@
     "game": "Tri-FruitSolitaire",
     "title": "Tri-Fruit Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/trifruitsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/trifruitsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1004,7 +1004,7 @@
     "game": "EgyptSolitaire",
     "title": "Egypt Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/egyptsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/egyptsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1012,7 +1012,7 @@
     "game": "PyramidSolitaire-AncientChina",
     "title": "Pyramid Solitaire - Ancient China",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire-ancientchina300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire-ancientchina300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1020,7 +1020,7 @@
     "game": "EasterIslandSolitaire",
     "title": "Easter Island Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/easterislandsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/easterislandsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1028,7 +1028,7 @@
     "game": "FreecellSolitaire",
     "title": "Freecell Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1036,7 +1036,7 @@
     "game": "SkyscraperSolitaire",
     "title": "Skyscraper Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/skyscrapersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/skyscrapersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1044,7 +1044,7 @@
     "game": "HawaiianSolitaire",
     "title": "Hawaiian Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hawaiiansolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hawaiiansolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1052,7 +1052,7 @@
     "game": "SpiderSolitaire1suit",
     "title": "Spider Solitaire 1 suit",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire1suit300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spidersolitaire1suit300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1060,7 +1060,7 @@
     "game": "LaBelleLucie",
     "title": "La Belle Lucie",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/labellelucie300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/labellelucie300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1068,7 +1068,7 @@
     "game": "FreecellGizaSolitaire",
     "title": "Freecell Giza Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellgizasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellgizasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1076,7 +1076,7 @@
     "game": "Spades",
     "title": "Spades",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spades300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spades300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1084,7 +1084,7 @@
     "game": "AlgerianPatience",
     "title": "Algerian Patience",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/algerianpatience300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/algerianpatience300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1092,7 +1092,7 @@
     "game": "HalloweenTripeaks",
     "title": "Halloween Tripeaks",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/halloweentripeaks-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/halloweentripeaks-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1100,7 +1100,7 @@
     "game": "BunnySolitaire",
     "title": "Bunny Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bunnysolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bunnysolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1108,7 +1108,7 @@
     "game": "QueenieSolitaire",
     "title": "Queenie Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/queeniesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/queeniesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1116,7 +1116,7 @@
     "game": "ThievesofEgyptSolitaire",
     "title": "Thieves of Egypt Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thievesofegyptsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thievesofegyptsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1124,7 +1124,7 @@
     "game": "TowerSolitaire",
     "title": "Tower Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/towersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/towersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1132,7 +1132,7 @@
     "game": "BlackJackChain",
     "title": "BlackJack Chain",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blackjackchain300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blackjackchain300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1140,7 +1140,7 @@
     "game": "TowerofLondonSolitaire",
     "title": "Tower of London Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/toweroflondonsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/toweroflondonsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1148,7 +1148,7 @@
     "game": "TripeaksMania",
     "title": "Tripeaks Mania",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeaksmania300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeaksmania300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1156,7 +1156,7 @@
     "game": "ChineseFreecell",
     "title": "Chinese Freecell",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chinesefreecell300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chinesefreecell300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1164,7 +1164,7 @@
     "game": "SpadesSpiderSolitaire",
     "title": "Spades Spider Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spadesspidersolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spadesspidersolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1172,7 +1172,7 @@
     "game": "PyramidSolitaire-AncientRome",
     "title": "Pyramid Solitaire - Ancient Rome",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire-ancientrome300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pyramidsolitaire-ancientrome300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1180,7 +1180,7 @@
     "game": "TripeaksCastle",
     "title": "Tripeaks Castle",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeakscastle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeakscastle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1188,7 +1188,7 @@
     "game": "TwentyOne",
     "title": "Twenty One",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/twentyone300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/twentyone300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1196,7 +1196,7 @@
     "game": "ClockSolitaire",
     "title": "Clock Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/clocksolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/clocksolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1204,7 +1204,7 @@
     "game": "Klootzakken",
     "title": "Klootzakken",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/klootzakken300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/klootzakken300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1212,7 +1212,7 @@
     "game": "TripeaksHalloween",
     "title": "Tripeaks Halloween",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripeakshalloween300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripeakshalloween300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1220,7 +1220,7 @@
     "game": "WinterSolitaire",
     "title": "Winter Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/wintersolitaire300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/wintersolitaire300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1228,7 +1228,7 @@
     "game": "FreecellDuplex",
     "title": "Freecell Duplex",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/freecellduplex300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/freecellduplex300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1236,7 +1236,7 @@
     "game": "Rummi",
     "title": "Rummi",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rummi300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rummi300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1244,7 +1244,7 @@
     "game": "SaratogaSolitaire",
     "title": "Saratoga Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/saratogasolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/saratogasolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1252,7 +1252,7 @@
     "game": "SecretDoubleKlondike",
     "title": "Secret Double Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/secretdoubleklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/secretdoubleklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1260,7 +1260,7 @@
     "game": "FrozenCastleSolitaire",
     "title": "Frozen Castle Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/frozencastlesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/frozencastlesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1268,7 +1268,7 @@
     "game": "ChineseSolitaire",
     "title": "Chinese Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chinesesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chinesesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1276,7 +1276,7 @@
     "game": "BlackWidowSolitaire",
     "title": "Black Widow Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blackwidowsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blackwidowsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1284,7 +1284,7 @@
     "game": "GolfSolitairePro",
     "title": "Golf Solitaire Pro",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/golfsolitairepro-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/golfsolitairepro-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1292,7 +1292,7 @@
     "game": "PyramidMountains",
     "title": "Pyramid Mountains",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pyramidmountains-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pyramidmountains-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1300,7 +1300,7 @@
     "game": "CastlesinSpain",
     "title": "Castles in Spain",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/castlesinspain-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/castlesinspain-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1308,7 +1308,7 @@
     "game": "Kraken",
     "title": "Kraken",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/kraken-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/kraken-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1316,7 +1316,7 @@
     "game": "DoubleSolitaire",
     "title": "Double Solitaire",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/doublesolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/doublesolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1324,7 +1324,7 @@
     "game": "PantagruelDoubleKlondike",
     "title": "Pantagruel Double Klondike",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pantagrueldoubleklondike300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pantagrueldoubleklondike300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1332,7 +1332,7 @@
     "game": "SolitaireReverse",
     "title": "Solitaire Reverse",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/solitairereverse300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/solitairereverse300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1340,7 +1340,7 @@
     "game": "RotterdamsKlaverjassen",
     "title": "Rotterdams Klaverjassen",
     "category": "Solitaire",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rotterdamsklaverjassen300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rotterdamsklaverjassen300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1348,7 +1348,7 @@
     "game": "1010Halloween",
     "title": "1010 Halloween",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/1010halloween300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/1010halloween300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1356,7 +1356,7 @@
     "game": "NonogramSaga",
     "title": "Nonogram Saga",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/nonogramsaga300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/nonogramsaga300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1364,7 +1364,7 @@
     "game": "4Winds",
     "title": "4 Winds",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/4winds300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/4winds300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1372,7 +1372,7 @@
     "game": "MahjongMerge",
     "title": "Mahjong Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mahjongmerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mahjongmerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1380,7 +1380,7 @@
     "game": "DailyPath",
     "title": "Daily Path",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-path-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-path-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1388,7 +1388,7 @@
     "game": "NeonFactory",
     "title": "Neon Factory",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonfactory300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonfactory300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1396,7 +1396,7 @@
     "game": "HigherorLower",
     "title": "Higher or Lower",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/higherorLower300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/higherorLower300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1404,7 +1404,7 @@
     "game": "GemChallenge",
     "title": "Gem Challenge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gemchallenge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gemchallenge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1412,7 +1412,7 @@
     "game": "DailyMiniSudoku",
     "title": "Daily Mini Sudoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-mini-sudoku-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-mini-sudoku-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1420,7 +1420,7 @@
     "game": "10x10Arabic",
     "title": "10x10 Arabic",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/10x10arabic300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/10x10arabic300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1428,7 +1428,7 @@
     "game": "NeonFlip",
     "title": "Neon Flip",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonflip300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonflip300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1436,7 +1436,7 @@
     "game": "TriPuzzle",
     "title": "Tri Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tripuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tripuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1444,7 +1444,7 @@
     "game": "MahjongConnectMerge",
     "title": "Mahjong Connect Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mahjongconnectmerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mahjongconnectmerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1452,7 +1452,7 @@
     "game": "DailyMasyu",
     "title": "Daily Masyu",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-masyu-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-masyu-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1460,7 +1460,7 @@
     "game": "DailyPatchIt",
     "title": "Daily PatchIt",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-patch-it-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-patch-it-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1468,7 +1468,7 @@
     "game": "ImagenPalavra",
     "title": "Imagen Palavra",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/imagen-palavra-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/imagen-palavra-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1476,7 +1476,7 @@
     "game": "DailyKakuro",
     "title": "Daily Kakuro",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailykakuro300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailykakuro300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1484,7 +1484,7 @@
     "game": "DailyNonograms",
     "title": "Daily Nonograms",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailynonograms300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailynonograms300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1492,7 +1492,7 @@
     "game": "Reach2048",
     "title": "Reach 2048",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/reach2048-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/reach2048-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1500,7 +1500,7 @@
     "game": "DailySudoku",
     "title": "Daily Sudoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailysudoku300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailysudoku300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1508,7 +1508,7 @@
     "game": "1010Classic",
     "title": "1010 Classic",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/1010classic300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/1010classic300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1516,7 +1516,7 @@
     "game": "DailyHexnum",
     "title": "Daily Hexnum",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyhexnum300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyhexnum300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1524,7 +1524,7 @@
     "game": "DailyKakurasu",
     "title": "Daily Kakurasu",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailykakurasu300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailykakurasu300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1532,7 +1532,7 @@
     "game": "CrucigramasDelDia",
     "title": "Crucigramas Del Dia",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crucigramasdeldia300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crucigramasdeldia300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1540,7 +1540,7 @@
     "game": "DailyStoStone",
     "title": "Daily StoStone",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-stostone-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-stostone-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1548,7 +1548,7 @@
     "game": "Hashiwokakero",
     "title": "Hashiwokakero",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hashiwokakero300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hashiwokakero300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1556,7 +1556,7 @@
     "game": "Tens",
     "title": "Tens",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tens300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tens300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1564,7 +1564,7 @@
     "game": "CountryLabyrinth1",
     "title": "Country Labyrinth 1",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1572,7 +1572,7 @@
     "game": "BalloonMaze",
     "title": "Balloon Maze",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/balloonmaze300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/balloonmaze300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1580,7 +1580,7 @@
     "game": "MemoryMahjong",
     "title": "Memory Mahjong",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/memorymahjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/memorymahjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1588,7 +1588,7 @@
     "game": "MarbleMerge",
     "title": "Marble Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/marblemerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/marblemerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1596,7 +1596,7 @@
     "game": "PacMaze",
     "title": "Pac Maze",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pacmaze300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pacmaze300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1604,7 +1604,7 @@
     "game": "NumberChain",
     "title": "Number Chain",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/numberchain300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/numberchain300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1612,7 +1612,7 @@
     "game": "DailyBinairo%2B",
     "title": "Daily Binairo%2B",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-binairo-%2B-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-binairo-%2B-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1620,7 +1620,7 @@
     "game": "TowerofHanoiSort",
     "title": "Tower of Hanoi Sort",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/towerofhanoisort300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/towerofhanoisort300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1628,7 +1628,7 @@
     "game": "Daily1to25",
     "title": "Daily 1 to 25",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily1to25300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily1to25300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1636,7 +1636,7 @@
     "game": "DailyShikaku",
     "title": "Daily Shikaku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyshikaku300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyshikaku300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1644,7 +1644,7 @@
     "game": "DailyTracks",
     "title": "Daily Tracks",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailytracks300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailytracks300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1652,7 +1652,7 @@
     "game": "PenguinWordTwist",
     "title": "Penguin Word Twist",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/penguinwordtwist300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/penguinwordtwist300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1660,7 +1660,7 @@
     "game": "MergeIt",
     "title": "Merge It",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mergeit300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mergeit300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1668,7 +1668,7 @@
     "game": "ClassicWordSearch",
     "title": "Classic Word Search",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classic-word-search-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classic-word-search-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1676,7 +1676,7 @@
     "game": "MysteryParadise",
     "title": "Mystery Paradise",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mysteryparadise300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mysteryparadise300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1684,7 +1684,7 @@
     "game": "Words",
     "title": "Words",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/words300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/words300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1692,7 +1692,7 @@
     "game": "CreepyCreatures",
     "title": "Creepy Creatures",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/creepycreatures300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/creepycreatures300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1700,7 +1700,7 @@
     "game": "ChocolateFactory",
     "title": "Chocolate Factory",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chocolatefactory300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chocolatefactory300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1708,7 +1708,7 @@
     "game": "ANonogramaDay",
     "title": "A Nonogram a Day",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/anonogramaday300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/anonogramaday300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1716,7 +1716,7 @@
     "game": "FruitCubes",
     "title": "Fruit Cubes",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/fruitcubes300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/fruitcubes300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1724,7 +1724,7 @@
     "game": "SumJong",
     "title": "SumJong",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sumjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sumjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1732,7 +1732,7 @@
     "game": "Cats1010",
     "title": "Cats 1010",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/cats1010300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/cats1010300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1740,7 +1740,7 @@
     "game": "DailyNumbrix",
     "title": "Daily Numbrix",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailynumbrix300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailynumbrix300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1748,7 +1748,7 @@
     "game": "TikiTotemsQuartet",
     "title": "Tiki Totems Quartet",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tikitotemsquartet300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tikitotemsquartet300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1756,7 +1756,7 @@
     "game": "TrainSwitch",
     "title": "Train Switch",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/trainswitch300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/trainswitch300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1764,7 +1764,7 @@
     "game": "WhacktheMoles",
     "title": "Whack the Moles",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/whackthemoles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/whackthemoles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1772,7 +1772,7 @@
     "game": "DailyFutoshiki",
     "title": "Daily Futoshiki",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyfutoshiki300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyfutoshiki300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1780,7 +1780,7 @@
     "game": "FlowerBurst",
     "title": "Flower Burst",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowerburst300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowerburst300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1788,7 +1788,7 @@
     "game": "DagelijkseKruiswoord",
     "title": "Dagelijkse Kruiswoord",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dagelijksekruiswoord300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dagelijksekruiswoord300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1796,7 +1796,7 @@
     "game": "BusPuzzle",
     "title": "Bus Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/buspuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/buspuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1804,7 +1804,7 @@
     "game": "SudokuClassic",
     "title": "Sudoku Classic",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sudokuclassic300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sudokuclassic300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1812,7 +1812,7 @@
     "game": "T%C3%A4glichesCodewort",
     "title": "T%C3%A4gliches Codewort",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tagliches-codewort-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tagliches-codewort-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1820,7 +1820,7 @@
     "game": "OneLine",
     "title": "One Line",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/oneline300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/oneline300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1828,7 +1828,7 @@
     "game": "MergeCards",
     "title": "Merge Cards",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mergecards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mergecards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1836,7 +1836,7 @@
     "game": "AncientWondersJigsaw",
     "title": "Ancient Wonders Jigsaw",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ancientwondersjigsaw300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ancientwondersjigsaw300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1844,7 +1844,7 @@
     "game": "DailyNumberSums",
     "title": "Daily Number Sums",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-number-sums-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-number-sums-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1852,7 +1852,7 @@
     "game": "DailyGuess",
     "title": "Daily Guess",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-guess-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-guess-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1860,7 +1860,7 @@
     "game": "HalloweenPairs",
     "title": "Halloween Pairs",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/halloweenpairs300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/halloweenpairs300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1868,7 +1868,7 @@
     "game": "2048Christmas",
     "title": "2048 Christmas",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/2048christmas300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/2048christmas300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1876,7 +1876,7 @@
     "game": "PicturePie-AncientCity",
     "title": "Picture Pie - Ancient City",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/picturepieancientcity300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/picturepieancientcity300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1884,7 +1884,7 @@
     "game": "PuzzleDrop-SpaceAdventure",
     "title": "Puzzle Drop - Space Adventure",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/puzzledropspaceadventure300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/puzzledropspaceadventure300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1892,7 +1892,7 @@
     "game": "Tetris1024",
     "title": "Tetris 1024",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetris1024300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetris1024300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1900,7 +1900,7 @@
     "game": "DailyWorms",
     "title": "Daily Worms",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-worms-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-worms-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1908,7 +1908,7 @@
     "game": "MazePuzzle",
     "title": "Maze Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mazepuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mazepuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1916,7 +1916,7 @@
     "game": "CountryLabyrinth4",
     "title": "Country Labyrinth 4",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth4300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth4300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1924,7 +1924,7 @@
     "game": "DailyWordSearch",
     "title": "Daily Word Search",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailywordsearch300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailywordsearch300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1932,7 +1932,7 @@
     "game": "DailyLoop",
     "title": "Daily Loop",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyloop300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyloop300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1940,7 +1940,7 @@
     "game": "NumberSearch",
     "title": "Number Search",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/numbersearch300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/numbersearch300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1948,7 +1948,7 @@
     "game": "ChristmasWords",
     "title": "Christmas Words",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/christmaswords300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/christmaswords300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1956,7 +1956,7 @@
     "game": "WordMahjong",
     "title": "Word Mahjong",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/wordmahjong300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/wordmahjong300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1964,7 +1964,7 @@
     "game": "EscapetheForest",
     "title": "Escape the Forest",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/escapetheforest300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/escapetheforest300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1972,7 +1972,7 @@
     "game": "Hangman",
     "title": "Hangman",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hangman300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hangman300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1980,7 +1980,7 @@
     "game": "DagelijkseWoordzoeker",
     "title": "Dagelijkse Woordzoeker",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dagelijksewoordzoeker300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dagelijksewoordzoeker300.webp",
     "provider": "htmlgames"
   },
   {
@@ -1988,7 +1988,7 @@
     "game": "BBQRoast",
     "title": "BBQ Roast",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bbqroast300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bbqroast300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -1996,7 +1996,7 @@
     "game": "JigsawJamWorld",
     "title": "Jigsaw Jam World",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/jigsawjamworld300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/jigsawjamworld300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2004,7 +2004,7 @@
     "game": "FruitFlip",
     "title": "Fruit Flip",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/fruitflip300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/fruitflip300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2012,7 +2012,7 @@
     "game": "DailyCalcudoku",
     "title": "Daily Calcudoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailycalcudoku300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailycalcudoku300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2020,7 +2020,7 @@
     "game": "KillerSudoku",
     "title": "Killer Sudoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/killersudoku300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/killersudoku300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2028,7 +2028,7 @@
     "game": "ExtremeVexed",
     "title": "Extreme Vexed",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/extremevexed300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/extremevexed300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2036,7 +2036,7 @@
     "game": "Linesandblocks2",
     "title": "Lines and blocks 2",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/linesandblocks2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/linesandblocks2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2044,7 +2044,7 @@
     "game": "DailyShinro",
     "title": "Daily Shinro",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/shinro-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/shinro-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2052,7 +2052,7 @@
     "game": "TreasureChests",
     "title": "Treasure Chests",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/treasurechests300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/treasurechests300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2060,7 +2060,7 @@
     "game": "DailyKaodoku",
     "title": "Daily Kaodoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailykaodoku300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailykaodoku300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2068,7 +2068,7 @@
     "game": "JollyJongMath",
     "title": "Jolly Jong Math",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/jollyjongmath300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/jollyjongmath300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2076,7 +2076,7 @@
     "game": "T%C3%A4glichesKreuzwortR%C3%A4tsel",
     "title": "T%C3%A4gliches Kreuzwort R%C3%A4tsel",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/taglicheskreuzwort300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/taglicheskreuzwort300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2084,7 +2084,7 @@
     "game": "BlubLove",
     "title": "Blub Love",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blublove300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blublove300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2092,7 +2092,7 @@
     "game": "MouseandCheese",
     "title": "Mouse and Cheese",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mouseandcheese300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mouseandcheese300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2100,7 +2100,7 @@
     "game": "DailyStarBattle",
     "title": "Daily Star Battle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-star-battle-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-star-battle-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2108,7 +2108,7 @@
     "game": "DailyTrafficJam",
     "title": "Daily Traffic Jam",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailytrafficjam300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailytrafficjam300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2116,7 +2116,7 @@
     "game": "NumberMerge",
     "title": "Number Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/numbermerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/numbermerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2124,7 +2124,7 @@
     "game": "DailyKillerSudoku",
     "title": "Daily Killer Sudoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailykillersudoku300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailykillersudoku300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2132,7 +2132,7 @@
     "game": "Rectangles",
     "title": "Rectangles",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rectangles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rectangles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2140,7 +2140,7 @@
     "game": "Daily15Up",
     "title": "Daily 15 Up",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/Daily15Up-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/Daily15Up-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2148,7 +2148,7 @@
     "game": "SupermarketNumbers",
     "title": "Supermarket Numbers",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/supermarketnumbers300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/supermarketnumbers300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2156,7 +2156,7 @@
     "game": "BeeEnglish",
     "title": "Bee English",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/beeenglish300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/beeenglish300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2164,7 +2164,7 @@
     "game": "AirportManagement2",
     "title": "Airport Management 2",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/airportmanagement2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/airportmanagement2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2172,7 +2172,7 @@
     "game": "SheepandWolves",
     "title": "Sheep and Wolves",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sheepandwolves300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sheepandwolves300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2180,7 +2180,7 @@
     "game": "BlockTown",
     "title": "Block Town",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetristown300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetristown300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2188,7 +2188,7 @@
     "game": "JigsawCities2",
     "title": "Jigsaw Cities 2",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/jigsawcities2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/jigsawcities2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2196,7 +2196,7 @@
     "game": "TicTacToe",
     "title": "Tic Tac Toe",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tictactoe300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tictactoe300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2204,7 +2204,7 @@
     "game": "BlitzWizards",
     "title": "Blitz Wizards",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blitzwizards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blitzwizards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2212,7 +2212,7 @@
     "game": "10to20",
     "title": "10 to 20",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/10to20300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/10to20300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2220,7 +2220,7 @@
     "game": "DailyBridges",
     "title": "Daily Bridges",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailybridges300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailybridges300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2228,7 +2228,7 @@
     "game": "Illuminate1",
     "title": "Illuminate 1",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/illuminate1300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/illuminate1300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2236,7 +2236,7 @@
     "game": "DailySokoban",
     "title": "Daily Sokoban",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailysokoban300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailysokoban300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2244,7 +2244,7 @@
     "game": "AdditUp3",
     "title": "Add it Up 3",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/additup3300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/additup3300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2252,7 +2252,7 @@
     "game": "Crosswords",
     "title": "Crosswords",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crosswords300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crosswords300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2260,7 +2260,7 @@
     "game": "StolenArt",
     "title": "Stolen Art",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/stolenart300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/stolenart300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2268,7 +2268,7 @@
     "game": "Connect10",
     "title": "Connect 10",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/connect10300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/connect10300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2276,7 +2276,7 @@
     "game": "CarParking",
     "title": "Car Parking",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/carparking-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/carparking-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2284,7 +2284,7 @@
     "game": "DailyWordoku",
     "title": "Daily Wordoku",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyworduky300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyworduky300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2292,7 +2292,7 @@
     "game": "AddItUp",
     "title": "Add It Up",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/additup-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/additup-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2300,7 +2300,7 @@
     "game": "PairZoobies",
     "title": "Pair Zoobies",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pairzoobies200120.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pairzoobies200120.webp",
     "provider": "htmlgames"
   },
   {
@@ -2308,7 +2308,7 @@
     "game": "BlockMonsters1010",
     "title": "Block Monsters 1010",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blockmonsters1010300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blockmonsters1010300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2316,7 +2316,7 @@
     "game": "MinesweeperClassic",
     "title": "Minesweeper Classic",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/minesweeperclassic300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/minesweeperclassic300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2324,7 +2324,7 @@
     "game": "YinandYang",
     "title": "Yin and Yang",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/yinandyang300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/yinandyang300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2332,7 +2332,7 @@
     "game": "AddItUp2",
     "title": "Add It Up 2",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/additup2-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/additup2-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2340,7 +2340,7 @@
     "game": "DailyCrossword",
     "title": "Daily Crossword",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-crossword-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-crossword-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2348,7 +2348,7 @@
     "game": "DailyHeggies",
     "title": "Daily Heggies",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyheggies300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyheggies300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2356,7 +2356,7 @@
     "game": "DailyLetterLogic",
     "title": "Daily Letter Logic",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dailyletterlogic300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dailyletterlogic300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2364,7 +2364,7 @@
     "game": "JigsawCities1",
     "title": "Jigsaw Cities 1",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/jigsawcities1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/jigsawcities1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2372,7 +2372,7 @@
     "game": "2048UFO",
     "title": "2048 UFO",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/2048ufo300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/2048ufo300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2380,7 +2380,7 @@
     "game": "SimonSays",
     "title": "Simon Says",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/simonsays300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/simonsays300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2388,7 +2388,7 @@
     "game": "FarmTown",
     "title": "Farm Town",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/farmtown300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/farmtown300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2396,7 +2396,7 @@
     "game": "HolidayMatch",
     "title": "Holiday Match",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/holidaymatch300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/holidaymatch300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2404,7 +2404,7 @@
     "game": "NumberFill",
     "title": "Number Fill",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/numberfill300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/numberfill300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2412,7 +2412,7 @@
     "game": "TangramBird",
     "title": "Tangram Bird",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tangrambird300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tangrambird300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2420,7 +2420,7 @@
     "game": "EmojiPairs",
     "title": "Emoji Pairs",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/emojipairs300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/emojipairs300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2428,7 +2428,7 @@
     "game": "LuckyClover",
     "title": "Lucky Clover",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/luckyclover300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/luckyclover300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2436,7 +2436,7 @@
     "game": "NeonFence",
     "title": "Neon Fence",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonfence-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonfence-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2444,7 +2444,7 @@
     "game": "LetterTrain",
     "title": "Letter Train",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/lettertrain300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/lettertrain300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2452,7 +2452,7 @@
     "game": "Nonogram",
     "title": "Nonogram",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/nonogram300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/nonogram300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2460,7 +2460,7 @@
     "game": "3DSort",
     "title": "3D Sort",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/3d-sort-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/3d-sort-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2468,7 +2468,7 @@
     "game": "PalabradeC%C3%B3digoDelDia",
     "title": "Palabra de C%C3%B3digo Del Dia",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/palabra-codigo-dia-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/palabra-codigo-dia-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2476,7 +2476,7 @@
     "game": "DailyAnagramCrossword",
     "title": "Daily Anagram Crossword",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-anagram-crossword-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-anagram-crossword-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2484,7 +2484,7 @@
     "game": "MedievalMerge",
     "title": "Medieval Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/medievalmerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/medievalmerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2492,7 +2492,7 @@
     "game": "PushPuzzle",
     "title": "Push Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pushpuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pushpuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2500,7 +2500,7 @@
     "game": "ChristmasMerge",
     "title": "Christmas Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/christmasmerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/christmasmerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2508,7 +2508,7 @@
     "game": "HexStream",
     "title": "Hex Stream",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hexstream300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hexstream300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2516,7 +2516,7 @@
     "game": "TapItAway3D",
     "title": "Tap It Away 3D",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tapitaway3d300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tapitaway3d300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2524,7 +2524,7 @@
     "game": "DagelijksCodewoord",
     "title": "Dagelijks Codewoord",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dagelijkscodewoord-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dagelijkscodewoord-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2532,7 +2532,7 @@
     "game": "DagelijkseAnagramKruiswoord",
     "title": "Dagelijkse Anagram Kruiswoord",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dagelijkse-anagram-kruiswoord-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dagelijkse-anagram-kruiswoord-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2540,7 +2540,7 @@
     "game": "EasterMerge",
     "title": "Easter Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/eastermerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/eastermerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2548,7 +2548,7 @@
     "game": "HarbourEscape",
     "title": "Harbour Escape",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/harbourescape300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/harbourescape300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2556,7 +2556,7 @@
     "game": "CarMatch",
     "title": "Car Match",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/carmatch300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/carmatch300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2564,7 +2564,7 @@
     "game": "CrucigramadeAnagramasDiario",
     "title": "Crucigrama de Anagramas Diario",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crucigrama-de-anagrames-diario-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crucigrama-de-anagrames-diario-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2572,7 +2572,7 @@
     "game": "TheBrainTrain",
     "title": "The Brain Train",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thebraintrain300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thebraintrain300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2580,7 +2580,7 @@
     "game": "WaterSort",
     "title": "Water Sort",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/watersort300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/watersort300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2588,7 +2588,7 @@
     "game": "T%C3%A4glichesAnagrammKreuzwortr%C3%A4tsel",
     "title": "T%C3%A4gliches Anagramm Kreuzwortr%C3%A4tsel",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tagliches-anagramm-kreuzwort-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tagliches-anagramm-kreuzwort-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2596,7 +2596,7 @@
     "game": "TheWatermelonGame",
     "title": "The Watermelon Game",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thewatermelongame300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thewatermelongame300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2604,7 +2604,7 @@
     "game": "SquirrelConnection",
     "title": "Squirrel Connection",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/squirrelconnection300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/squirrelconnection300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2612,7 +2612,7 @@
     "game": "SortBubbles",
     "title": "Sort Bubbles",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sortbubbles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sortbubbles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2620,7 +2620,7 @@
     "game": "CircusPairs",
     "title": "Circus Pairs",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/circuspairs300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/circuspairs300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2628,7 +2628,7 @@
     "game": "WeaveLines",
     "title": "Weave Lines",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/weavelines300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/weavelines300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2636,7 +2636,7 @@
     "game": "RotatePuzzle-SummerBeach",
     "title": "Rotate Puzzle - Summer Beach",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rotatepuzzle-summerbeach300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rotatepuzzle-summerbeach300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2644,7 +2644,7 @@
     "game": "FlowerMerge",
     "title": "Flower Merge",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowermerge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowermerge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2652,7 +2652,7 @@
     "game": "TetrisPuzzle",
     "title": "Tetris Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrispuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrispuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2660,7 +2660,7 @@
     "game": "RemembertheBubbles",
     "title": "Remember the Bubbles",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rememberbubbles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rememberbubbles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2668,7 +2668,7 @@
     "game": "PuzzleDrop-Egypt",
     "title": "Puzzle Drop - Egypt",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/puzzledropegypt300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/puzzledropegypt300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2676,7 +2676,7 @@
     "game": "TapitAway2D",
     "title": "Tap it Away 2D",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tapitaway2d300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tapitaway2d300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2684,7 +2684,7 @@
     "game": "SlidePuzzle",
     "title": "Slide Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/slidepuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/slidepuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2692,7 +2692,7 @@
     "game": "AquaticSlice",
     "title": "Aquatic Slice",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/aquaticslice300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/aquaticslice300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2700,7 +2700,7 @@
     "game": "BlockDrop",
     "title": "Block Drop",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blockdrop300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blockdrop300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2708,7 +2708,7 @@
     "game": "PegSolitaire",
     "title": "Peg Solitaire",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pegsolitaire300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pegsolitaire300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2716,7 +2716,7 @@
     "game": "PicturePie-HarbourCity",
     "title": "Picture Pie - Harbour City",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/picturepieharbourcity300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/picturepieharbourcity300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2724,7 +2724,7 @@
     "game": "LinkNumbers",
     "title": "Link Numbers",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/linknumbers300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/linknumbers300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2732,7 +2732,7 @@
     "game": "EasterHexPuzzle",
     "title": "Easter Hex Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/easterhexpuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/easterhexpuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2740,7 +2740,7 @@
     "game": "NeonHex",
     "title": "Neon Hex",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonhex300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonhex300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2748,7 +2748,7 @@
     "game": "TreasureMaze",
     "title": "Treasure Maze",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/treasuremaze300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/treasuremaze300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2756,7 +2756,7 @@
     "game": "Gameof15",
     "title": "Game of 15",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gameof15300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gameof15300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2764,7 +2764,7 @@
     "game": "DailyHitori",
     "title": "Daily Hitori",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-hitori-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-hitori-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2772,7 +2772,7 @@
     "game": "PictureNonogram",
     "title": "Picture Nonogram",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/picturenonogram300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/picturenonogram300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2780,7 +2780,7 @@
     "game": "Binairo",
     "title": "Binairo",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/binairo-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/binairo-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2788,7 +2788,7 @@
     "game": "DailyPhotoGuess",
     "title": "Daily Photo Guess",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/daily-photo-guess-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/daily-photo-guess-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2796,7 +2796,7 @@
     "game": "CountryLabyrinth3",
     "title": "Country Labyrinth 3",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth3300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/countrylabyrinth3300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2804,7 +2804,7 @@
     "game": "MemoryPuzzle",
     "title": "Memory Puzzle",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/memorypuzzle300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/memorypuzzle300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2812,7 +2812,7 @@
     "game": "PictureWords",
     "title": "Picture Words",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/picturewords300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/picturewords300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2820,7 +2820,7 @@
     "game": "KakuroMaster",
     "title": "Kakuro Master",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/kakuromaster300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/kakuromaster300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2828,7 +2828,7 @@
     "game": "ImagenPalabra",
     "title": "Imagen Palabra",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/imagen-palabra-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/imagen-palabra-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2836,7 +2836,7 @@
     "game": "BilderW%C3%B6rter",
     "title": "Bilder W%C3%B6rter",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bilder-woerter-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bilder-woerter-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2844,7 +2844,7 @@
     "game": "PlaatjesWoorden",
     "title": "Plaatjes Woorden",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/plaatjes-woorden-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/plaatjes-woorden-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2852,7 +2852,7 @@
     "game": "DailyTreesandTents",
     "title": "Daily Trees and Tents",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/treesandtents300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/treesandtents300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2860,7 +2860,7 @@
     "game": "ZooAnimals",
     "title": "Zoo Animals",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/zooanimals300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/zooanimals300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2868,7 +2868,7 @@
     "game": "AirportManagement1",
     "title": "Airport Management 1",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/airportmanagement1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/airportmanagement1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2876,7 +2876,7 @@
     "game": "Vexed",
     "title": "Vexed",
     "category": "Mind games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/vexed300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/vexed300.webp",
     "provider": "htmlgames"
   },
   {
@@ -2884,7 +2884,7 @@
     "game": "DelhiHiddenObjects",
     "title": "Delhi Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/delhihiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/delhihiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2892,7 +2892,7 @@
     "game": "GuardianLighthouse-HiddenSecrets",
     "title": "Guardian Lighthouse - Hidden Secrets",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/guardianlighthousehiddensecrets300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/guardianlighthousehiddensecrets300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2900,7 +2900,7 @@
     "game": "HuntingJack-AttheTrainStation",
     "title": "Hunting Jack - At the Train Station",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackatthetrainstation300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackatthetrainstation300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2908,7 +2908,7 @@
     "game": "PragueHiddenObjects",
     "title": "Prague Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/praquehiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/praquehiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2916,7 +2916,7 @@
     "game": "HiddenSpots-Jewelry",
     "title": "Hidden Spots - Jewelry",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-jewelry300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-jewelry300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2924,7 +2924,7 @@
     "game": "SydneyHiddenObjects",
     "title": "Sydney Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sydneyhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sydneyhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2932,7 +2932,7 @@
     "game": "TokyoHiddenObjects",
     "title": "Tokyo Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tokyohiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tokyohiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2940,7 +2940,7 @@
     "game": "ChenonceauHiddenObjects",
     "title": "Chenonceau Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chenonceauhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chenonceauhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2948,7 +2948,7 @@
     "game": "ThePalaceHotel",
     "title": "The Palace Hotel",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thepalacehotel300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thepalacehotel300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2956,7 +2956,7 @@
     "game": "RailwayMysteries",
     "title": "Railway Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/railwaymysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/railwaymysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2964,7 +2964,7 @@
     "game": "PlaygroundDifferences",
     "title": "Playground Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/playgrounddifferences300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/playgrounddifferences300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2972,7 +2972,7 @@
     "game": "BerlinHiddenObjects",
     "title": "Berlin Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/berlinhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/berlinhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2980,7 +2980,7 @@
     "game": "EscapeRoom-HotelEscape",
     "title": "Escape Room - Hotel Escape",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/escaperoom-hotelescape300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/escaperoom-hotelescape300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2988,7 +2988,7 @@
     "game": "GardenSecretsHiddenObjects",
     "title": "Garden Secrets Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjects-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjects-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -2996,7 +2996,7 @@
     "game": "ChristmasMysteries",
     "title": "Christmas Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/christmasmysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/christmasmysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3004,7 +3004,7 @@
     "game": "AmsterdamHiddenObjects",
     "title": "Amsterdam Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/amsterdamhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/amsterdamhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3012,7 +3012,7 @@
     "game": "ZooMysteries",
     "title": "Zoo Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/zoomysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/zoomysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3020,7 +3020,7 @@
     "game": "HiddenSpots-Birds",
     "title": "Hidden Spots - Birds",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-birds300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-birds300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3028,7 +3028,7 @@
     "game": "MysteryHouse",
     "title": "Mystery House",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mysteryhouse300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mysteryhouse300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3036,7 +3036,7 @@
     "game": "TheLostCrown",
     "title": "The Lost Crown",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/thelostcrown300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/thelostcrown300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3044,7 +3044,7 @@
     "game": "DubaiHiddenObjects",
     "title": "Dubai Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dubaihiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dubaihiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3052,7 +3052,7 @@
     "game": "Illustrations3",
     "title": "Illustrations 3",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/illustrations3300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/illustrations3300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3060,7 +3060,7 @@
     "game": "LoveHiddenHearts",
     "title": "Love Hidden Hearts",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/lovehiddenhearts300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/lovehiddenhearts300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3068,7 +3068,7 @@
     "game": "FlowerGarden2",
     "title": "Flower Garden 2",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowergarden2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowergarden2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3076,7 +3076,7 @@
     "game": "CircusHiddenNumbers",
     "title": "Circus Hidden Numbers",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/circushiddennumbers300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/circushiddennumbers300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3084,7 +3084,7 @@
     "game": "AdayintheMuseum",
     "title": "A day in the Museum",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/adayinthemuseum-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/adayinthemuseum-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3092,7 +3092,7 @@
     "game": "HiddenSpots-Indonesia",
     "title": "Hidden Spots - Indonesia",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotsindonesia300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotsindonesia300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3100,7 +3100,7 @@
     "game": "CastleMysteries",
     "title": "Castle Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/castlemysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/castlemysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3108,7 +3108,7 @@
     "game": "FunfairMysteries",
     "title": "Funfair Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/funfairmysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/funfairmysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3116,7 +3116,7 @@
     "game": "EscapeRoom-HomeEscape",
     "title": "Escape Room - Home Escape",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/escaperoom-homeescape300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/escaperoom-homeescape300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3124,7 +3124,7 @@
     "game": "HiddenKitchen",
     "title": "Hidden Kitchen",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenkitchen300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenkitchen300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3132,7 +3132,7 @@
     "game": "HiddenLibrary",
     "title": "Hidden Library",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenlibrary300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenlibrary300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3140,7 +3140,7 @@
     "game": "FamousPaintings1",
     "title": "Famous Paintings 1",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3148,7 +3148,7 @@
     "game": "DiscoverPetra",
     "title": "Discover Petra",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/discoverpetra300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/discoverpetra300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3156,7 +3156,7 @@
     "game": "NewYorkHiddenObjects",
     "title": "New York Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/newyorkhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/newyorkhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3164,7 +3164,7 @@
     "game": "HiddenSpots-Castles",
     "title": "Hidden Spots - Castles",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotscastles300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotscastles300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3172,7 +3172,7 @@
     "game": "HiddenFood",
     "title": "Hidden Food",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenfood300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenfood300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3180,7 +3180,7 @@
     "game": "RomeHiddenObjects",
     "title": "Rome Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/romehiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/romehiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3188,7 +3188,7 @@
     "game": "JungleMysteries",
     "title": "Jungle Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/junglemysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/junglemysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3196,7 +3196,7 @@
     "game": "FamousPaintings3",
     "title": "Famous Paintings 3",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings3300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings3300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3204,7 +3204,7 @@
     "game": "WorldCruise",
     "title": "World Cruise",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/worldcruise300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/worldcruise300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3212,7 +3212,7 @@
     "game": "ParisHiddenObjects",
     "title": "Paris Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/parishiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/parishiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3220,7 +3220,7 @@
     "game": "EuropeanCities",
     "title": "European Cities",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/europeancities300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/europeancities300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3228,7 +3228,7 @@
     "game": "FlowerGarden",
     "title": "Flower Garden",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/flowergarden300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/flowergarden300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3236,7 +3236,7 @@
     "game": "NumbersintheCity",
     "title": "Numbers in the City",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/numbersinthecity300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/numbersinthecity300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3244,7 +3244,7 @@
     "game": "GardenSecretsHiddenNumbers",
     "title": "Garden Secrets Hidden Numbers",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddennumbers300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddennumbers300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3252,7 +3252,7 @@
     "game": "CircusHiddenLetters",
     "title": "Circus Hidden Letters",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/circushiddenletters300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/circushiddenletters300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3260,7 +3260,7 @@
     "game": "MedievalCastleHiddenNumbers",
     "title": "Medieval Castle Hidden Numbers",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddennumbers300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddennumbers300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3268,7 +3268,7 @@
     "game": "PiratesandTreasures",
     "title": "Pirates and Treasures",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/piratesandtreasures300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/piratesandtreasures300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3276,7 +3276,7 @@
     "game": "OfficeHiddenObjects",
     "title": "Office Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/officehiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/officehiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3284,7 +3284,7 @@
     "game": "GardenSecretsHiddenObjectsbyText",
     "title": "Garden Secrets Hidden Objects by Text",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjectstext300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjectstext300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3292,7 +3292,7 @@
     "game": "BeijingHiddenObjects",
     "title": "Beijing Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/beijinghiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/beijinghiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3300,7 +3300,7 @@
     "game": "PirateMysteries",
     "title": "Pirate Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/piratemysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/piratemysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3308,7 +3308,7 @@
     "game": "LondonHiddenObjects",
     "title": "London Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/londonhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/londonhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3316,7 +3316,7 @@
     "game": "StreetHiddenObjects",
     "title": "Street Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/streethiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/streethiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3324,7 +3324,7 @@
     "game": "HuntingJack-AtHome",
     "title": "Hunting Jack - At Home",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackathome300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackathome300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3332,7 +3332,7 @@
     "game": "WildWestMysteries",
     "title": "Wild West Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/wildwestmysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/wildwestmysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3340,7 +3340,7 @@
     "game": "DesertOasis-HiddenSecrets",
     "title": "Desert Oasis - Hidden Secrets",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/desertoasis-hiddensecrets300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/desertoasis-hiddensecrets300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3348,7 +3348,7 @@
     "game": "Winter-HiddenStars",
     "title": "Winter - Hidden Stars",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/winterhiddenstars300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/winterhiddenstars300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3356,7 +3356,7 @@
     "game": "IstanbulHiddenObjects",
     "title": "Istanbul Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/istanbulhiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/istanbulhiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3364,7 +3364,7 @@
     "game": "Cavern-HiddenStars",
     "title": "Cavern - Hidden Stars",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/cavernhiddenstars300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/cavernhiddenstars300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3372,7 +3372,7 @@
     "game": "MedievalCastleHiddenDifferences",
     "title": "Medieval Castle Hidden Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddendifferences300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddendifferences300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3380,7 +3380,7 @@
     "game": "World%27sGreatestCities",
     "title": "World%27s Greatest Cities",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/worldsgreatestcities300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/worldsgreatestcities300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3388,7 +3388,7 @@
     "game": "GardenSecretsHiddenLetters",
     "title": "Garden Secrets Hidden Letters",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenletters300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenletters300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3396,7 +3396,7 @@
     "game": "FamousPaintings2",
     "title": "Famous Paintings 2",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/famouspaintings2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3404,7 +3404,7 @@
     "game": "HuntingJack-InTheCity",
     "title": "Hunting Jack - In The City",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackinthecity300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/huntingjackinthecity300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3412,7 +3412,7 @@
     "game": "ChinaTemple",
     "title": "China Temple",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chinatemple300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chinatemple300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3420,7 +3420,7 @@
     "game": "HiddenPrincess",
     "title": "Hidden Princess",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenprincess300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenprincess300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3428,7 +3428,7 @@
     "game": "WarehouseHiddenDifferences",
     "title": "Warehouse Hidden Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/warehousehiddenobjects-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/warehousehiddenobjects-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3436,7 +3436,7 @@
     "game": "HiddenForest",
     "title": "Hidden Forest",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenforest300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenforest300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3444,7 +3444,7 @@
     "game": "JapaneseGarden-HiddenSecrets",
     "title": "Japanese Garden - Hidden Secrets",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/japanesegarden-hiddensecrets300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/japanesegarden-hiddensecrets300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3452,7 +3452,7 @@
     "game": "DiscoverChina",
     "title": "Discover China",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/discoverchina-300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/discoverchina-300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3460,7 +3460,7 @@
     "game": "GardenSecretsHiddenObjectsMemory",
     "title": "Garden Secrets Hidden Objects Memory",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3468,7 +3468,7 @@
     "game": "FindtheOddOneOut",
     "title": "Find the Odd One Out",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/findtheoddout300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/findtheoddout300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3476,7 +3476,7 @@
     "game": "Fantasy-HiddenStars",
     "title": "Fantasy - Hidden Stars",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/fantasyhiddenstars300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/fantasyhiddenstars300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3484,7 +3484,7 @@
     "game": "MedievalCastleHiddenLetters",
     "title": "Medieval Castle Hidden Letters",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddenletters300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddenletters300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3492,7 +3492,7 @@
     "game": "HiddenSpots-Christmas",
     "title": "Hidden Spots - Christmas",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotschristmas300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspotschristmas300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3500,7 +3500,7 @@
     "game": "CircusHiddenObjects",
     "title": "Circus Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/circushiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/circushiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3508,7 +3508,7 @@
     "game": "Illustrations2",
     "title": "Illustrations 2",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/illustrations2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/illustrations2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3516,7 +3516,7 @@
     "game": "RestaurantHiddenDifferences",
     "title": "Restaurant Hidden Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/restauranthiddendifferences300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/restauranthiddendifferences300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3524,7 +3524,7 @@
     "game": "HiddenClassroom",
     "title": "Hidden Classroom",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenclassroom300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenclassroom300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3532,7 +3532,7 @@
     "game": "HiddenIcons",
     "title": "Hidden Icons",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenicon300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenicon300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3540,7 +3540,7 @@
     "game": "HiddenToys",
     "title": "Hidden Toys",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddentoys300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddentoys300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3548,7 +3548,7 @@
     "game": "HauntedHouseHiddenObjects",
     "title": "Haunted House Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hauntedhousehiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hauntedhousehiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3556,7 +3556,7 @@
     "game": "FarmMysteries",
     "title": "Farm Mysteries",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/farmmysteries300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/farmmysteries300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3564,7 +3564,7 @@
     "game": "MedievalCastleHiddenPieces",
     "title": "Medieval Castle Hidden Pieces",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddenpieces300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/medievalcastlehiddenpieces300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3572,7 +3572,7 @@
     "game": "SpottheUFO",
     "title": "Spot the UFO",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spottheufo300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spottheufo300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3580,7 +3580,7 @@
     "game": "EnchantedGarden",
     "title": "Enchanted Garden",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/enchantedgarden300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/enchantedgarden300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3588,7 +3588,7 @@
     "game": "BarcelonaHiddenObjects",
     "title": "Barcelona Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/barcelonahiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/barcelonahiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3596,7 +3596,7 @@
     "game": "HiddenSpots-City",
     "title": "Hidden Spots - City",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-city300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-city300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3604,7 +3604,7 @@
     "game": "HiddenSpots-Trains",
     "title": "Hidden Spots - Trains",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-train300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hiddenspots-train300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3612,7 +3612,7 @@
     "game": "GardenSecretsHiddenObjectsbyOutline",
     "title": "Garden Secrets Hidden Objects by Outline",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenoutlines300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenoutlines300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3620,7 +3620,7 @@
     "game": "Illustrations1",
     "title": "Illustrations 1",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/illustrations1300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/illustrations1300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3628,7 +3628,7 @@
     "game": "AnimalDifferences",
     "title": "Animal Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animaldifferences300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animaldifferences300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3636,7 +3636,7 @@
     "game": "CircusAdventures",
     "title": "Circus Adventures",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/circusadventures300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/circusadventures300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3644,7 +3644,7 @@
     "game": "Ruins-HiddenStars",
     "title": "Ruins - Hidden Stars",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ruins-hidden-stars-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ruins-hidden-stars-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3652,7 +3652,7 @@
     "game": "Waterfall-HiddenStars",
     "title": "Waterfall - Hidden Stars",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/waterfallhiddenstars300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/waterfallhiddenstars300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3660,7 +3660,7 @@
     "game": "CruiseShipHiddenObjects",
     "title": "Cruise Ship Hidden Objects",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/cruiseshiphiddenobjects300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/cruiseshiphiddenobjects300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3668,7 +3668,7 @@
     "game": "GardenSecretsFindtheDifferences",
     "title": "Garden Secrets Find the Differences",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretsfindthedifferences300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretsfindthedifferences300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3676,7 +3676,7 @@
     "game": "GardenSecretsHiddenChallenge",
     "title": "Garden Secrets Hidden Challenge",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenchallenge300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gardensecretshiddenchallenge300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3684,7 +3684,7 @@
     "game": "LunarLander",
     "title": "Lunar Lander",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/lunarlander300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/lunarlander300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3692,7 +3692,7 @@
     "game": "NeonNibblet",
     "title": "Neon Nibblet",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonnibblet300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonnibblet300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3700,7 +3700,7 @@
     "game": "UpsideDown",
     "title": "Upside Down",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/upsidedown300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/upsidedown300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3708,7 +3708,7 @@
     "game": "NeonBreaker",
     "title": "Neon Breaker",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonbreaker300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonbreaker300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3716,7 +3716,7 @@
     "game": "PacMaze",
     "title": "Pac Maze",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pacmaze300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pacmaze300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3724,7 +3724,7 @@
     "game": "CookieMonster",
     "title": "Cookie Monster",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/cookiemonster300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/cookiemonster300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3732,7 +3732,7 @@
     "game": "GreedyWorm",
     "title": "Greedy Worm",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/greedyworm300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/greedyworm300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3740,7 +3740,7 @@
     "game": "TetrisSlide",
     "title": "Tetris Slide",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrisslide300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrisslide300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3748,7 +3748,7 @@
     "game": "DrawDomino",
     "title": "Draw Domino",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/drawdomino300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/drawdomino300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3756,7 +3756,7 @@
     "game": "AllThreesDomino",
     "title": "All Threes Domino",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/allthreesdomino300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/allthreesdomino300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3764,7 +3764,7 @@
     "game": "Rotris",
     "title": "Rotris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/rotris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/rotris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3772,7 +3772,7 @@
     "game": "OuterSpaceArkanoid",
     "title": "Outer Space Arkanoid",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/outerspacearkanoic300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/outerspacearkanoic300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3780,7 +3780,7 @@
     "game": "GoldMiner",
     "title": "Gold Miner",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/goldminer300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/goldminer300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3788,7 +3788,7 @@
     "game": "SpaceshipLanding",
     "title": "Spaceship Landing",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spaceshiplanding300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spaceshiplanding300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3796,7 +3796,7 @@
     "game": "RobotCrossRoad",
     "title": "Robot Cross Road",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/robotcrossroad300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/robotcrossroad300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3804,7 +3804,7 @@
     "game": "MineSweeper2Player",
     "title": "MineSweeper 2 Player",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/minesweeper300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/minesweeper300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3812,7 +3812,7 @@
     "game": "FrogJumper",
     "title": "Frog Jumper",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/frogjumper300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/frogjumper300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3820,7 +3820,7 @@
     "game": "DiscPool2Player",
     "title": "Disc Pool 2 Player",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/discpool2player300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/discpool2player300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3828,7 +3828,7 @@
     "game": "ExtremeVexed",
     "title": "Extreme Vexed",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/extremevexed300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/extremevexed300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3836,7 +3836,7 @@
     "game": "AlienInvaders2",
     "title": "Alien Invaders 2",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alieninvaders2300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alieninvaders2300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3844,7 +3844,7 @@
     "game": "TetrisFun",
     "title": "Tetris Fun",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrisfun300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrisfun300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3852,7 +3852,7 @@
     "game": "AlienInvaders",
     "title": "Alien Invaders",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/alieninvaders300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/alieninvaders300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3860,7 +3860,7 @@
     "game": "EndlessBreakOut",
     "title": "Endless Break Out",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/endlessbreakout300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/endlessbreakout300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3868,7 +3868,7 @@
     "game": "ColoringMandalas",
     "title": "Coloring Mandalas",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/coloring-mandalas-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/coloring-mandalas-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3876,7 +3876,7 @@
     "game": "Battleships",
     "title": "Battleships",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/battleships300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/battleships300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3884,7 +3884,7 @@
     "game": "MsTapman",
     "title": "Ms Tapman",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/mstapman300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/mstapman300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3892,7 +3892,7 @@
     "game": "BubbleTrouble",
     "title": "Bubble Trouble",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bubbletrouble300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bubbletrouble300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3900,7 +3900,7 @@
     "game": "Xiangqi",
     "title": "Xiangqi",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/xiangqi300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/xiangqi300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3908,7 +3908,7 @@
     "game": "TetrisSlider",
     "title": "Tetris Slider",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrisslider300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrisslider300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3916,7 +3916,7 @@
     "game": "PinballBreakout",
     "title": "Pinball Breakout",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pinballbreakout300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pinballbreakout300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3924,7 +3924,7 @@
     "game": "AnimalTetris",
     "title": "Animal Tetris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/animaltetris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/animaltetris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3932,7 +3932,7 @@
     "game": "DropTris",
     "title": "DropTris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/droptris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/droptris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3940,7 +3940,7 @@
     "game": "SoccerPinball",
     "title": "Soccer Pinball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/soccerpinball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/soccerpinball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3948,7 +3948,7 @@
     "game": "SlideWood",
     "title": "Slide Wood",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/slidewood300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/slidewood300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3956,7 +3956,7 @@
     "game": "ShapeGrid",
     "title": "Shape Grid",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/shapegrid300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/shapegrid300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3964,7 +3964,7 @@
     "game": "Tetrix3D",
     "title": "Tetrix 3D",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrix-3d-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrix-3d-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3972,7 +3972,7 @@
     "game": "BlockDomino",
     "title": "Block Domino",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/blockdomino300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/blockdomino300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3980,7 +3980,7 @@
     "game": "Pentris",
     "title": "Pentris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pentris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pentris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -3988,7 +3988,7 @@
     "game": "Gomoku",
     "title": "Gomoku",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/gomoku300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/gomoku300.webp",
     "provider": "htmlgames"
   },
   {
@@ -3996,7 +3996,7 @@
     "game": "SnowMan",
     "title": "SnowMan",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/snowman300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/snowman300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4004,7 +4004,7 @@
     "game": "VintageVexed",
     "title": "Vintage Vexed",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/vintagevexed300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/vintagevexed300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4012,7 +4012,7 @@
     "game": "Reversi",
     "title": "Reversi",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/reversi300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/reversi300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4020,7 +4020,7 @@
     "game": "BreakTris",
     "title": "Break Tris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bricktetris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bricktetris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4028,7 +4028,7 @@
     "game": "RetroBricks",
     "title": "Retro Bricks",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/retrobricks300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/retrobricks300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4036,7 +4036,7 @@
     "game": "ClassicPac",
     "title": "Classic Pac",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicpac300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicpac300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4044,7 +4044,7 @@
     "game": "ClassicDomino",
     "title": "Classic Domino",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicdomino300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicdomino300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4052,7 +4052,7 @@
     "game": "DotsandBoxes",
     "title": "Dots and Boxes",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/dotsandboxes300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/dotsandboxes300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4060,7 +4060,7 @@
     "game": "Crackthecode",
     "title": "Crack the code",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/crackthecode300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/crackthecode300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4068,7 +4068,7 @@
     "game": "ClassicFrog",
     "title": "Classic Frog",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicfrog300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicfrog300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4076,7 +4076,7 @@
     "game": "TetrisDimensions",
     "title": "Tetris Dimensions",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrisdimensions300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrisdimensions300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4084,7 +4084,7 @@
     "game": "TrickBall",
     "title": "Trick Ball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/trickball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/trickball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4092,7 +4092,7 @@
     "game": "Bingo",
     "title": "Bingo",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bingo300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bingo300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4100,7 +4100,7 @@
     "game": "NeonBilliards",
     "title": "Neon Billiards",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonbilliards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonbilliards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4108,7 +4108,7 @@
     "game": "TetroClassic",
     "title": "Tetro Classic",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetroclassic300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetroclassic300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4116,7 +4116,7 @@
     "game": "Sokoban",
     "title": "Sokoban",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/sokoban300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/sokoban300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4124,7 +4124,7 @@
     "game": "ConnectFour",
     "title": "Connect Four",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/connect4300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/connect4300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4132,7 +4132,7 @@
     "game": "TowerTown",
     "title": "Tower Town",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/towertown300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/towertown300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4140,7 +4140,7 @@
     "game": "ColoringforKids",
     "title": "Coloring for Kids",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/coloringforkids300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/coloringforkids300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4148,7 +4148,7 @@
     "game": "2048Billiards",
     "title": "2048 Billiards",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/2048billiards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/2048billiards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4156,7 +4156,7 @@
     "game": "NinjaBreakout",
     "title": "Ninja Breakout",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ninjabreakout300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ninjabreakout300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4164,7 +4164,7 @@
     "game": "ExtremeBilliards",
     "title": "Extreme Billiards",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/extremebiliards300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/extremebiliards300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4172,7 +4172,7 @@
     "game": "Minesweeper",
     "title": "Minesweeper",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/minesweeper300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/minesweeper300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4180,7 +4180,7 @@
     "game": "TetrixXL",
     "title": "Tetrix XL",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrixxl300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrixxl300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4188,7 +4188,7 @@
     "game": "5Dice",
     "title": "5Dice",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/5dice300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/5dice300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4196,7 +4196,7 @@
     "game": "SnowBalls",
     "title": "Snow Balls",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/snowballs300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/snowballs300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4204,7 +4204,7 @@
     "game": "Tapman",
     "title": "Tapman",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tapman300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tapman300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4212,7 +4212,7 @@
     "game": "ClassicSnake",
     "title": "Classic Snake",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/classicsnake300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/classicsnake300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4220,7 +4220,7 @@
     "game": "BrickBuilding",
     "title": "Brick Building",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/brickbuilding300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/brickbuilding300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4228,7 +4228,7 @@
     "game": "Go",
     "title": "Go",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/go300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/go300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4236,7 +4236,7 @@
     "game": "DigDig",
     "title": "Dig Dig",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/digdig300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/digdig300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4244,7 +4244,7 @@
     "game": "Tetrix",
     "title": "Tetrix",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/tetrix300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/tetrix300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4252,7 +4252,7 @@
     "game": "PoolBilliard",
     "title": "Pool Billiard",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/poolbilliard300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/poolbilliard300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4260,7 +4260,7 @@
     "game": "Pinball",
     "title": "Pinball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pinball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pinball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4268,7 +4268,7 @@
     "game": "Space",
     "title": "Space",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/space300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/space300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4276,7 +4276,7 @@
     "game": "CarromPool",
     "title": "Carrom Pool",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/carrompool300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/carrompool300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4284,7 +4284,7 @@
     "game": "BubbleBall",
     "title": "Bubble Ball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/bubbleball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/bubbleball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4292,7 +4292,7 @@
     "game": "AllFivesDomino",
     "title": "All Fives Domino",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/allfivesdomino300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/allfivesdomino300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4300,7 +4300,7 @@
     "game": "NeonArkanoid",
     "title": "Neon Arkanoid",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonarkanoid300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonarkanoid300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4308,7 +4308,7 @@
     "game": "Chess",
     "title": "Chess",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/chess-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/chess-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4316,7 +4316,7 @@
     "game": "NineMen%27sMorris",
     "title": "Nine Men%27s Morris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ninemenmorris-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ninemenmorris-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4324,7 +4324,7 @@
     "game": "NeonBall",
     "title": "Neon Ball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4332,7 +4332,7 @@
     "game": "SpacePinball",
     "title": "Space Pinball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/space-pinball-300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/space-pinball-300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4340,7 +4340,7 @@
     "game": "Halma",
     "title": "Halma",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/halma300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/halma300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4348,7 +4348,7 @@
     "game": "NeonPinball",
     "title": "Neon Pinball",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neonpinball300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neonpinball300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4356,7 +4356,7 @@
     "game": "SnakeDash",
     "title": "Snake Dash",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/snakedash300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/snakedash300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4364,7 +4364,7 @@
     "game": "Checkers",
     "title": "Checkers",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/checkers300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/checkers300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4372,7 +4372,7 @@
     "game": "Pente",
     "title": "Pente",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/pente300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/pente300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4380,7 +4380,7 @@
     "game": "NeonTris",
     "title": "NeonTris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/neontris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/neontris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4388,7 +4388,7 @@
     "game": "DiscPool1Player",
     "title": "Disc Pool 1 Player",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/discpool1player300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/discpool1player300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4396,7 +4396,7 @@
     "game": "TrumpSweeper",
     "title": "Trump Sweeper",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/trumpsweeper300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/trumpsweeper300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4404,7 +4404,7 @@
     "game": "Backgammon",
     "title": "Backgammon",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/backgammon300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/backgammon300.webp",
     "provider": "htmlgames"
   },
   {
@@ -4412,7 +4412,7 @@
     "game": "Draughts",
     "title": "Draughts",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/image-300x200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/image-300x200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4420,7 +4420,7 @@
     "game": "AliceinTetrisland",
     "title": "Alice in Tetrisland",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/aliceIntetrisland300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/aliceIntetrisland300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4428,7 +4428,7 @@
     "game": "SpaceTris",
     "title": "SpaceTris",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/spacetris300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/spacetris300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4436,7 +4436,7 @@
     "game": "Ludo",
     "title": "Ludo",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/ludo300200.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/ludo300200.webp",
     "provider": "htmlgames"
   },
   {
@@ -4444,7 +4444,7 @@
     "game": "Hnefatafl",
     "title": "Hnefatafl",
     "category": "Classic Games",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hnefatafl300.webp",
+    "icon": "https://www.htmlgames.com/uploaded/game/thumb/hnefatafl300.webp",
     "provider": "htmlgames"
   }
 ]
