@@ -17,9 +17,13 @@
    ------------------------------------------------------------------------ */
 const CATALOG_ICON_FALLBACK = "🎮";
 
-/* Beberapa game lama masih dirender dengan ikon emoji spesifik alih-alih
-   thumbnail gambar. Mapping ini murni kosmetik & opsional — kalau field
-   "icon" tidak ada di games.json, fallback ke ikon generik di atas. */
+/* CATALOG_ICON_MAP: mapping emoji fallback, HARDCODE di file ini —
+   BUKAN dibaca dari field apa pun di games.json (games.json tidak
+   punya field "icon"). Emoji ini dirender di BELAKANG <img> thumbnail
+   (lihat catalogCardHtml di bawah): kalau gambar dari CDN berhasil
+   load, emoji otomatis ketutup; kalau gambar gagal load, emoji inilah
+   yang terlihat. Untuk id yang tidak terdaftar di sini, dipakai
+   CATALOG_ICON_FALLBACK (🎮). */
 const CATALOG_ICON_MAP = {
   "mahjong-collapse": "🀄",
   "bubble-shooter": "🔮",
@@ -97,7 +101,134 @@ function initFooterYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
-/* ===== Catalog Rendering (index.html) ===== */
+/* ==========================================================================
+   CATALOG (index.html)
+   Katalog mendukung search, filter kategori, dan pagination ("load
+   more") di sisi client — supaya siap menampung katalog besar (ratusan-
+   ribuan game) tanpa merender semuanya sekaligus ke DOM. Semua state
+   disimpan di closure CatalogState, bukan variabel global.
+   ========================================================================== */
+const CATALOG_PAGE_SIZE = 24;
+
+const CatalogState = {
+  allGames: [],
+  filtered: [],
+  visibleCount: CATALOG_PAGE_SIZE,
+  activeCategory: "all",
+  searchTerm: "",
+};
+
+function catalogCardHtml(g, index) {
+  const icon = CATALOG_ICON_MAP[g.id] || CATALOG_ICON_FALLBACK;
+  const thumb = g.thumbnail
+    ? `<span aria-hidden="true">${icon}</span>
+       <img src="${g.thumbnail}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();" />`
+    : `<span aria-hidden="true">${icon}</span>`;
+
+  return `
+    <a
+      href="./play.html?id=${encodeURIComponent(g.id)}"
+      class="game-card"
+      role="listitem"
+      style="animation-delay:${Math.min(index, 30) * 40}ms"
+      aria-label="Main ${g.title}"
+    >
+      <div class="game-card-thumb">${thumb}</div>
+      <div class="game-card-body">
+        <p class="game-card-title">${g.title}</p>
+      </div>
+      <span class="game-card-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </a>`;
+}
+/* Catatan thumbnail: gambar diambil langsung dari CDN htmlgames.com
+   (bukan file lokal). Kalau CDN gagal merespons / URL gambar untuk game
+   tertentu tidak valid, <img> akan gagal load dan onerror menghapus
+   dirinya sendiri, sehingga fallback emoji (yang sudah dirender di
+   belakangnya) tetap terlihat. */
+
+function applyCatalogFilter() {
+  const { allGames, activeCategory, searchTerm } = CatalogState;
+  const term = searchTerm.trim().toLowerCase();
+
+  CatalogState.filtered = allGames.filter((g) => {
+    const matchesCategory = activeCategory === "all" || g.category === activeCategory;
+    const matchesSearch = !term || g.title.toLowerCase().includes(term);
+    return matchesCategory && matchesSearch;
+  });
+}
+
+function renderCatalogGrid() {
+  const grid = document.getElementById("gameGrid");
+  const loadMoreBtn = document.getElementById("btnLoadMore");
+  const emptyEl = document.getElementById("catalogEmpty");
+  if (!grid) return;
+
+  const { filtered, visibleCount } = CatalogState;
+  const slice = filtered.slice(0, visibleCount);
+
+  grid.innerHTML = slice.map((g, i) => catalogCardHtml(g, i)).join("");
+
+  if (emptyEl) emptyEl.classList.toggle("hidden", filtered.length !== 0);
+  if (loadMoreBtn) {
+    loadMoreBtn.classList.toggle("hidden", visibleCount >= filtered.length);
+  }
+}
+
+function renderCategoryChips() {
+  const wrap = document.getElementById("categoryChips");
+  if (!wrap) return;
+
+  const categories = Array.from(
+    new Set(CatalogState.allGames.map((g) => g.category).filter(Boolean))
+  ).sort();
+
+  const chips = [{ key: "all", label: "Semua" }].concat(
+    categories.map((c) => ({ key: c, label: c }))
+  );
+
+  wrap.innerHTML = chips
+    .map(
+      (c) => `
+    <button
+      type="button"
+      class="chip${c.key === CatalogState.activeCategory ? " active" : ""}"
+      data-category="${c.key}"
+      role="tab"
+      aria-selected="${c.key === CatalogState.activeCategory}"
+    >${c.label}</button>`
+    )
+    .join("");
+
+  wrap.querySelectorAll(".chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      CatalogState.activeCategory = btn.dataset.category;
+      CatalogState.visibleCount = CATALOG_PAGE_SIZE;
+      applyCatalogFilter();
+      renderCategoryChips();
+      renderCatalogGrid();
+    });
+  });
+}
+
+function initCatalogControls() {
+  const searchInput = document.getElementById("gameSearch");
+  const loadMoreBtn = document.getElementById("btnLoadMore");
+
+  searchInput?.addEventListener("input", (e) => {
+    CatalogState.searchTerm = e.target.value;
+    CatalogState.visibleCount = CATALOG_PAGE_SIZE;
+    applyCatalogFilter();
+    renderCatalogGrid();
+  });
+
+  loadMoreBtn?.addEventListener("click", () => {
+    CatalogState.visibleCount += CATALOG_PAGE_SIZE;
+    renderCatalogGrid();
+  });
+}
+
 async function renderCatalog() {
   const grid = document.getElementById("gameGrid");
   if (!grid) return; // bukan halaman index
@@ -110,29 +241,11 @@ async function renderCatalog() {
     return;
   }
 
-  const games = GameDatabase.getAll();
-
-  grid.innerHTML = games
-    .map((g, i) => {
-      const icon = CATALOG_ICON_MAP[g.id] || CATALOG_ICON_FALLBACK;
-      return `
-    <a
-      href="./play.html?id=${encodeURIComponent(g.id)}"
-      class="game-card"
-      role="listitem"
-      style="animation-delay:${Math.min(i, 30) * 40}ms"
-      aria-label="Main ${g.title}"
-    >
-      <div class="game-card-thumb" aria-hidden="true">${icon}</div>
-      <div class="game-card-body">
-        <p class="game-card-title">${g.title}</p>
-      </div>
-      <span class="game-card-play" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </span>
-    </a>`;
-    })
-    .join("");
+  CatalogState.allGames = GameDatabase.getAll();
+  applyCatalogFilter();
+  renderCategoryChips();
+  renderCatalogGrid();
+  initCatalogControls();
 }
 
 /* ==========================================================================
