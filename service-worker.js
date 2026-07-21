@@ -5,7 +5,7 @@
    terhubung ke internet untuk konten game.
    ========================================================================== */
 
-const CACHE_NAME = "296game-shell-v3";
+const CACHE_NAME = "296game-shell-v4";
 
 const APP_SHELL = [
   "./index.html",
