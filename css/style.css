@@ -348,7 +348,17 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(to top, rgba(0,0,0,0.55), transparent 50%);
+}
+
+.game-card-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .game-card-body {
@@ -383,6 +393,99 @@ body::before {
 .game-card:hover .game-card-play {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== Catalog Controls (search + filter) ===== */
+.catalog-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+  color: var(--color-text-muted);
+}
+
+.search-box svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 0.92rem;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.search-input::placeholder { color: var(--color-text-muted); }
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(255, 152, 0, 0.5);
+  background: var(--color-surface-2);
+}
+
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.chip:hover {
+  color: var(--color-text);
+  border-color: rgba(255, 152, 0, 0.35);
+}
+
+.chip.active {
+  background: var(--color-accent);
+  color: #1a1000;
+  border-color: transparent;
+}
+
+.catalog-loadmore-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.catalog-empty {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.catalog-error {
+  color: var(--color-text-muted);
+  text-align: center;
+  grid-column: 1 / -1;
 }
 
 /* ===== About ===== */
