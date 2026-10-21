@@ -3528,11 +3528,11 @@
     "provider": "htmlgames"
   },
   {
-    "id": "hidden-thumbnails",
-    "game": "Hiddenthumbnails",
-    "title": "Hidden thumbnails",
+    "id": "hidden-icons",
+    "game": "HiddenIcons",
+    "title": "Hidden Icons",
     "category": "Hidden objects",
-    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenthumbnail300200.webp",
+    "thumbnail": "https://www.htmlgames.com/uploaded/game/thumb/hiddenicon300200.webp",
     "provider": "htmlgames"
   },
   {
