@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tebak Hewan – Game Ingatan untuk Si Kecil</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<style>
+:root{
+  --bg:#fff3d1; --bg2:#ffe0a8; --ink:#25325a; --soft:#5b678f; --panel:#ffffff;
+  --back:#16a39a; --back2:#0e7f8a; --sun:#ffb703; --sun-d:#e08e00; --leaf:#4cbf5e; --leaf-d:#2f9a41; --coral:#ff6b5e;
+  --front:#fffdf6; --line:#25325a22;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1c2547; --bg2:#141b38; --ink:#fff4dc; --soft:#b9c2e6; --panel:#2a3563; --line:#ffffff22;
+}}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  font-family:'Fredoka',system-ui,'Segoe UI',sans-serif; color:var(--ink);
+  background:radial-gradient(circle at 15% 10%,var(--bg) 0,var(--bg2) 100%);
+  display:flex;flex-direction:column;gap:10px;padding:12px clamp(10px,3vw,28px);
+  user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;overflow:hidden;
+}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+button:focus-visible{outline:4px solid var(--coral);outline-offset:3px}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+h1{margin:0;font-size:clamp(1.4rem,4.5vw,2.4rem);font-weight:700;letter-spacing:.01em;line-height:1}
+h1 span{display:inline-block;transform:rotate(-8deg)}
+.tools{display:flex;gap:8px}
+.btn{background:var(--panel);border-radius:16px;padding:8px 14px;font-weight:600;font-size:clamp(.9rem,2.6vw,1.05rem);
+  box-shadow:0 4px 0 var(--line),0 6px 14px #0000001a;display:inline-flex;align-items:center;gap:6px;min-height:44px;transition:transform .1s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.btn.primary{background:var(--sun);color:#3b2a00;box-shadow:0 4px 0 var(--sun-d),0 6px 14px #0000001a}
+.btn.go{background:var(--leaf);color:#fff;box-shadow:0 4px 0 var(--leaf-d),0 6px 14px #0000001a}
+
+/* Status */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--panel);
+  border-radius:20px;padding:8px 12px;box-shadow:0 6px 18px #0000001a}
+.levels{display:flex;gap:6px}
+.lv{padding:8px 14px;border-radius:14px;background:transparent;font-weight:600;min-height:40px;color:var(--soft)}
+.lv[aria-pressed="true"]{background:var(--back);color:#fff}
+.stats{display:flex;gap:14px;font-weight:600;font-size:clamp(.95rem,2.8vw,1.15rem)}
+.stats b{font-weight:700}
+.meter{height:10px;border-radius:99px;background:var(--line);overflow:hidden;flex:1 1 100%}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sun),var(--leaf));border-radius:99px;transition:width .4s}
+
+/* Papan */
+#stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+#board{display:grid;gap:10px;justify-content:center}
+.card{width:var(--cs);height:var(--cs);padding:0;background:none;perspective:900px;border-radius:22px}
+.inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.3,.7,.3,1.1)}
+.card.open .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.back{background:
+  radial-gradient(circle at 25% 25%,#ffffff33 0 12%,transparent 13%),
+  radial-gradient(circle at 75% 70%,#ffffff22 0 14%,transparent 15%),
+  linear-gradient(145deg,var(--back),var(--back2));
+  box-shadow:0 6px 0 #0a5f68,0 10px 16px #0000002a;font-size:calc(var(--cs)*.42);color:#ffffffcc}
+.card:active .back{transform:translateY(3px)}
+.front{background:var(--front);color:#25325a;transform:rotateY(180deg);box-shadow:0 6px 0 #d9c9a0,0 10px 16px #0000002a;gap:2px;border:4px solid var(--sun)}
+.front .em{font-size:calc(var(--cs)*.5);line-height:1}
+.front .nm{font-size:max(11px,calc(var(--cs)*.13));font-weight:700;text-align:center;padding:0 4px;line-height:1.1}
+.card.done .front{border-color:var(--leaf);background:#effbe9}
+.card.done .inner{animation:pop .5s}
+@keyframes pop{0%,100%{scale:1}50%{scale:1.1}}
+
+footer{text-align:center;font-size:.85rem;color:var(--soft)}
+
+/* Dialog */
+dialog{border:0;border-radius:28px;padding:0;background:var(--panel);color:var(--ink);max-width:min(94vw,560px);width:100%;box-shadow:0 20px 60px #0006}
+dialog::backdrop{background:#10183a99;backdrop-filter:blur(3px)}
+.dlg{padding:clamp(18px,4vw,30px);text-align:center}
+.dlg h2{margin:6px 0;font-size:clamp(1.5rem,5vw,2.1rem)}
+.dlg p{margin:6px 0 16px;color:var(--soft);font-size:1.05rem}
+.stars{font-size:clamp(2.4rem,9vw,3.6rem);letter-spacing:4px}
+.stars .off{filter:grayscale(1);opacity:.3}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero{font-size:4rem;animation:bob 1s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-10px) rotate(4deg)}}
+
+/* Koleksi */
+#colDlg .dlg{text-align:left;max-height:86vh;display:flex;flex-direction:column}
+#colDlg h2{text-align:center}
+#colGrid{overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;padding:4px 2px 10px;overscroll-behavior:contain}
+.sticker{background:var(--front);color:#25325a;border-radius:16px;padding:8px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;
+  box-shadow:0 3px 0 #d9c9a0;min-height:78px}
+.sticker .e{font-size:2rem;line-height:1.1}.sticker .n{font-size:.7rem;font-weight:600;text-align:center;line-height:1.05}
+.sticker.lock{background:var(--line);box-shadow:none}.sticker.lock .e{filter:grayscale(1) brightness(.2);opacity:.35}.sticker.lock .n{opacity:.5}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+@media (max-height:560px){footer{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span>🐾</span> Tebak Hewan</h1>
+  <div class="tools">
+    <button class="btn" id="sndBtn" aria-pressed="true" aria-label="Suara">🔊 Suara</button>
+    <button class="btn" id="colBtn">📖 Koleksi <span id="colMini">0/100</span></button>
+    <button class="btn primary" id="resetBtn">🔄 Ulang</button>
+  </div>
+</header>
+
+<section class="bar" aria-label="Tingkat dan skor">
+  <div class="levels" id="levels">
+    <button class="lv" data-lv="mudah" aria-pressed="true">Mudah</button>
+    <button class="lv" data-lv="sedang" aria-pressed="false">Sedang</button>
+    <button class="lv" data-lv="sulit" aria-pressed="false">Sulit</button>
+  </div>
+  <div class="stats" aria-live="polite">
+    <span>⭐ <b id="pairs">0</b>/<span id="total">6</span></span>
+    <span>👆 <b id="moves">0</b></span>
+  </div>
+  <div class="meter" aria-hidden="true"><i id="fill"></i></div>
+</section>
+
+<main id="stage"><div id="board" aria-label="Papan kartu"></div></main>
+<footer>Ketuk kartu, dengarkan suaranya, lalu cari pasangannya!</footer>
+
+<dialog id="winDlg"><div class="dlg">
+  <div class="hero">🎉</div>
+  <h2>Hore! Hebat sekali!</h2>
+  <div class="stars" id="stars" aria-label="Bintang"></div>
+  <p id="winTxt"></p>
+  <div class="row">
+    <button class="btn go" id="againBtn">▶ Main lagi</button>
+    <button class="btn" id="winColBtn">📖 Lihat koleksi</button>
+  </div>
+</div></dialog>
+
+<dialog id="colDlg"><div class="dlg">
+  <h2>Buku Koleksi Hewan</h2>
+  <p style="text-align:center" id="colTxt"></p>
+  <div id="colGrid"></div>
+  <div class="row"><button class="btn primary" id="colClose">Tutup</button></div>
+</div></dialog>
+
+<script>
+// 100 hewan: emoji | nama | suara
+const RAW=`🐶|Anjing|Guk guk!
+🐱|Kucing|Meong!
+🐭|Tikus|Cit cit!
+🐹|Hamster|Cicit!
+🐰|Kelinci|
+🦊|Rubah|
+🐻|Beruang|Grrr!
+🐼|Panda|
+🐨|Koala|
+🐯|Harimau|Auum!
+🦁|Singa|Roar!
+🐮|Sapi|Mooo!
+🐷|Babi|Oink oink!
+🐸|Katak|Kwek kwek!
+🐵|Monyet|Uu aa!
+🐔|Ayam|Petok petok!
+🐧|Penguin|
+🐦|Burung|Cuit cuit!
+🐤|Anak Ayam|Ciap ciap!
+🦆|Bebek|Kwek kwek!
+🦅|Elang|Kyaa!
+🦉|Burung Hantu|Hu hu!
+🦇|Kelelawar|
+🐺|Serigala|Auuu!
+🐗|Babi Hutan|Ngok ngok!
+🐴|Kuda|Ihiii!
+🦄|Unicorn|
+🐝|Lebah|Zzzz!
+🐛|Ulat|
+🦋|Kupu-kupu|
+🐌|Siput|
+🐞|Kepik|
+🐜|Semut|
+🦗|Jangkrik|Krik krik!
+🕷️|Laba-laba|
+🦂|Kalajengking|
+🐢|Kura-kura|
+🐍|Ular|Sssss!
+🦎|Kadal|
+🦖|T-Rex|Roarrr!
+🦕|Dinosaurus|
+🐙|Gurita|
+🦑|Cumi-cumi|
+🦐|Udang|
+🦞|Lobster|
+🦀|Kepiting|
+🐡|Ikan Buntal|
+🐠|Ikan Hias|
+🐟|Ikan|Blub blub!
+🐬|Lumba-lumba|Iik iik!
+🐳|Paus|
+🦈|Hiu|
+🐊|Buaya|Grrr!
+🐅|Macan|Auum!
+🐆|Macan Tutul|
+🦓|Zebra|
+🦍|Gorila|Uu uu!
+🐘|Gajah|Tuuut!
+🦛|Kuda Nil|
+🦏|Badak|
+🐪|Unta|
+🦒|Jerapah|
+🦘|Kanguru|
+🐃|Kerbau|Mooo!
+🐂|Banteng|Mooo!
+🐄|Sapi Perah|Mooo!
+🐎|Kuda Pacu|Ihiii!
+🐏|Domba|Mbeek!
+🐑|Biri-biri|Mbeek!
+🦙|Llama|
+🐐|Kambing|Mbek mbek!
+🦌|Rusa|
+🐩|Pudel|Guk guk!
+🐓|Ayam Jago|Kukuruyuk!
+🦃|Kalkun|Glek glek!
+🦚|Merak|
+🦜|Burung Beo|Halo!
+🦢|Angsa|
+🦩|Flamingo|
+🕊️|Merpati|Kur kur!
+🐇|Kelinci Putih|
+🦝|Rakun|
+🦨|Sigung|
+🦡|Luwak|
+🦦|Berang-berang|
+🦥|Kungkang|
+🐁|Mencit|Cit cit!
+🐀|Tikus Got|Cit cit!
+🐿️|Tupai|
+🦔|Landak|
+🐉|Naga|Roarrr!
+🦭|Anjing Laut|Ouk ouk!
+🐚|Kerang|
+🦬|Bison|
+🐣|Anak Ayam Menetas|Ciap!
+🐒|Monyet Kecil|Uu aa!
+🐈|Kucing Manis|Meong!
+🐕|Anjing Setia|Guk guk!
+🐋|Paus Biru|
+🦧|Orangutan|`;
+const ANIMALS=RAW.split('\n').map((s,i)=>{const [e,n,v]=s.split('|');return{id:i,emoji:e,name:n,sound:v||''}});
+
+const LEVELS={mudah:6,sedang:8,sulit:12};
+let level='mudah',cards=[],picked=[],matched=0,moves=0,lock=false,soundOn=true,found=new Set(),actx=null;
+const $=id=>document.getElementById(id);
+const board=$('board'),stage=$('stage');
+
+// Penyimpanan (aman bila diblokir)
+try{const s=JSON.parse(localStorage.getItem('hewan-koleksi')||'[]');if(Array.isArray(s))s.forEach(x=>found.add(x));}catch(e){}
+function save(){try{localStorage.setItem('hewan-koleksi',JSON.stringify([...found]))}catch(e){}}
+
+// Suara
+function say(t){
+  if(!soundOn||!('speechSynthesis' in window))return;
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='id-ID';u.rate=.9;u.pitch=1.25;speechSynthesis.speak(u);}catch(e){}
+}
+function tone(notes){
+  if(!soundOn)return;
+  try{
+    actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    notes.forEach((f,i)=>{
+      const o=actx.createOscillator(),g=actx.createGain(),t=actx.currentTime+i*.12;
+      o.type='triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);
+      g.gain.exponentialRampToValueAtTime(.18,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.25);
+      o.connect(g).connect(actx.destination);o.start(t);o.stop(t+.3);
+    });
+  }catch(e){}
+}
+
+// Tata letak responsif: pilih jumlah kolom agar kartu sebesar mungkin
+function layout(){
+  const w=stage.clientWidth,h=stage.clientHeight,n=cards.length,gap=10;
+  let best=0,bc=3;
+  for(let c=2;c<=6;c++){
+    const r=Math.ceil(n/c);
+    const s=Math.min((w-gap*(c-1))/c,(h-gap*(r-1))/r);
+    if(s>best){best=s;bc=c}
+  }
+  const cs=Math.max(48,Math.min(Math.floor(best),180));
+  board.style.setProperty('--cs',cs+'px');
+  board.style.gridTemplateColumns=`repeat(${bc},${cs}px)`;
+}
+new ResizeObserver(layout).observe(stage);
+
+function newGame(){
+  const n=LEVELS[level];
+  const pool=[...ANIMALS].sort(()=>Math.random()-.5).slice(0,n);
+  cards=[...pool,...pool].sort(()=>Math.random()-.5);
+  picked=[];matched=0;moves=0;lock=false;
+  $('total').textContent=n;updateStats();
+  board.innerHTML='';
+  cards.forEach(a=>{
+    const b=document.createElement('button');
+    b.className='card';b.dataset.id=a.id;b.setAttribute('aria-label','Kartu tertutup');
+    b.innerHTML=`<div class="inner"><div class="face back">❓</div><div class="face front"><span class="em">${a.emoji}</span><span class="nm">${a.name}</span></div></div>`;
+    b.addEventListener('click',()=>flip(b,a));
+    board.appendChild(b);
+  });
+  layout();
+}
+
+function updateStats(){
+  $('pairs').textContent=matched;$('moves').textContent=moves;
+  $('fill').style.width=(matched/LEVELS[level]*100)+'%';
+  $('colMini').textContent=found.size+'/100';
+}
+
+function flip(b,a){
+  if(lock||b.classList.contains('open'))return;
+  b.classList.add('open');b.setAttribute('aria-label',a.name);
+  say(`${a.sound} ${a.name}`.trim());
+  if(!found.has(a.id)){found.add(a.id);save();updateStats();}
+  picked.push({b,a});
+  if(picked.length===2){
+    moves++;lock=true;updateStats();
+    const [p,q]=picked;
+    if(p.a.id===q.a.id){
+      setTimeout(()=>{
+        p.b.classList.add('done');q.b.classList.add('done');
+        tone([660,880,1100]);matched++;picked=[];lock=false;updateStats();
+        if(matched===LEVELS[level])setTimeout(win,700);
+      },500);
+    }else{
+      setTimeout(()=>{
+        p.b.classList.remove('open');q.b.classList.remove('open');
+        p.b.setAttribute('aria-label','Kartu tertutup');q.b.setAttribute('aria-label','Kartu tertutup');
+        tone([300]);picked=[];lock=false;
+      },1200);
+    }
+  }
+}
+
+function win(){
+  const n=LEVELS[level],s=moves<=n*1.7?3:moves<=n*2.6?2:1;
+  $('stars').innerHTML=[0,1,2].map(i=>`<span class="${i<s?'':'off'}">⭐</span>`).join('');
+  $('winTxt').textContent=`Kamu menemukan ${n} pasangan hewan dalam ${moves} langkah.`;
+  $('winDlg').showModal();
+  tone([523,659,784,1046]);
+  setTimeout(()=>say('Hore! Selamat! Kamu hebat sekali!'),600);
+  if(typeof confetti==='function'&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    confetti({particleCount:140,spread:90,origin:{y:.6}});
+    setTimeout(()=>confetti({particleCount:80,angle:60,spread:70,origin:{x:0,y:.7}}),300);
+    setTimeout(()=>confetti({particleCount:80,angle:120,spread:70,origin:{x:1,y:.7}}),300);
+  }
+}
+
+// Koleksi
+function openCollection(){
+  $('colTxt').textContent=`Terkumpul ${found.size} dari 100 hewan. Mainkan terus untuk menemukan semuanya!`;
+  $('colGrid').innerHTML=ANIMALS.map(a=>{
+    const ok=found.has(a.id);
+    return `<button class="sticker ${ok?'':'lock'}" data-id="${a.id}" aria-label="${ok?a.name:'Hewan belum ditemukan'}"><span class="e">${a.emoji}</span><span class="n">${ok?a.name:'?'}</span></button>`;
+  }).join('');
+  if(!$('colDlg').open)$('colDlg').showModal();
+}
+$('colGrid').addEventListener('click',e=>{
+  const s=e.target.closest('.sticker');if(!s||s.classList.contains('lock'))return;
+  const a=ANIMALS[s.dataset.id];say(`${a.sound} ${a.name}`.trim());
+});
+
+// Kontrol
+$('resetBtn').onclick=newGame;
+$('againBtn').onclick=()=>{$('winDlg').close();newGame()};
+$('colBtn').onclick=openCollection;
+$('winColBtn').onclick=()=>{$('winDlg').close();openCollection()};
+$('colClose').onclick=()=>$('colDlg').close();
+$('sndBtn').onclick=e=>{
+  soundOn=!soundOn;e.currentTarget.setAttribute('aria-pressed',soundOn);
+  e.currentTarget.textContent=soundOn?'🔊 Suara':'🔇 Senyap';
+  if(!soundOn&&'speechSynthesis' in window)speechSynthesis.cancel();
+};
+$('levels').addEventListener('click',e=>{
+  const b=e.target.closest('.lv');if(!b)return;
+  level=b.dataset.lv;
+  document.querySelectorAll('.lv').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  newGame();
+});
+
+newGame();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>

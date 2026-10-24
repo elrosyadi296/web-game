@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id" data-kids-home>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dunia Game Anak – Belajar & Bermain Gratis</title>
+
+<!-- ========== META TAG ========== -->
+<meta name="description" content="Kumpulan game edukasi gratis untuk anak: berhitung, mengeja, mewarnai, tebak hewan, dan banyak lagi. Aman, seru, dan bisa dimainkan langsung dari browser tanpa instal.">
+<meta name="keywords" content="game anak, game edukasi anak, belajar berhitung, belajar mengeja, mewarnai online, tebak hewan, game anak gratis, game SPA">
+<meta name="author" content="296.web.id">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#7cc8ff">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Game Anak">
+<link rel="canonical" href="https://game.296.web.id/kids/">
+
+<!-- Open Graph (Facebook, WhatsApp, Telegram, dll) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dunia Game Anak">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Dunia Game Anak – Belajar & Bermain Gratis">
+<meta property="og:description" content="Game edukasi gratis untuk anak: berhitung, mengeja, mewarnai, tebak hewan, dan lainnya.">
+<meta property="og:url" content="https://game.296.web.id/kids/">
+<meta property="og:image" content="https://game.296.web.id/kids/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dunia Game Anak – Belajar & Bermain Gratis">
+<meta name="twitter:description" content="Game edukasi gratis untuk anak: berhitung, mengeja, mewarnai, tebak hewan, dan lainnya.">
+<meta name="twitter:image" content="https://game.296.web.id/kids/og-image.webp">
+
+<!-- ========== FAVICON (ganti file gambarnya sendiri, nama file biarkan sama) ========== -->
+<link rel="icon" href="img/favicon.ico" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Dunia Game Anak","url":"https://game.296.web.id/kids/","inLanguage":"id","description":"Kumpulan game edukasi gratis untuk anak."}
+</script>
+
+<style>
+:root{--ink:#3a2d86;--paper:#fffaf0}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{min-height:100dvh;font-family:'Nunito',system-ui,sans-serif;color:var(--ink);overflow-x:hidden;
+background:linear-gradient(180deg,#7cc8ff 0%,#b9defd 38%,#e9dcff 100%);background-attachment:fixed}
+
+/* ---------- Dekorasi langit ---------- */
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.sun{position:absolute;top:4vh;right:6vw;width:clamp(70px,12vw,130px);aspect-ratio:1;border-radius:50%;
+background:radial-gradient(circle at 35% 35%,#fff3a8,#ffd23f);box-shadow:0 0 0 14px #ffe58a55,0 0 0 30px #ffe58a33;animation:spin 40s linear infinite}
+.cloud{position:absolute;width:var(--w);height:calc(var(--w)*.4);background:#fff;border-radius:99px;opacity:.9;top:var(--t);left:-30%;
+animation:drift var(--s) linear infinite;animation-delay:var(--dl)}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud::before{width:45%;aspect-ratio:1;left:14%;top:-45%}
+.cloud::after{width:35%;aspect-ratio:1;left:50%;top:-30%}
+@keyframes drift{to{transform:translateX(160vw)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{position:absolute;font-size:var(--z,2rem);left:var(--x);top:var(--y);opacity:.55;animation:bob var(--s,5s) ease-in-out infinite;animation-delay:var(--dl,0s)}
+@keyframes bob{50%{transform:translateY(-16px) rotate(8deg)}}
+
+/* ---------- Layout ---------- */
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom))}
+header{text-align:center;padding:clamp(18px,5vw,48px) 0 10px}
+.logo{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;line-height:1;font-size:clamp(2.2rem,9vw,4.6rem);
+color:#fff;-webkit-text-stroke:0;text-shadow:0 4px 0 var(--ink),0 8px 0 #2a1f6a55,0 14px 24px #3a2d8655}
+.logo span{display:inline-block;animation:hop 2.4s ease-in-out infinite;animation-delay:calc(var(--i)*.09s)}
+.logo .sp{width:.3em}
+@keyframes hop{0%,60%,100%{transform:none}30%{transform:translateY(-.18em) rotate(-4deg)}}
+.logo span:nth-child(5n+1){color:#ffe066}.logo span:nth-child(5n+2){color:#ff8fa3}.logo span:nth-child(5n+3){color:#b8f2e6}.logo span:nth-child(5n+4){color:#fff}.logo span:nth-child(5n){color:#ffd6a5}
+.tagline{margin-top:14px;font-family:'Baloo 2',cursive;font-weight:600;font-size:clamp(1.05rem,3.4vw,1.5rem)}
+.stats{margin:16px auto 0;display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.chip{font-family:'Baloo 2',cursive;font-weight:800;background:#fff;border-radius:99px;padding:.3rem 1rem;font-size:1rem;box-shadow:0 4px 0 #cfc3f5,0 8px 14px #3a2d8630}
+
+/* ---------- Tombol aksi & filter ---------- */
+.bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 22px}
+.tab,.surprise{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.05rem;border:0;cursor:pointer;border-radius:99px;padding:.55rem 1.15rem;
+color:var(--ink);background:#fff;box-shadow:0 5px 0 #cfc3f5,0 10px 14px #3a2d8626;transition:transform .12s,box-shadow .12s}
+.tab:hover,.surprise:hover{transform:translateY(-2px)}
+.tab:active,.surprise:active{transform:translateY(4px);box-shadow:0 1px 0 #cfc3f5}
+.tab[aria-pressed=true]{color:#fff;background:#7c5cff;box-shadow:0 5px 0 #5237d6,0 10px 14px #3a2d8626}
+.surprise{color:#fff;background:#ff9f1c;box-shadow:0 5px 0 #d97f00,0 10px 14px #3a2d8626}
+.tab:focus-visible,.surprise:focus-visible,.card:focus-visible{outline:4px solid #ffc83d;outline-offset:3px}
+
+/* ---------- Kartu game ---------- */
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
+.card{--c:#7c5cff;--d:#5237d6;position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);
+background:#fff;border:5px solid #fff;border-radius:30px;overflow:hidden;box-shadow:0 8px 0 var(--d),0 18px 30px #3a2d8638;
+transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .18s;animation:pop .6s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i)*.06s)}
+@keyframes pop{0%{opacity:0;transform:translateY(34px) scale(.85)}100%{opacity:1;transform:none}}
+.card:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 14px 0 var(--d),0 26px 36px #3a2d8644}
+.card:active{transform:translateY(4px);box-shadow:0 3px 0 var(--d)}
+.card[hidden]{display:none}
+.art{position:relative;display:grid;place-items:center;height:130px;background:var(--c);overflow:hidden}
+.art::before,.art::after{content:"";position:absolute;border-radius:50%;background:#fff3}
+.art::before{width:120px;height:120px;left:-30px;top:-50px}
+.art::after{width:90px;height:90px;right:-20px;bottom:-40px}
+.emo{position:relative;z-index:1;font-size:4.4rem;filter:drop-shadow(0 6px 0 #0002);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.card:hover .emo{transform:scale(1.18) rotate(-8deg)}
+.cat{position:absolute;z-index:1;left:12px;top:10px;font:800 .72rem 'Nunito',sans-serif;color:var(--ink);background:#fff;border-radius:99px;padding:.15rem .6rem}
+.body{display:flex;flex-direction:column;gap:6px;padding:14px 16px 16px;flex:1}
+.body h2{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.35rem;line-height:1.1}
+.body p{font-weight:700;font-size:.92rem;line-height:1.35;opacity:.78;flex:1}
+.play{align-self:flex-start;margin-top:8px;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.05rem;color:#fff;background:var(--c);
+border-radius:99px;padding:.3rem 1.1rem;box-shadow:0 4px 0 var(--d)}
+
+/* ---------- Footer ---------- */
+footer{margin-top:44px;text-align:center;font-weight:800;font-size:.9rem;opacity:.8}
+footer b{font-family:'Baloo 2',cursive}
+noscript p{background:#fff;border-radius:20px;padding:20px;text-align:center;font-weight:800;margin:20px 0}
+
+@media(max-width:520px){.grid{gap:18px}.art{height:112px}.emo{font-size:3.8rem}.bar{gap:8px}.tab,.surprise{font-size:.95rem;padding:.5rem .95rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.cloud{left:10%}}
+</style>
+</head>
+<body>
+
+<div class="sky" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="cloud" style="--w:180px;--t:9vh;--s:70s;--dl:-10s"></div>
+  <div class="cloud" style="--w:120px;--t:22vh;--s:95s;--dl:-55s"></div>
+  <div class="cloud" style="--w:220px;--t:60vh;--s:120s;--dl:-80s"></div>
+  <div class="cloud" style="--w:140px;--t:80vh;--s:85s;--dl:-30s"></div>
+  <span class="float" style="--x:6%;--y:30%;--z:2.4rem;--s:5s">⭐</span>
+  <span class="float" style="--x:90%;--y:46%;--z:2rem;--s:6s;--dl:-2s">🌈</span>
+  <span class="float" style="--x:4%;--y:70%;--z:2.2rem;--s:7s;--dl:-1s">🎈</span>
+  <span class="float" style="--x:93%;--y:80%;--z:2.4rem;--s:5.5s;--dl:-3s">🦋</span>
+</div>
+
+<div class="wrap">
+  <header>
+    <h1 class="logo" id="logo" aria-label="Dunia Game Anak">Dunia Game Anak</h1>
+    <p class="tagline">Ayo belajar sambil bermain! 🚀</p>
+    <div class="stats"><span class="chip" id="count">🎮 … game</span><span class="chip">🆓 Gratis</span><span class="chip">📱 Bisa di HP & tablet</span></div>
+  </header>
+
+  <main>
+    <div class="bar" id="filters" role="group" aria-label="Pilih kategori game"></div>
+    <section class="grid" id="grid" aria-label="Daftar game"></section>
+    <noscript><p>Aktifkan JavaScript di browser agar daftar game tampil ya 😊</p></noscript>
+  </main>
+
+  <footer>
+    <p>Dibuat dengan 💜 untuk si kecil · <b>game.296.web.id/kids</b></p>
+  </footer>
+</div>
+
+<!-- Daftar game diambil dari kids-nav.js (satu sumber data) -->
+<script src="kids-nav.js"></script>
+<script>
+(function(){
+  var N = window.KidsNav, games = N.games, cats = N.categories;
+  var $ = function(s){return document.querySelector(s)};
+
+  // Judul beranimasi (huruf melompat satu per satu)
+  var logo = $('#logo'), txt = logo.textContent;
+  logo.innerHTML = txt.split('').map(function(ch,i){
+    return ch === ' ' ? '<span class="sp" aria-hidden="true"> </span>' : '<span aria-hidden="true" style="--i:'+i+'">'+ch+'</span>';
+  }).join('');
+
+  $('#count').textContent = '🎮 ' + games.length + ' game seru';
+
+  // Kartu game
+  var catMap = {}; cats.forEach(function(c){catMap[c.id] = c});
+  $('#grid').innerHTML = games.map(function(g,i){
+    var c = catMap[g.cat] || {emoji:'🎲',label:'Umum'};
+    return '<a class="card" href="'+N.urlOf(g)+'" data-cat="'+g.cat+'" style="--c:'+g.c+';--d:'+g.d+';--i:'+i+'">'+
+      '<div class="art"><span class="cat">'+c.emoji+' '+c.label+'</span><span class="emo" aria-hidden="true">'+g.emoji+'</span></div>'+
+      '<div class="body"><h2>'+g.title+'</h2><p>'+g.desc+'</p><span class="play">▶ Main</span></div></a>';
+  }).join('');
+
+  // Filter kategori
+  var fb = [{id:'all',label:'Semua',emoji:'🌟'}].concat(cats);
+  $('#filters').innerHTML = fb.map(function(c){
+    return '<button class="tab" type="button" data-f="'+c.id+'" aria-pressed="'+(c.id==='all')+'">'+c.emoji+' '+c.label+'</button>';
+  }).join('') + '<button class="surprise" type="button" id="rnd">🎲 Kejutkan Aku!</button>';
+
+  $('#filters').addEventListener('click', function(e){
+    var b = e.target.closest('.tab'); if(!b) return;
+    var f = b.dataset.f;
+    document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-pressed', t===b)});
+    document.querySelectorAll('.card').forEach(function(c){c.hidden = !(f==='all' || c.dataset.cat===f)});
+  });
+  $('#rnd').onclick = function(){ location.href = N.urlOf(N.randomGame()); };
+})();
+</script>
+</body>
+</html>

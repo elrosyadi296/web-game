@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pilah Buah & Sayur</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3b2a5a;--sun:#ffd23f;--leaf:#2fbf71}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{font-family:'Fredoka','Baloo 2',system-ui,sans-serif;color:var(--ink);background:linear-gradient(#7dd3fc,#bdeafd 45%,#d9f7b8);overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+:focus-visible{outline:4px solid #7c3aed;outline-offset:3px}
+.bg i{position:fixed;pointer-events:none}
+.sun{right:8vw;top:9vh;width:clamp(60px,10vmin,110px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7b0,#ffd23f 60%,#ffb703);box-shadow:0 0 0 14px rgba(255,210,63,.25),0 0 60px 20px rgba(255,210,63,.4)}
+.cloud{height:clamp(24px,5vmin,44px);width:clamp(90px,18vmin,170px);background:#fff;border-radius:50px;filter:drop-shadow(0 6px 0 rgba(125,180,230,.35));animation:drift 45s linear infinite}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%;aspect-ratio:1}
+.cloud::before{width:45%;left:14%;top:-45%}.cloud::after{width:35%;left:50%;top:-30%}
+.c1{top:14vh;left:-20vw}.c2{top:27vh;left:-40vw;width:clamp(70px,13vmin,120px);animation-duration:65s;animation-delay:-25s}
+@keyframes drift{to{transform:translateX(170vw)}}
+.hill{left:-10vw;right:-10vw;height:42vh;border-radius:50% 50% 0 0}
+.h1{background:#8bdc6a;bottom:-24vh}.h2{background:#5fc470;bottom:-32vh;left:25vw}
+#app{position:relative;height:100dvh;max-width:900px;margin:auto;display:flex;flex-direction:column;padding:max(10px,env(safe-area-inset-top)) 14px max(14px,env(safe-area-inset-bottom))}
+.hud{display:flex;align-items:center;gap:10px;animation:drop .6s cubic-bezier(.2,1.5,.4,1) both}
+.pill{background:rgba(255,255,255,.9);border-radius:22px;padding:6px 14px;box-shadow:0 5px 0 rgba(59,42,90,.14),inset 0 2px 0 #fff;display:flex;align-items:center;gap:8px;font-weight:700}
+.brand{font-size:clamp(15px,3.6vw,24px);white-space:nowrap}
+.prog{flex:1;min-width:0}
+.bar{flex:1;height:14px;border-radius:9px;background:#e7e2f3;overflow:hidden;box-shadow:inset 0 2px 3px rgba(59,42,90,.2)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(#ffe066,#ffb703);border-radius:9px;transition:width .5s cubic-bezier(.2,1.4,.4,1)}
+#stars{gap:2px}#stars svg{width:clamp(22px,5vw,30px)}
+.icon{border:0;font-size:22px;width:46px;height:46px;border-radius:16px;background:#fff;box-shadow:0 5px 0 rgba(59,42,90,.18);cursor:pointer}
+.icon:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(59,42,90,.18)}
+.stage{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.hint{font-weight:600;font-size:clamp(14px,3.4vw,18px);background:rgba(255,255,255,.75);padding:4px 14px;border-radius:14px;transition:opacity .4s;text-align:center}
+.card{width:clamp(130px,min(34vmin,27vh),230px);touch-action:none;cursor:grab;position:relative;z-index:5;will-change:transform}
+.inner{background:linear-gradient(#fff,#fff6d6);border:4px solid var(--sun);border-radius:32px;padding:10px 10px 12px;box-shadow:0 10px 0 #e8b923,0 22px 28px rgba(59,42,90,.25),inset 0 3px 0 #fff;display:flex;flex-direction:column;align-items:center;gap:6px;animation:pop .55s cubic-bezier(.2,1.6,.4,1) both,float 3s ease-in-out .55s infinite}
+.card.drag{cursor:grabbing}
+.card.drag .inner{animation:none;box-shadow:0 18px 0 #e8b923,0 40px 40px rgba(59,42,90,.3),inset 0 3px 0 #fff}
+svg{display:block}
+#art svg{width:100%;filter:drop-shadow(0 6px 0 rgba(59,42,90,.12))}
+.o :not([stroke]){stroke:rgba(59,42,90,.28);stroke-width:1.8;stroke-linejoin:round}
+.name{font-weight:700;font-size:clamp(17px,4.4vw,26px);background:#fff0b3;border-radius:16px;padding:2px 14px;text-align:center}
+.toast{position:absolute;bottom:1%;left:50%;transform:translate(-50%,20px) scale(.8);opacity:0;padding:8px 18px;border-radius:18px;font-weight:700;font-size:clamp(15px,4vw,22px);color:#fff;background:var(--leaf);box-shadow:0 5px 0 rgba(0,0,0,.15);transition:.3s cubic-bezier(.2,1.6,.4,1);max-width:96%;text-align:center;pointer-events:none;z-index:6}
+.toast.show{opacity:1;transform:translate(-50%,0) scale(1)}.toast.no{background:#ff7a59}
+.combo{position:absolute;top:0;right:0;font-weight:700;color:#e8590c;background:#fff;border-radius:14px;padding:2px 12px;box-shadow:0 4px 0 rgba(59,42,90,.14);opacity:0;transition:.3s}
+.combo.show{opacity:1}
+.baskets{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,5vw,40px);padding-top:clamp(40px,9vmin,90px);animation:rise .7s .1s cubic-bezier(.2,1.4,.4,1) both}
+.basket{--c1:#ff8fa3;--c2:#ff5d73;--c3:#c93a52;position:relative;isolation:isolate;border:0;font:inherit;cursor:pointer;height:clamp(92px,20vh,160px);border-radius:20px 20px 34px 34px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.16) 0 7px,transparent 7px 16px),repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0 9px,transparent 9px 18px),linear-gradient(var(--c1),var(--c2));box-shadow:0 10px 0 var(--c3),0 20px 26px rgba(59,42,90,.25),inset 0 4px 0 rgba(255,255,255,.4);transition:transform .2s cubic-bezier(.2,1.6,.4,1),filter .2s;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px}
+.basket::before{content:"";position:absolute;left:-4%;right:-4%;top:-12px;height:26px;border-radius:14px;background:linear-gradient(var(--c1),var(--c2));box-shadow:0 5px 0 var(--c3),inset 0 3px 0 rgba(255,255,255,.45)}
+.basket.v{--c1:#58d68d;--c2:#2fbf71;--c3:#1e8a52}
+.basket.over{transform:translateY(-8px) scale(1.05);filter:brightness(1.1) saturate(1.1)}
+.peek{position:absolute;left:0;right:0;bottom:calc(100% - 6px);z-index:-1;display:flex;justify-content:center;pointer-events:none}
+.peek svg{width:25%;margin:0 -2%;filter:drop-shadow(0 4px 0 rgba(59,42,90,.15))}
+.basket b{position:relative;background:#fff;color:var(--ink);padding:4px 14px;border-radius:16px;font-size:clamp(15px,3.8vw,24px);box-shadow:0 4px 0 rgba(59,42,90,.15)}
+.overlay{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgba(59,42,90,.55);backdrop-filter:blur(6px);transition:opacity .3s}
+.overlay.hide{opacity:0;visibility:hidden;pointer-events:none}.overlay.hide .modal{animation:none}
+.modal{background:linear-gradient(#fff,#fff7dd);border:5px solid var(--sun);border-radius:36px;padding:clamp(18px,4vw,30px);max-width:420px;width:100%;text-align:center;box-shadow:0 12px 0 #e8b923,0 30px 50px rgba(0,0,0,.35);animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+.modal h1,.modal h2{margin:4px 0 6px;font-size:clamp(28px,7.5vw,40px);line-height:1.1}
+.modal p{margin:0 0 14px;font-weight:600;font-size:clamp(15px,4vw,18px)}
+.duo{display:flex;justify-content:center;gap:8px}.duo svg{width:clamp(80px,24vw,120px);animation:float 3s ease-in-out infinite}.duo svg:last-child{animation-delay:-1.5s}
+.fin{display:flex;justify-content:center;gap:6px;margin:10px 0}.fin svg{width:clamp(48px,14vw,64px)}
+.btn{border:0;font:inherit;font-weight:700;font-size:clamp(18px,4.6vw,24px);color:#fff;padding:12px 28px;border-radius:22px;cursor:pointer;background:linear-gradient(#58d68d,#2fbf71);box-shadow:0 8px 0 #1e8a52,0 16px 20px rgba(0,0,0,.2);width:100%;margin-top:6px}
+.btn:active{transform:translateY(6px);box-shadow:0 2px 0 #1e8a52}
+.col{display:inline-block;background:#e9f9ee;border-radius:14px;padding:3px 14px;font-weight:700;color:#1e8a52}
+.p{position:fixed;z-index:60;pointer-events:none;font-size:22px;animation:fly .8s ease-out forwards}
+@keyframes pop{from{transform:scale(.1) rotate(-14deg);opacity:0}}
+@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes drop{from{transform:translateY(-60px);opacity:0}}
+@keyframes rise{from{transform:translateY(90px);opacity:0}}
+@keyframes fly{to{transform:translate(var(--x),var(--y)) scale(.3);opacity:0}}
+@media (max-width:560px){.brand .t{display:none}.pill{padding:6px 10px}}
+@media (max-height:520px){.hint{display:none}.baskets{padding-top:36px}.basket{height:84px}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="sun"></i><i class="cloud c1"></i><i class="cloud c2"></i><i class="hill h1"></i><i class="hill h2"></i></div>
+<div id="app">
+  <header class="hud">
+    <div class="pill brand">🧺 <span class="t">Pilah Buah &amp; Sayur</span></div>
+    <div class="pill prog"><div class="bar"><i id="bar"></i></div><span id="pt">0/10</span></div>
+    <div class="pill" id="stars" aria-label="Nilai bintang"></div>
+    <button class="icon" id="snd" aria-label="Suara hidup/mati">🔊</button>
+  </header>
+  <main class="stage">
+    <div class="combo" id="combo"></div>
+    <div class="hint" id="hint">Seret ke keranjang yang tepat 👇</div>
+    <div class="card" id="card" role="img"><div class="inner" id="inner"><div id="art"></div><div class="name" id="nm"></div></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <section class="baskets">
+    <button class="basket f" data-t="f" aria-label="Keranjang Buah"><span class="peek" id="pf"></span><b>Keranjang Buah</b></button>
+    <button class="basket v" data-t="v" aria-label="Keranjang Sayur"><span class="peek" id="pv"></span><b>Keranjang Sayur</b></button>
+  </section>
+</div>
+
+<div class="overlay" id="start"><div class="modal">
+  <div class="duo" id="duo"></div>
+  <h1>Pilah Buah &amp; Sayur</h1>
+  <p>Seret buah ke keranjang merah dan sayur ke keranjang hijau. Ada 100 teman yang menunggumu!</p>
+  <span class="col" id="col1"></span>
+  <button class="btn" id="go">Mulai Main</button>
+</div></div>
+
+<div class="overlay hide" id="end"><div class="modal">
+  <h2>Hebat Sekali! 🎉</h2>
+  <div class="fin" id="fin"></div>
+  <p id="msg"></p>
+  <span class="col" id="col2"></span>
+  <button class="btn" id="again">Main Lagi</button>
+</div></div>
+
+<script>
+/* ===== 100 aset: nama, bentuk, warna utama, warna daun/aksen ===== */
+const FR=`Apel Merah,A,#ef4444,#22a559
+Apel Hijau,A,#8bd450,#2f8f46
+Apel Kuning,A,#fcd34d,#4caf50
+Pisang,B,#ffd43b,#7a5a2b
+Jeruk,R,#ff9f1c,#2f9e44
+Anggur Ungu,G,#7c3aed,#2f9e44
+Anggur Hijau,G,#a3d977,#2f9e44
+Semangka,M,#2f9e44,#9be37a
+Stroberi,S,#f43f5e,#2f9e44
+Nanas,N,#fbbf24,#2f9e44
+Mangga,P,#ffb703,#2f9e44
+Pepaya,E,#ff9a3c,#4caf50
+Melon,M,#c7e9a0,#8fcf6a
+Pir,P,#c6e04a,#4caf50
+Ceri,R,#d90429,#2f9e44
+Persik,A,#ffb48a,#4caf50
+Lemon,R,#ffe14d,#4caf50
+Jeruk Nipis,R,#7ccf3b,#2f9e44
+Kiwi,R,#9b7b4a,#6b8e23
+Alpukat,P,#3f7d3a,#2f5d2a
+Kelapa,R,#8b5a2b,#5a3a1a
+Rambutan,W,#e63946,#7ac143
+Manggis,R,#6a1b4d,#4caf50
+Salak,P,#a0522d,#6b3e1f
+Jambu Biji,R,#b5e48c,#4caf50
+Jambu Air,P,#ff5d8f,#4caf50
+Belimbing,X,#ffd23f,#e0a800
+Sirsak,W,#7fb069,#4c7a34
+Markisa,R,#7b2cbf,#4caf50
+Leci,W,#ef476f,#8ac926
+Delima,R,#c9184a,#2f9e44
+Buah Naga,W,#ff4d8d,#2fbf71
+Jeruk Bali,R,#cddc39,#4caf50
+Blueberry,R,#4361ee,#2f9e44
+Frambos,G,#e11d48,#2f9e44
+Plum,R,#6d28d9,#2f9e44
+Aprikot,R,#ffa94d,#2f9e44
+Kurma,E,#7b4a2a,#c9a66b
+Buah Ara,P,#7b3f8e,#5aa469
+Nangka,W,#c5d24a,#6b8e23
+Kelengkeng,R,#d9b382,#8a6d3b
+Sawo,R,#b8864b,#6b8e23
+Duku,R,#e9c46a,#8a6d3b
+Mandarin,R,#ff8c1a,#2f9e44
+Nektarin,A,#ff6f59,#4caf50
+Cranberry,R,#b5173a,#2f9e44
+Blackberry,G,#4a3a7a,#2f9e44
+Melon Madu,M,#ffe8a3,#d4b45a
+Semangka Kuning,M,#f6c945,#2f9e44
+Pir Merah,P,#d64045,#4caf50`;
+const VG=`Wortel,C,#ff8a1f,#2f9e44
+Wortel Ungu,C,#7c3aed,#2f9e44
+Lobak,R,#ef476f,#4caf50
+Lobak Putih,C,#f1f5e9,#4caf50
+Brokoli,U,#2f9e44,#7cb342
+Kembang Kol,U,#f5f0dc,#8bc34a
+Kembang Kol Ungu,U,#9d4edd,#8bc34a
+Terong,E,#6d28d9,#2f9e44
+Terong Hijau,E,#8bc34a,#2e7d32
+Jagung,K,#ffd43b,#7cb342
+Timun,L,#4caf50,#2e7d32
+Zukini,L,#2f9e44,#1b5e20
+Pare,D,#4f9d3a,#2e6b25
+Labu Siam,P,#a7d97b,#6aa84f
+Okra,D,#7cb342,#4a7c28
+Tomat,R,#e63946,#2f9e44
+Tomat Ceri,R,#ff6b6b,#2f9e44
+Labu Kuning,Q,#ff9f1c,#6b8e23
+Bayam,V,#3da35d,#7ed957
+Kangkung,V,#58b368,#8bd450
+Sawi,V,#8bd450,#4caf50
+Seledri,V,#a3d977,#6abf69
+Daun Bawang,V,#9be15d,#f1f5e9
+Kemangi,V,#2f9e44,#7ed957
+Selada,F,#8bd450,#c5f08b
+Selada Merah,F,#c0396b,#f4a6c0
+Kol,F,#a7d97b,#e1f5c4
+Kol Brussel,F,#6abf69,#a7d97b
+Kentang,T,#d9a066,#9c6b3c
+Ubi Jalar,T,#9b5de5,#6a3fb5
+Singkong,T,#c08a5a,#8b5e34
+Talas,T,#b59a85,#8b6f5a
+Bawang Merah,O,#b83280,#e8a1c8
+Bawang Putih,O,#fff6e0,#e0cfa8
+Bawang Bombay,O,#e9b44c,#c68a2e
+Cabai Merah,H,#e63946,#2f9e44
+Cabai Hijau,H,#4caf50,#2e7d32
+Cabai Rawit,H,#ff7b00,#2f9e44
+Paprika Merah,Z,#e63946,#2f9e44
+Paprika Kuning,Z,#ffd23f,#2f9e44
+Paprika Hijau,Z,#4caf50,#2e7d32
+Buncis,D,#4caf50,#2e7d32
+Kacang Panjang,D,#6abf69,#2e7d32
+Kacang Polong,D,#8bd450,#4caf50
+Jamur,Y,#c9a27a,#f8efe0
+Jamur Tiram,Y,#e0d5c8,#f5efe6
+Bit,R,#a4133c,#2f9e44
+Asparagus,C,#7cb342,#4caf50
+Rebung,C,#e0c58f,#8a6d3b
+Tauge,V,#f7f3c9,#ffd23f`;
+const mk=(s,t)=>s.split('\n').map(l=>{const r=l.split(',');return{n:r[0],k:r[1],a:r[2],b:r[3],t}});
+const ITEMS=[...mk(FR,'f'),...mk(VG,'v')];ITEMS.forEach((it,i)=>it.id=i);
+const by=n=>ITEMS.find(i=>i.n===n);
+
+/* ===== Ilustrasi SVG dibuat dari kode ===== */
+const INK='#3b2a5a';
+const face=(x,y,s)=>`<g transform="translate(${x} ${y}) scale(${s})"><circle cx="-8" cy="0" r="3.2" fill="${INK}"/><circle cx="8" cy="0" r="3.2" fill="${INK}"/><circle cx="-7" cy="-1.2" r="1.1" fill="#fff"/><circle cx="9" cy="-1.2" r="1.1" fill="#fff"/><path d="M-4 6q4 4.5 8 0" stroke="${INK}" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="-14" cy="6" r="3" fill="#ff8fa3" opacity=".65"/><circle cx="14" cy="6" r="3" fill="#ff8fa3" opacity=".65"/></g>`;
+const lf=(x,y,c,r)=>`<path d="M0 0q10-14 22-4q-8 14-22 4z" fill="${c}" transform="translate(${x} ${y}) rotate(${r||0})"/>`;
+const sh=(x,y)=>`<ellipse cx="${x}" cy="${y}" rx="4.5" ry="8" fill="#fff" opacity=".4" transform="rotate(30 ${x} ${y})"/>`;
+const st=(d,c)=>`<path d="${d}" stroke="${c||'#7a5230'}" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+const dots=(pts,r,f)=>pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="${r}" fill="${f}"/>`).join('');
+const KD={
+R:(a,b)=>[`<circle cx="50" cy="56" r="34" fill="${a}"/>${sh(30,40)}${st('M50 24q0-9 4-13')}${lf(52,20,b)}`,50,60,1],
+A:(a,b)=>[`<path d="M50 30C38 20 14 26 16 54C18 78 36 92 50 86C64 92 82 78 84 54C86 26 62 20 50 30Z" fill="${a}"/>${sh(30,46)}${st('M50 30q0-10 4-16')}${lf(54,22,b)}`,50,62,1],
+P:(a,b)=>[`<path d="M50 14C60 14 62 28 66 40C84 56 82 88 50 90C18 88 16 56 34 40C38 28 40 14 50 14Z" fill="${a}"/>${sh(34,64)}${st('M50 16q0-6 3-9')}${lf(52,14,b,-10)}`,50,66,1],
+B:(a,b)=>[`<path d="M22 22C16 62 44 94 88 72C92 68 88 62 82 64C54 78 38 56 40 22Z" fill="${a}"/><path d="M22 22h18l-1-9H24z" fill="${b}"/>`,42,60,.75],
+G:(a,b)=>[dots([[30,46],[50,40],[70,46],[40,60],[60,60],[50,76]],14,a)+st('M50 28q2-10 8-14')+lf(54,18,b),50,58,.7],
+S:(a,b)=>[`<path d="M50 92C18 74 12 46 20 34C34 24 66 24 80 34C88 46 82 74 50 92Z" fill="${a}"/>${[[34,44],[66,44],[28,60],[72,60],[40,76],[60,76]].map(p=>`<ellipse cx="${p[0]}" cy="${p[1]}" rx="1.8" ry="2.6" fill="#ffe27a"/>`).join('')}<path d="M26 32l24-14 24 14-12 4-12-8-12 8z" fill="${b}"/>`,50,58,.8],
+N:(a,b)=>[`<path d="M50 4l8 22-8-6-8 6zM30 10l12 18-12-4zM70 10L58 28l12-4z" fill="${b}"/><ellipse cx="50" cy="62" rx="27" ry="31" fill="${a}"/><path d="M28 46l44 34M28 66l30 22M42 34l34 26M72 46L28 80M60 34L26 62" stroke="#c98a00" stroke-width="2" opacity=".35" fill="none"/>`,50,62,.9],
+M:(a,b)=>[`<circle cx="50" cy="54" r="36" fill="${a}"/><path d="M50 18q-16 36 0 72M50 18q16 36 0 72M24 32q-6 22 0 44M76 32q6 22 0 44" stroke="${b}" stroke-width="6" fill="none" opacity=".6"/>${sh(30,36)}`,50,56,1],
+L:(a,b)=>[`<g transform="rotate(-30 50 50)"><rect x="8" y="34" width="84" height="32" rx="16" fill="${a}"/><rect x="86" y="43" width="10" height="14" rx="4" fill="${b}"/></g>`,50,50,.8],
+C:(a,b)=>[`<path d="M50 30q-14-12-22-8M50 30q0-18 0-26M50 30q14-12 22-8" stroke="${b}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M26 34C26 26 74 26 74 34L55 92Q50 98 45 92Z" fill="${a}"/><path d="M34 46h10M58 62h8M44 76h8" stroke="#fff" stroke-width="3" opacity=".3" stroke-linecap="round"/>`,50,50,.8],
+E:(a,b)=>[`<path d="M58 22C72 28 86 46 78 70C70 92 40 96 28 80C20 66 34 46 46 38C50 32 52 26 58 22Z" fill="${a}"/>${sh(36,70)}<path d="M42 30q16-12 30 2l-8 6-8-4-8 6z" fill="${b}"/>`,52,66,.85],
+K:(a,b)=>[`<path d="M50 10C72 10 78 46 72 70C68 90 32 90 28 70C22 46 28 10 50 10Z" fill="${a}"/>${dots([[40,24],[60,24],[36,36],[64,36],[34,50],[66,50]],3,'rgba(224,168,0,.5)')}<path d="M50 96C18 92 14 58 28 36C30 62 44 78 50 96ZM50 96C82 92 86 58 72 36C70 62 56 78 50 96Z" fill="${b}"/>`,50,52,.8],
+O:(a,b)=>[`<path d="M50 10C54 24 56 28 70 40C90 58 82 90 50 90C18 90 10 58 30 40C44 28 46 24 50 10Z" fill="${a}"/><path d="M50 28q-14 30 0 62M50 28q14 30 0 62" stroke="${b}" stroke-width="3" fill="none" opacity=".6"/>`,50,64,.9],
+H:(a,b)=>[`<path d="M24 28C24 20 44 20 52 32C68 52 82 70 90 90C58 86 28 62 24 28Z" fill="${a}"/><path d="M20 26q2-14 18-10l-2 10z" fill="${b}"/>`,50,56,.6],
+F:(a,b)=>[`<circle cx="50" cy="54" r="34" fill="${a}" stroke="${b}" stroke-width="6" stroke-dasharray="13 5"/><path d="M50 24v60M50 40q-14-4-22-14M50 40q14-4 22-14" stroke="${b}" stroke-width="3" fill="none" opacity=".5"/>`,50,60,.85],
+U:(a,b)=>[`<path d="M40 60h20l5 32H35z" fill="${b}"/>${dots([[28,50],[72,50],[50,34],[40,52],[62,52]],16,a)}`,50,52,.75],
+Y:(a,b)=>[`<rect x="34" y="50" width="32" height="38" rx="12" fill="${b}"/><path d="M10 58C10 22 90 22 90 58Q50 66 10 58Z" fill="${a}"/>${dots([[30,42],[52,34],[72,44]],4.5,'rgba(255,255,255,.65)')}`,50,74,.65],
+D:(a,b)=>[`<path d="M14 72C28 30 66 12 90 24C86 54 50 90 14 72Z" fill="${a}"/><path d="M18 70C36 38 66 22 88 26" stroke="${b}" stroke-width="3" fill="none" opacity=".6"/>`,52,56,.65],
+T:(a,b)=>[`<path d="M16 54C16 30 44 20 66 26C90 32 92 62 76 78C60 94 18 86 16 54Z" fill="${a}"/>${dots([[30,40],[72,38],[78,66],[34,74]],2.6,b)}`,52,58,.9],
+X:(a)=>[`<path d="M50 10l11 26 28 2-21 19 7 28-25-15-25 15 7-28-21-19 28-2z" fill="${a}" stroke="rgba(59,42,90,.28)" stroke-width="5" stroke-linejoin="round"/>`,50,54,.75],
+Z:(a,b)=>[`<path d="M26 34C8 40 8 82 30 88C40 92 44 86 50 86C56 86 60 92 70 88C92 82 92 40 74 34C64 30 58 36 50 36C42 36 36 30 26 34Z" fill="${a}"/>${sh(26,60)}${st('M50 36q0-12 10-18',b)}`,50,62,1],
+Q:(a,b)=>[`<ellipse cx="28" cy="58" rx="20" ry="30" fill="${a}"/><ellipse cx="72" cy="58" rx="20" ry="30" fill="${a}"/><ellipse cx="50" cy="58" rx="22" ry="33" fill="${a}"/>${st('M50 26q0-8 6-12',b)}`,50,62,.95],
+W:(a,b)=>[Array.from({length:14},(_,i)=>{const t=i*Math.PI/7,c=Math.cos(t),s=Math.sin(t);return `<path d="M${50+27*c} ${54+27*s}L${50+39*c} ${54+39*s}" stroke="${b}" stroke-width="6" stroke-linecap="round"/>`}).join('')+`<circle cx="50" cy="54" r="30" fill="${a}"/>`,50,56,.9],
+V:(a,b)=>[`<path d="M50 92V30M34 92Q30 56 22 34M66 92Q70 56 78 34" stroke="${b}" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="50" cy="26" r="14" fill="${a}"/><circle cx="22" cy="30" r="12" fill="${a}"/><circle cx="78" cy="30" r="12" fill="${a}"/><ellipse cx="50" cy="62" rx="22" ry="26" fill="${a}"/>`,50,62,.85]
+};
+const art=it=>{const[b,x,y,s]=KD[it.k](it.a,it.b);return `<svg viewBox="0 0 100 100" aria-hidden="true"><g class="o">${b}</g>${face(x,y,s)}</svg>`};
+const starSvg=(on,sty)=>`<svg viewBox="0 0 20 20" ${sty?`style="${sty}"`:''}><path fill="${on?'#ffc400':'#d9d3e8'}" stroke="rgba(59,42,90,.3)" stroke-width=".8" stroke-linejoin="round" d="M10 1.5l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.4 4.9 17.3 6 11.5 1.7 7.5l5.8-.7z"/></svg>`;
+
+/* ===== Suara ===== */
+let ac,snd=true;
+const A=()=>{if(!ac){const C=window.AudioContext||window.webkitAudioContext;if(C)ac=new C()}if(ac&&ac.state==='suspended')ac.resume();return ac};
+const tone=(f,t,d,ty,v)=>{const c=A();if(!c||!snd)return;const o=c.createOscillator(),g=c.createGain(),n=c.currentTime+t;o.type=ty||'sine';o.frequency.setValueAtTime(f,n);g.gain.setValueAtTime(v||.25,n);g.gain.exponentialRampToValueAtTime(.001,n+d);o.connect(g);g.connect(c.destination);o.start(n);o.stop(n+d)};
+const sOk=()=>{tone(523,0,.3);tone(1046,.1,.4,'sine',.3)},sNo=()=>tone(180,0,.3,'triangle',.3),sPop=()=>tone(700,0,.12,'sine',.12),sWin=()=>[262,330,392,523,659].forEach((f,i)=>tone(f,i*.1,.4));
+const say=t=>{if(!snd)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='id-ID';u.rate=.9;u.pitch=1.15;speechSynthesis.speak(u)}catch(e){}};
+
+/* ===== Koleksi (tersimpan di perangkat) ===== */
+let seen=new Set();try{seen=new Set(JSON.parse(localStorage.getItem('pbs296')||'[]'))}catch(e){}
+const save=()=>{try{localStorage.setItem('pbs296',JSON.stringify([...seen]))}catch(e){}};
+const colTxt=()=>`Koleksi stiker: ${seen.size} / ${ITEMS.length}`;
+
+/* ===== Permainan ===== */
+const $=s=>document.querySelector(s),N=10;
+const card=$('#card'),inner=$('#inner'),toastEl=$('#toast'),hint=$('#hint');
+let q=[],cur,score=0,miss=0,streak=0,busy=true,ox=0,oy=0,drag=null,tt;
+const rate=()=>miss>=3?1:miss>=1?2:3;
+const stars=()=>{$('#stars').innerHTML=[1,2,3].map(i=>starSvg(i<=rate())).join('')};
+const kind=t=>t==='f'?'buah':'sayur';
+const show=(id,on)=>$(id).classList.toggle('hide',!on);
+
+function newRound(){
+  const pick=t=>ITEMS.filter(i=>i.t===t).sort(()=>Math.random()-.5).sort((a,b)=>seen.has(a.id)-seen.has(b.id)).slice(0,N/2);
+  q=[...pick('f'),...pick('v')].sort(()=>Math.random()-.5);
+  score=miss=streak=0;stars();hud();hint.style.opacity=1;
+  show('#start',false);show('#end',false);next();
+}
+function hud(){$('#bar').style.width=score/N*100+'%';$('#pt').textContent=score+'/'+N;const c=$('#combo');c.textContent='🔥 '+streak+'x beruntun!';c.classList.toggle('show',streak>=3)}
+function next(){
+  if(!q.length)return end();
+  cur=q.pop();$('#art').innerHTML=art(cur);$('#nm').textContent=cur.n;card.setAttribute('aria-label',cur.n);
+  card.style.transition='none';card.style.transform='';card.style.opacity=1;ox=oy=0;
+  inner.style.animation='none';void inner.offsetWidth;inner.style.animation='';
+  busy=false;sPop();say(cur.n);
+}
+function toast(t,ok){toastEl.textContent=t;toastEl.className='toast show'+(ok?'':' no');clearTimeout(tt);tt=setTimeout(()=>toastEl.classList.remove('show'),1800)}
+function burst(x,y){const e=['✨','⭐','🍀','💖','🌟'];for(let i=0;i<12;i++){const s=document.createElement('span');s.className='p';s.textContent=e[i%5];s.style.left=x+'px';s.style.top=y+'px';const a=Math.random()*6.28,d=60+Math.random()*90;s.style.setProperty('--x',Math.cos(a)*d+'px');s.style.setProperty('--y',Math.sin(a)*d-30+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),850)}}
+function back(){card.style.transition='transform .4s cubic-bezier(.2,1.6,.4,1)';card.style.transform='';ox=oy=0}
+
+function answer(t){
+  if(busy)return;busy=true;
+  if(t===cur.t){
+    score++;streak++;seen.add(cur.id);save();sOk();
+    const b=$(`.basket[data-t="${t}"]`).getBoundingClientRect(),r=card.getBoundingClientRect();
+    const dx=b.left+b.width/2-(r.left+r.width/2)+ox,dy=b.top+b.height/3-(r.top+r.height/2)+oy;
+    card.style.transition='transform .45s cubic-bezier(.5,0,.7,.4),opacity .45s';
+    card.style.transform=`translate(${dx}px,${dy}px) scale(.2) rotate(20deg)`;card.style.opacity=0;
+    burst(b.left+b.width/2,b.top);toast(`Benar! ${cur.n} adalah ${kind(cur.t)}`,1);hud();
+    setTimeout(next,650);
+  }else{
+    miss++;streak=0;sNo();stars();hud();toast(`Ups! ${cur.n} adalah ${kind(cur.t)}. Coba lagi ya!`,0);
+    inner.animate([{transform:'translateX(0)',borderColor:'#ff7a59'},{transform:'translateX(-12px)'},{transform:'translateX(12px)'},{transform:'translateX(-8px)'},{transform:'translateX(0)',borderColor:'#ffd23f'}],{duration:450});
+    setTimeout(()=>{back();busy=false},450);
+  }
+}
+function end(){
+  busy=true;sWin();const r=rate();
+  $('#fin').innerHTML=[1,2,3].map(i=>starSvg(i<=r,`animation:pop .6s ${i*.25}s both cubic-bezier(.2,1.6,.4,1)`)).join('');
+  $('#msg').textContent=r===3?'Sempurna! 10 item dipilah tanpa salah!':r===2?'Bagus sekali! Kamu makin mahir.':'Kerja bagus! Coba lagi untuk 3 bintang!';
+  $('#col2').textContent=colTxt();show('#end',true);
+  for(let i=0;i<4;i++)setTimeout(()=>burst(innerWidth/2,innerHeight/3),i*250);
+}
+
+/* ===== Seret & lepas (mouse, sentuh, pena) ===== */
+const baskets=[...document.querySelectorAll('.basket')];
+function hit(){const r=card.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return baskets.find(b=>{const k=b.getBoundingClientRect();return x>k.left-12&&x<k.right+12&&y>k.top-12&&y<k.bottom+12})}
+const over=()=>{const h=hit();baskets.forEach(b=>b.classList.toggle('over',b===h))};
+card.addEventListener('pointerdown',e=>{if(busy)return;A();card.setPointerCapture(e.pointerId);drag={x:e.clientX-ox,y:e.clientY-oy,sx:e.clientX,sy:e.clientY,m:0};card.classList.add('drag');card.style.transition='none';hint.style.opacity=0});
+card.addEventListener('pointermove',e=>{if(!drag)return;ox=e.clientX-drag.x;oy=e.clientY-drag.y;drag.m=Math.max(drag.m,Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy));card.style.transform=`translate(${ox}px,${oy}px) scale(1.08) rotate(${ox/18}deg)`;over()});
+const drop=e=>{if(!drag)return;const d=drag,b=hit();drag=null;card.classList.remove('drag');baskets.forEach(k=>k.classList.remove('over'));if(e.type==='pointercancel'||!b){back();if(d.m<8)say(cur.n)}else answer(b.dataset.t)};
+card.addEventListener('pointerup',drop);card.addEventListener('pointercancel',drop);
+baskets.forEach(b=>b.addEventListener('click',()=>answer(b.dataset.t)));
+addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='a')answer('f');if(e.key==='ArrowRight'||e.key==='d')answer('v')});
+
+/* ===== Tombol & awal permainan ===== */
+$('#snd').onclick=e=>{snd=!snd;e.currentTarget.textContent=snd?'🔊':'🔇';if(!snd)try{speechSynthesis.cancel()}catch(x){}};
+$('#go').onclick=()=>{A();newRound()};$('#again').onclick=()=>{A();newRound()};
+$('#pf').innerHTML=['Stroberi','Pisang','Apel Merah'].map(n=>art(by(n))).join('');
+$('#pv').innerHTML=['Wortel','Brokoli','Jagung'].map(n=>art(by(n))).join('');
+$('#duo').innerHTML=art(by('Apel Merah'))+art(by('Brokoli'));
+$('#col1').textContent=colTxt();stars();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>

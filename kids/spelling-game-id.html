@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Petualangan Mengeja Beni si Beruang</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--ink:#3b1f6b;--pink:#ff6fb5;--sun:#ffd23f;--sky:#3ec6ff;--mint:#3ddc97;--tang:#ff8a3d;--grape:#8a5cf6;--cream:#fff8e7}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+body{margin:0;min-height:100vh;font-family:'Fredoka','Comic Sans MS','Trebuchet MS',sans-serif;font-weight:700;color:var(--ink);
+background:radial-gradient(circle at 20% 10%,#ffe3f1 0,transparent 40%),radial-gradient(circle at 85% 90%,#d8f3ff 0,transparent 45%),linear-gradient(160deg,#ffd6ec,#fff1b8 55%,#c9f5e0);overflow-x:hidden}
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg i{position:absolute;font-style:normal;font-size:28px;opacity:.55;animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-24px) rotate(20deg)}}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:12px 14px 28px}
+.screen{display:none}.screen.on{display:block}
+h1{font-size:clamp(34px,9vw,58px);margin:4px 0;text-align:center;line-height:1;color:var(--grape);text-shadow:0 4px 0 #fff,0 7px 0 var(--pink)}
+.sub{text-align:center;font-size:20px;margin:6px 0 14px}
+.mascot{font-size:110px;text-align:center;animation:bob 1.6s ease-in-out infinite;display:block;line-height:1.1}
+.mascot.small{font-size:64px}
+@keyframes bob{50%{transform:translateY(-14px) rotate(-5deg)}}
+.cheer{animation:cheer .9s ease!important}
+@keyframes cheer{30%{transform:translateY(-50px) rotate(360deg) scale(1.3)}60%{transform:translateY(0) scale(.9)}}
+.sad{animation:wob .6s ease!important}
+@keyframes wob{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+.btn{display:block;width:100%;border:0;border-radius:30px;padding:18px;margin:12px 0;font:inherit;font-size:28px;color:#fff;cursor:pointer;
+box-shadow:0 8px 0 rgba(0,0,0,.2);transition:transform .1s,box-shadow .1s;text-shadow:0 2px 0 rgba(0,0,0,.18)}
+.btn:active{transform:translateY(7px);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.btn small{display:block;font-size:16px;opacity:.95}
+.b-easy{background:var(--mint)}.b-med{background:var(--tang)}.b-hard{background:var(--pink)}.b-go{background:var(--grape)}.b-sky{background:var(--sky)}
+.hud{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pill{background:#fff;border-radius:24px;padding:6px 14px;font-size:20px;box-shadow:0 4px 0 rgba(0,0,0,.12);border:3px solid var(--sun)}
+.hearts{font-size:26px;letter-spacing:2px}
+.hearts .lost{filter:grayscale(1);opacity:.35}
+.pop{animation:pop .4s}
+@keyframes pop{50%{transform:scale(1.4)}}
+.bar{height:20px;background:#fff;border-radius:12px;border:3px solid var(--grape);margin:10px 0;overflow:hidden}
+.bar div{height:100%;width:0;background:repeating-linear-gradient(45deg,var(--pink),var(--pink) 12px,var(--sun) 12px,var(--sun) 24px);transition:width .5s;border-radius:8px}
+.rewards{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.rw{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:24px;border:3px dashed #c9b6ee;filter:grayscale(1);opacity:.6}
+.rw.got{filter:none;opacity:1;border:3px solid var(--sun);background:#fff6c9;animation:pop .6s}
+.card{background:var(--cream);border:6px solid #fff;border-radius:36px;box-shadow:0 10px 0 rgba(138,92,246,.35);padding:12px;margin:10px 0;text-align:center}
+.pic{font-size:clamp(90px,26vw,150px);line-height:1.1;display:inline-block;animation:bob 2s ease-in-out infinite}
+.say{font-size:22px;padding:8px 22px;border:0;border-radius:24px;background:var(--sky);color:#fff;font-family:inherit;font-weight:700;box-shadow:0 5px 0 rgba(0,0,0,.2);cursor:pointer;margin:2px}
+.say:active{transform:translateY(4px);box-shadow:none}
+.slots,.tiles{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.slot{width:clamp(48px,14vw,72px);height:clamp(58px,17vw,84px);border-radius:18px;border:4px dashed var(--grape);background:#fff;display:grid;place-items:center;font-size:clamp(34px,10vw,52px);text-transform:uppercase}
+.slot.next{border-color:var(--pink);animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.slot.full{border:4px solid var(--mint);background:#e6fff3;animation:pop .35s}
+.slot.win{animation:dance .6s ease infinite alternate}
+@keyframes dance{to{transform:translateY(-14px) rotate(8deg)}}
+.tile{width:clamp(58px,17vw,84px);height:clamp(58px,17vw,84px);border:0;border-radius:22px;font:inherit;font-size:clamp(34px,11vw,54px);text-transform:uppercase;color:#fff;cursor:pointer;
+box-shadow:0 7px 0 rgba(0,0,0,.25);text-shadow:0 3px 0 rgba(0,0,0,.2);animation:hop 1.4s ease-in-out infinite}
+@keyframes hop{50%{transform:translateY(-9px)}}
+.tile:active{transform:translateY(6px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.tile.used{visibility:hidden}
+.tile.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
+.tile.hint{outline:6px solid var(--sun);animation:pulse .5s infinite}
+.msg{min-height:34px;font-size:26px;color:var(--grape)}
+.toast{position:fixed;left:50%;top:30%;transform:translate(-50%,-50%) scale(0);z-index:50;background:#fff;border:6px solid var(--sun);border-radius:36px;padding:18px 28px;font-size:34px;text-align:center;box-shadow:0 12px 0 rgba(0,0,0,.2);pointer-events:none}
+.toast.show{animation:toast 1.9s ease forwards}
+@keyframes toast{15%{transform:translate(-50%,-50%) scale(1.15) rotate(-3deg)}25%{transform:translate(-50%,-50%) scale(1)}80%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(0)}}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.top{display:flex;gap:8px}.top .pill{flex:1;text-align:center;font-size:18px;cursor:pointer}
+.big{font-size:64px;text-align:center}
+@media (prefers-reduced-motion:reduce){.bg i{animation:none}}
+</style></head><body>
+<div class="bg" id="bg"></div><canvas id="cv"></canvas><div class="toast" id="toast"></div>
+<main>
+<section class="screen on" id="s-start">
+<h1>Petualangan Mengeja Beni!</h1>
+<span class="mascot" id="m0">🐻</span>
+<p class="sub">Halo teman! Dengar, lihat, lalu eja katanya! (799 kata untuk ditemukan)</p>
+<button class="btn b-easy" data-lv="easy">🌱 Mudah<small>5 hati · kata pendek (3–4 huruf)</small></button>
+<button class="btn b-med" data-lv="med">🔥 Sedang<small>4 hati · kata sedang (5–6 huruf) + huruf pengecoh</small></button>
+<button class="btn b-hard" data-lv="hard">🚀 Sulit<small>3 hati · kata panjang (7+ huruf) + banyak huruf pengecoh</small></button>
+<div class="rewards" id="rw0"></div>
+</section>
+
+<section class="screen" id="s-game">
+<div class="top"><span class="pill" id="home">🏠 Beranda</span><span class="pill" id="snd">🔊 Suara nyala</span></div>
+<div class="hud" style="margin-top:8px">
+<span class="pill">⭐ <span id="pts">0</span></span>
+<span class="pill" id="streak">🔥 0</span>
+<span class="pill hearts" id="hearts"></span></div>
+<div class="bar"><div id="prog"></div></div>
+<div class="rewards" id="rw1"></div>
+<div class="card">
+<span class="mascot small" id="m1">🐻</span>
+<div class="pic" id="pic"></div><br>
+<button class="say" id="again">🔊 Dengar lagi</button>
+<button class="say" id="hint" style="background:var(--tang)">💡 Petunjuk</button>
+<div class="slots" id="slots"></div>
+<div class="msg" id="msg"></div>
+</div>
+<div class="tiles" id="tiles"></div>
+</section>
+
+<section class="screen" id="s-end">
+<h1 id="endT">Hore!</h1>
+<div class="big" id="endS"></div>
+<span class="mascot" id="m2">🐻</span>
+<p class="sub" id="endP"></p>
+<div class="rewards" id="rw2"></div>
+<button class="btn b-go" id="replay">🎈 Main lagi</button>
+<button class="btn b-sky" id="menu">🏠 Pilih level</button>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const WORDS=[["monyet","🐵"],["gorila","🦍"],["orangutan","🦧"],["anjing","🐶"],["anjing pemandu","🦮"],["pudel","🐩"],["serigala","🐺"],["rubah","🦊"],["rakun","🦝"],["kucing","🐱"],["singa","🦁"],["harimau","🐯"],["macan tutul","🐆"],["kuda","🐴"],["rusa besar","🫎"],["keledai","🫏"],["unicorn","🦄"],["zebra","🦓"],["rusa","🦌"],["bison","🦬"],["sapi","🐮"],["lembu","🐂"],["kerbau","🐃"],["babi hutan","🐗"],["hidung babi","🐽"],["domba jantan","🐏"],["domba betina","🐑"],["kambing","🐐"],["unta","🐪"],["llama","🦙"],["jerapah","🦒"],["gajah","🐘"],["mamut","🦣"],["badak","🦏"],["kuda nil","🦛"],["tikus","🐭"],["hamster","🐹"],["kelinci","🐰"],["tupai","🐿️"],["biwara","🦫"],["landak","🦔"],["kelelawar","🦇"],["beruang","🐻"],["beruang kutub","🐻‍❄️"],["koala","🐨"],["panda","🐼"],["kungkang","🦥"],["sigung","🦨"],["kanguru","🦘"],["musang","🦡"],["kalkun","🦃"],["ayam","🐔"],["ayam jago","🐓"],["itik menetas","🐣"],["itik bayi","🐤"],["burung","🐦"],["pinguin","🐧"],["merpati","🕊️"],["elang","🦅"],["bebek","🦆"],["burung hantu","🦉"],["dodo","🦤"],["bulu","🪶"],["flamingo","🦩"],["merak","🦚"],["nuri","🦜"],["sayap","🪽"],["katak","🐸"],["buaya","🐊"],["kadal","🦎"],["ular","🐍"],["naga","🐲"],["sauropod","🦕"],["ikan paus","🐋"],["anjing laut","🦭"],["ikan","🐟"],["ikan tropis","🐠"],["ikan gembung","🐡"],["hiu","🦈"],["gurita","🐙"],["terumbu karang","🪸"],["siput","🐌"],["serangga kecil","🐛"],["semut","🐜"],["lebah madu","🐝"],["kumbang","🪲"],["kumbang betina","🐞"],["jangkrik","🦗"],["kecoak","🪳"],["kalajengking","🦂"],["nyamuk","🦟"],["lalat","🪰"],["cacing","🪱"],["karangan bunga","💐"],["sakura","🌸"],["bunga","💮"],["teratai","🪷"],["hiasan mawar","🏵️"],["mawar","🌹"],["bunga layu","🥀"],["kembang sepatu","🌺"],["bunga matahari","🌻"],["mekar","🌼"],["tulip","🌷"],["hyacinthus","🪻"],["semai","🌱"],["tanaman pot","🪴"],["pohon palem","🌴"],["kaktus","🌵"],["seikat padi","🌾"],["herba","🌿"],["shamrock","☘️"],["daun maple","🍁"],["jamur","🍄"],["anggur","🍇"],["melon","🍈"],["semangka","🍉"],["buah jeruk","🍊"],["lemon","🍋"],["pisang","🍌"],["nanas","🍍"],["mangga","🥭"],["apel","🍎"],["pir","🍐"],["persik","🍑"],["ceri","🍒"],["stroberi","🍓"],["blueberry","🫐"],["buah kiwi","🥝"],["tomat","🍅"],["zaitun","🫒"],["kelapa","🥥"],["alpukat","🥑"],["terung","🍆"],["kentang","🥔"],["wortel","🥕"],["bonggol jagung","🌽"],["cabai pedas","🌶️"],["paprika","🫑"],["ketimun","🥒"],["selada","🥬"],["brokoli","🥦"],["bawang","🧄"],["bawang bombay","🧅"],["kacang tanah","🥜"],["kacang","🫘"],["kastanye","🌰"],["akar jahe","🫚"],["kacang polong","🫛"],["roti","🍞"],["croissant","🥐"],["roti baguette","🥖"],["roti pipih","🫓"],["pretzel","🥨"],["bagel","🥯"],["panekuk","🥞"],["wafel","🧇"],["irisan keju","🧀"],["kaki ayam","🍗"],["babi asap","🥓"],["hamburger","🍔"],["kentang goreng","🍟"],["pizza","🍕"],["hot dog","🌭"],["roti lapis","🥪"],["taco","🌮"],["burrito","🌯"],["tamale","🫔"],["falafel","🧆"],["telur","🥚"],["memasak","🍳"],["wajan dangkal","🥘"],["panci makanan","🍲"],["fondue","🫕"],["salad","🥗"],["popcorn","🍿"],["mentega","🧈"],["garam","🧂"],["makanan kaleng","🥫"],["kotak bento","🍱"],["kerupuk beras","🍘"],["nasi kepal","🍙"],["nasi matang","🍚"],["nasi kari","🍛"],["spageti","🍝"],["ubi panggang","🍠"],["oden","🍢"],["sushi","🍣"],["udang goreng","🍤"],["kue bulan","🥮"],["dango","🍡"],["dumpling","🥟"],["kotak makanan","🥡"],["kepiting","🦀"],["lobster","🦞"],["udang","🦐"],["tiram","🦪"],["es serut","🍧"],["es krim","🍨"],["donat","🍩"],["biskuit","🍪"],["kue","🍰"],["kue mangkuk","🧁"],["pai","🥧"],["sebatang","🍫"],["permen","🍬"],["permen lolipop","🍭"],["puding susu","🍮"],["toples madu","🍯"],["botol bayi","🍼"],["gelas susu","🥛"],["minuman hangat","☕"],["teko","🫖"],["gelas tumbler","🥃"],["menuang cairan","🫗"],["teh bubble","🧋"],["kotak minuman","🧃"],["teh mate","🧉"],["es batu","🧊"],["sumpit","🥢"],["sendok","🥄"],["toples","🫙"],["amphora","🏺"],["peta dunia","🗺️"],["peta jepang","🗾"],["kompas","🧭"],["gunung","⛰️"],["gunung berapi","🌋"],["gunung fuji","🗻"],["berkemah","🏕️"],["gurun","🏜️"],["taman nasional","🏞️"],["stadion","🏟️"],["batu bata","🧱"],["batu","🪨"],["kayu","🪵"],["pondok","🛖"],["perumahan","🏘️"],["rumah","🏠"],["kantor pos","🏤"],["rumah sakit","🏥"],["bank","🏦"],["hotel","🏨"],["hotel cinta","🏩"],["minimarket","🏪"],["sekolah","🏫"],["toserba","🏬"],["pabrik","🏭"],["kastel jepang","🏯"],["kastel","🏰"],["pernikahan","💒"],["menara tokyo","🗼"],["patung liberty","🗽"],["gereja","⛪"],["masjid","🕌"],["pura","🛕"],["sinagog","🕍"],["kuil shinto","⛩️"],["air mancur","⛲"],["tenda","⛺"],["berkabut","🌁"],["panorama kota","🏙️"],["komidi putar","🎠"],["perosotan","🛝"],["kincir ria","🎡"],["roller coaster","🎢"],["tanda salon","💈"],["tenda sirkus","🎪"],["lokomotif","🚂"],["gerbong","🚃"],["kereta ekspres","🚄"],["kereta","🚆"],["light rail","🚈"],["stasiun","🚉"],["trem","🚊"],["monorel","🚝"],["gerbong trem","🚋"],["bus datang","🚍"],["bus listrik","🚎"],["minibus","🚐"],["ambulans","🚑"],["mobil polisi","🚓"],["taksi datang","🚖"],["mobil datang","🚘"],["truk pikap","🛻"],["lori gandeng","🚛"],["traktor","🚜"],["mobil balap","🏎️"],["sepeda motor","🏍️"],["motor skuter","🛵"],["bajaj","🛺"],["sepeda","🚲"],["otoped","🛴"],["papan luncur","🛹"],["sepatu roda","🛼"],["halte bus","🚏"],["jalan raya","🛣️"],["rel kereta","🛤️"],["drum minyak","🛢️"],["roda","🛞"],["rambu stop","🛑"],["konstruksi","🚧"],["jangkar","⚓"],["ban pelampung","🛟"],["perahu layar","⛵"],["kano","🛶"],["perahu cepat","🚤"],["kapal feri","⛴️"],["kapal","🚢"],["pesawat","✈️"],["pesawat kecil","🛩️"],["parasut","🪂"],["kursi","💺"],["helikopter","🚁"],["kereta gantung","🚠"],["trem gantung","🚡"],["satelit","🛰️"],["roket","🚀"],["piring terbang","🛸"],["bel meja","🛎️"],["koper","🧳"],["jam pasir","⌛"],["jam tangan","⌚"],["jam weker","⏰"],["stopwatch","⏱️"],["jam perapian","🕰️"],["bulan baru","🌑"],["bulan purnama","🌕"],["bulan sabit","🌙"],["termometer","🌡️"],["matahari","☀️"],["bintang medium","⭐"],["bintang jatuh","🌠"],["bima sakti","🌌"],["awan","☁️"],["awan hujan","🌧️"],["awan salju","🌨️"],["awan petir","🌩️"],["tornado","🌪️"],["kabut","🌫️"],["tertiup angin","🌬️"],["topan","🌀"],["pelangi","🌈"],["payung","☂️"],["serpihan salju","❄️"],["komet","☄️"],["api","🔥"],["tetesan air","💧"],["ombak","🌊"],["pohon natal","🎄"],["kembang api","🎆"],["petasan","🧨"],["berkilau","✨"],["balon","🎈"],["party popper","🎉"],["bola konfeti","🎊"],["pohon tanabata","🎋"],["dekorasi pinus","🎍"],["boneka jepang","🎎"],["ikan koi","🎏"],["lonceng angin","🎐"],["perayaan bulan","🎑"],["amplop","🧧"],["pita","🎀"],["kado","🎁"],["pita pengingat","🎗️"],["tiket masuk","🎟️"],["tiket","🎫"],["medali militer","🎖️"],["piala","🏆"],["medali emas","🥇"],["medali perak","🥈"],["bola sepak","⚽"],["bisbol","⚾"],["sofbol","🥎"],["bola basket","🏀"],["bola voli","🏐"],["tenis","🎾"],["lempar cakram","🥏"],["bowling","🎳"],["kriket","🏏"],["hoki lapangan","🏑"],["hoki es","🏒"],["lacrosse","🥍"],["ping pong","🏓"],["bulu tangkis","🏸"],["sarung tinju","🥊"],["gawang","🥅"],["seluncur es","⛸️"],["kacamata selam","🤿"],["kaos lari","🎽"],["ski","🎿"],["kereta luncur","🛷"],["batu curling","🥌"],["dart","🎯"],["bola kristal","🔮"],["tongkat ajaib","🪄"],["video game","🎮"],["joystick","🕹️"],["mesin slot","🎰"],["dadu","🎲"],["keping puzzle","🧩"],["boneka beruang","🧸"],["pinata","🪅"],["bola disko","🪩"],["hati","♥️"],["pion catur","♟️"],["joker","🃏"],["kartu bunga","🎴"],["seni drama","🎭"],["palet pelukis","🎨"],["benang","🧵"],["jarum jahit","🪡"],["simpul","🪢"],["kacamata","👓"],["rompi pengaman","🦺"],["dasi","👔"],["kaos","👕"],["celana jeans","👖"],["syal","🧣"],["sarung tangan","🧤"],["mantel","🧥"],["kaus kaki","🧦"],["gaun","👗"],["kimono","👘"],["sari","🥻"],["celana renang","🩲"],["celana pendek","🩳"],["pakaian wanita","👚"],["dompet","👛"],["tas jinjing","👜"],["kantung","👝"],["tas belanja","🛍️"],["tas sekolah","🎒"],["sandal jepit","🩴"],["sepatu pria","👞"],["sepatu lari","👟"],["sepatu flat","🥿"],["sandal wanita","👡"],["sepatu balet","🩰"],["sisir garpu","🪮"],["mahkota","👑"],["topi wanita","👒"],["topi tinggi","🎩"],["topi wisuda","🎓"],["topi berlidah","🧢"],["helm tentara","🪖"],["lipstik","💄"],["cincin","💍"],["batu permata","💎"],["speaker mati","🔇"],["pengeras suara","📢"],["megafon","📣"],["trompet pos","📯"],["lonceng","🔔"],["naskah musik","🎼"],["not musik","🎵"],["kenop kontrol","🎛️"],["mikrofon","🎤"],["headphone","🎧"],["radio","📻"],["saksofon","🎷"],["akordeon","🪗"],["gitar","🎸"],["keyboard musik","🎹"],["trompet","🎺"],["biola","🎻"],["banjo","🪕"],["drum","🥁"],["gendang","🪘"],["marakas","🪇"],["seruling","🪈"],["ponsel","📱"],["telepon masuk","📲"],["telepon","☎️"],["gagang telepon","📞"],["pager","📟"],["mesin faks","📠"],["baterai","🔋"],["baterai lemah","🪫"],["steker","🔌"],["printer","🖨️"],["keyboard","⌨️"],["mouse komputer","🖱️"],["trackball","🖲️"],["disk komputer","💽"],["disket","💾"],["disk optik","💿"],["dvd","📀"],["sempoa","🧮"],["kamera film","🎥"],["frame film","🎞️"],["proyektor film","📽️"],["televisi","📺"],["kamera","📷"],["kamera video","📹"],["kaset video","📼"],["lilin","🕯️"],["bohlam","💡"],["lampu senter","🔦"],["lampion","🏮"],["lampu diya","🪔"],["buku tertutup","📕"],["buku terbuka","📖"],["buku","📗"],["buku catatan","📓"],["buku besar","📒"],["gulungan","📜"],["koran","📰"],["gulungan koran","🗞️"],["pembatas buku","🔖"],["label","🏷️"],["kantung uang","💰"],["koin","🪙"],["uang bersayap","💸"],["kartu kredit","💳"],["kuitansi","🧾"],["email","📧"],["amplop datang","📨"],["paket","📦"],["kotak pos","📮"],["pensil","✏️"],["ujung pena","✒️"],["pena tinta","🖋️"],["pena","🖊️"],["kuas","🖌️"],["krayon","🖍️"],["memo","📝"],["tas kantor","💼"],["folder file","📁"],["kalender","📅"],["kalender sobek","📆"],["catatan spiral","🗒️"],["indeks kartu","📇"],["bagan menurun","📉"],["diagram batang","📊"],["papan klip","📋"],["paku penanda","📌"],["klip kertas","📎"],["gunting","✂️"],["lemari file","🗄️"],["gembok","🔒"],["gembok terbuka","🔓"],["kunci","🔑"],["kunci antik","🗝️"],["palu","🔨"],["beliung","⛏️"],["bumerang","🪃"],["perisai","🛡️"],["gergaji kayu","🪚"],["kunci inggris","🔧"],["obeng","🪛"],["roda gigi","⚙️"],["klem","🗜️"],["tautan","🔗"],["kait","🪝"],["kotak perkakas","🧰"],["magnet","🧲"],["tangga","🪜"],["alembic","⚗️"],["tabung uji","🧪"],["cawan petri","🧫"],["dna","🧬"],["mikroskop","🔬"],["teleskop","🔭"],["antena satelit","📡"],["plester luka","🩹"],["kruk","🩼"],["stetoskop","🩺"],["pintu","🚪"],["elevator","🛗"],["cermin","🪞"],["jendela","🪟"],["tempat tidur","🛏️"],["bangku","🪑"],["penyedot wc","🪠"],["shower","🚿"],["bathtub","🛁"],["pisau cukur","🪒"],["botol losion","🧴"],["peniti","🧷"],["sapu","🧹"],["keranjang","🧺"],["ember","🪣"],["sabun","🧼"],["gelembung","🫧"],["sikat gigi","🪥"],["spons","🧽"],["troli belanja","🛒"],["batu nisan","🪦"],["jimat nazar","🧿"],["hamsa","🪬"],["moai","🗿"],["plakat","🪧"],["andorra","🇦🇩"],["afganistan","🇦🇫"],["anguilla","🇦🇮"],["albania","🇦🇱"],["armenia","🇦🇲"],["angola","🇦🇴"],["antarktika","🇦🇶"],["argentina","🇦🇷"],["samoa amerika","🇦🇸"],["austria","🇦🇹"],["australia","🇦🇺"],["aruba","🇦🇼"],["azerbaijan","🇦🇿"],["barbados","🇧🇧"],["bangladesh","🇧🇩"],["belgia","🇧🇪"],["burkina faso","🇧🇫"],["bulgaria","🇧🇬"],["bahrain","🇧🇭"],["burundi","🇧🇮"],["benin","🇧🇯"],["bermuda","🇧🇲"],["bolivia","🇧🇴"],["brasil","🇧🇷"],["bahama","🇧🇸"],["bhutan","🇧🇹"],["pulau bouvet","🇧🇻"],["botswana","🇧🇼"],["belarus","🇧🇾"],["belize","🇧🇿"],["kanada","🇨🇦"],["swiss","🇨🇭"],["kepulauan cook","🇨🇰"],["cile","🇨🇱"],["kamerun","🇨🇲"],["tiongkok","🇨🇳"],["kolombia","🇨🇴"],["kosta rika","🇨🇷"],["kuba","🇨🇺"],["tanjung verde","🇨🇻"],["pulau natal","🇨🇽"],["siprus","🇨🇾"],["ceko","🇨🇿"],["jerman","🇩🇪"],["diego garcia","🇩🇬"],["jibuti","🇩🇯"],["denmark","🇩🇰"],["dominika","🇩🇲"],["aljazair","🇩🇿"],["ekuador","🇪🇨"],["estonia","🇪🇪"],["mesir","🇪🇬"],["sahara barat","🇪🇭"],["eritrea","🇪🇷"],["spanyol","🇪🇸"],["etiopia","🇪🇹"],["uni eropa","🇪🇺"],["finlandia","🇫🇮"],["fiji","🇫🇯"],["mikronesia","🇫🇲"],["prancis","🇫🇷"],["gabon","🇬🇦"],["inggris raya","🇬🇧"],["grenada","🇬🇩"],["georgia","🇬🇪"],["guyana prancis","🇬🇫"],["guernsey","🇬🇬"],["ghana","🇬🇭"],["gibraltar","🇬🇮"],["greenland","🇬🇱"],["gambia","🇬🇲"],["guinea","🇬🇳"],["guadeloupe","🇬🇵"],["yunani","🇬🇷"],["guatemala","🇬🇹"],["guam","🇬🇺"],["guyana","🇬🇾"],["honduras","🇭🇳"],["kroasia","🇭🇷"],["haiti","🇭🇹"],["hungaria","🇭🇺"],["indonesia","🇮🇩"],["irlandia","🇮🇪"],["israel","🇮🇱"],["pulau man","🇮🇲"],["india","🇮🇳"],["irak","🇮🇶"],["iran","🇮🇷"],["islandia","🇮🇸"],["italia","🇮🇹"],["jersey","🇯🇪"],["jamaika","🇯🇲"],["yordania","🇯🇴"],["jepang","🇯🇵"],["kenya","🇰🇪"],["kirgizstan","🇰🇬"],["kamboja","🇰🇭"],["kiribati","🇰🇮"],["komoro","🇰🇲"],["korea utara","🇰🇵"],["korea selatan","🇰🇷"],["kuwait","🇰🇼"],["kazakhstan","🇰🇿"],["laos","🇱🇦"],["lebanon","🇱🇧"],["saint lucia","🇱🇨"],["liechtenstein","🇱🇮"],["sri lanka","🇱🇰"],["liberia","🇱🇷"],["lesotho","🇱🇸"],["lituania","🇱🇹"],["luksemburg","🇱🇺"],["latvia","🇱🇻"],["libya","🇱🇾"],["maroko","🇲🇦"],["monako","🇲🇨"],["moldova","🇲🇩"],["montenegro","🇲🇪"],["saint martin","🇲🇫"],["madagaskar","🇲🇬"],["mali","🇲🇱"],["mongolia","🇲🇳"],["martinik","🇲🇶"],["mauritania","🇲🇷"],["montserrat","🇲🇸"],["malta","🇲🇹"],["mauritius","🇲🇺"],["maladewa","🇲🇻"],["malawi","🇲🇼"],["meksiko","🇲🇽"],["malaysia","🇲🇾"],["mozambik","🇲🇿"],["namibia","🇳🇦"],["kaledonia baru","🇳🇨"],["niger","🇳🇪"],["nigeria","🇳🇬"],["nikaragua","🇳🇮"],["belanda","🇳🇱"],["norwegia","🇳🇴"],["nepal","🇳🇵"],["nauru","🇳🇷"],["niue","🇳🇺"],["selandia baru","🇳🇿"],["oman","🇴🇲"],["panama","🇵🇦"],["peru","🇵🇪"],["papua nugini","🇵🇬"],["filipina","🇵🇭"],["pakistan","🇵🇰"],["polandia","🇵🇱"],["puerto riko","🇵🇷"],["portugal","🇵🇹"],["palau","🇵🇼"],["paraguay","🇵🇾"],["qatar","🇶🇦"],["rumania","🇷🇴"],["serbia","🇷🇸"],["rusia","🇷🇺"],["rwanda","🇷🇼"],["arab saudi","🇸🇦"],["seychelles","🇸🇨"],["sudan","🇸🇩"],["swedia","🇸🇪"],["singapura","🇸🇬"],["saint helena","🇸🇭"],["slovenia","🇸🇮"],["slovakia","🇸🇰"],["sierra leone","🇸🇱"],["san marino","🇸🇲"],["senegal","🇸🇳"],["somalia","🇸🇴"],["suriname","🇸🇷"],["sudan selatan","🇸🇸"],["el salvador","🇸🇻"],["sint maarten","🇸🇽"],["suriah","🇸🇾"],["eswatini","🇸🇿"],["chad","🇹🇩"],["togo","🇹🇬"],["thailand","🇹🇭"],["tajikistan","🇹🇯"],["tokelau","🇹🇰"],["timor leste","🇹🇱"],["turkmenistan","🇹🇲"],["tunisia","🇹🇳"],["tonga","🇹🇴"],["turki","🇹🇷"],["tuvalu","🇹🇻"],["taiwan","🇹🇼"],["tanzania","🇹🇿"],["ukraina","🇺🇦"],["uganda","🇺🇬"],["uruguay","🇺🇾"],["uzbekistan","🇺🇿"],["vatikan","🇻🇦"],["venezuela","🇻🇪"],["vietnam","🇻🇳"],["vanuatu","🇻🇺"],["samoa","🇼🇸"],["kosovo","🇽🇰"],["yaman","🇾🇪"],["mayotte","🇾🇹"],["afrika selatan","🇿🇦"],["zambia","🇿🇲"],["zimbabwe","🇿🇼"]];
+const LV={easy:{h:5,x:0,loss:0,f:n=>n<=4},med:{h:4,x:3,loss:1,f:n=>n>=5&&n<=6},hard:{h:3,x:6,loss:1,f:n=>n>=7}};
+const REWARDS=[[40,"🌟","Bintang Emas"],[100,"🦄","Unicorn"],[180,"🚀","Roket"],[280,"🏆","Piala"],[400,"👑","Mahkota"]];
+const CHEERS=["Hebat!", "Luar biasa!", "Keren sekali!", "Pintar sekali!", "Mantap!", "Bagus sekali!", "Fantastis!"];
+const OOPS=["Ups! Coba lagi ya!", "Hampir benar! Kamu pasti bisa!", "Belum tepat, coba huruf lain!", "Semangat, kamu hebat!"];
+const COLS=["#ff6fb5","#3ec6ff","#ff8a3d","#3ddc97","#8a5cf6","#f5b800","#ef476f"];
+const ROUND=10;
+let S={},sound=true,got=JSON.parse("[]"),AC=null;
+
+// background stars
+["⭐","✨","🎈","🌈","🦋","🌸","☁️","💖"].forEach((e,i)=>{for(let k=0;k<3;k++){const n=document.createElement("i");n.textContent=e;n.style.left=Math.random()*95+"%";n.style.top=Math.random()*95+"%";n.style.animationDelay=(-Math.random()*7)+"s";n.style.fontSize=(20+Math.random()*26)+"px";$("bg").appendChild(n)}});
+
+// ---------- sound ----------
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC}
+function tone(f,d=.15,type="sine",v=.3,t0=0,slide=0){if(!sound)return;const a=ac();if(!a)return;const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+t0;
+o.type=type;o.frequency.setValueAtTime(f,t);if(slide)o.frequency.exponentialRampToValueAtTime(f*slide,t+d);
+g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+d+.02)}
+const N=[523,587,659,698,784,880,988,1047,1175,1319];
+const sPlace=i=>{tone(N[Math.min(i,9)],.18,"triangle",.4);tone(N[Math.min(i,9)]*2,.1,"sine",.18,.04)};
+const sOk=()=>[523,659,784,1047,1319].forEach((f,i)=>tone(f,.25,"square",.2,i*.09));
+const sBad=()=>{tone(220,.25,"sawtooth",.3,0,.5);tone(165,.3,"sawtooth",.25,.12,.5)};
+const sStreak=()=>[784,988,1175,1568,1976].forEach((f,i)=>tone(f,.2,"triangle",.35,i*.07));
+const sReward=()=>{[523,659,784,1047,784,1047,1319,1568].forEach((f,i)=>tone(f,.3,"square",.22,i*.11));tone(262,1,"triangle",.3,0)};
+const sLose=()=>[392,330,262,196].forEach((f,i)=>tone(f,.35,"triangle",.35,i*.25));
+function say(t,pitch=1.4){if(!sound||!window.speechSynthesis)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="id-ID";u.rate=.85;u.pitch=pitch;u.volume=1;speechSynthesis.speak(u)}catch(e){}}
+
+// ---------- confetti ----------
+const cv=$("cv"),cx=cv.getContext("2d");let P=[],raf=0;
+function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener("resize",size);
+function confetti(n=120,x=.5,y=.35){for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,s=6+Math.random()*12;
+P.push({x:innerWidth*x,y:innerHeight*y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,r:Math.random()*6.3,vr:Math.random()*.4-.2,w:8+Math.random()*10,c:COLS[i%7],e:Math.random()<.2?["⭐","🎉","💖"][i%3]:null,life:140})}
+if(!raf)loop()}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.life-->0);
+P.forEach(p=>{p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.life/30);
+if(p.e){cx.font="26px serif";cx.fillText(p.e,-13,10)}else{cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.w/4,p.w,p.w/2)}cx.restore()});
+raf=P.length?requestAnimationFrame(loop):0}
+
+// ---------- helpers ----------
+function toast(t){const e=$("toast");e.textContent=t;e.classList.remove("show");void e.offsetWidth;e.classList.add("show")}
+function mascot(cls,face){["m1"].forEach(id=>{const m=$(id);if(face)m.textContent=face;m.classList.remove("cheer","sad");void m.offsetWidth;if(cls)m.classList.add(cls)})}
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("on"));$(id).classList.add("on");scrollTo(0,0)}
+function renderRewards(){["rw0","rw1","rw2"].forEach(id=>{$(id).innerHTML=REWARDS.map(r=>`<div class="rw ${got.includes(r[1])?"got":""}" title="${r[2]} di ${r[0]} poin">${r[1]}</div>`).join("")})}
+function hud(){$("pts").textContent=S.pts;$("streak").textContent="🔥 "+S.streak;
+$("hearts").innerHTML=Array.from({length:LV[S.lv].h},(_,i)=>`<span class="${i<S.hearts?"":"lost"}">❤️</span>`).join("");
+$("prog").style.width=(S.i/ROUND*100)+"%"}
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+// ---------- game ----------
+function start(lv){ac();S={lv,pts:0,streak:0,best:0,hearts:LV[lv].h,i:0,list:shuffle(WORDS.filter(w=>LV[lv].f(w[0].replace(/ /g,'').length))).slice(0,ROUND),clean:0,mistakes:0,busy:false};
+renderRewards();show("s-game");say("Ayo mengeja!");setTimeout(next,900)}
+function next(){if(S.i>=ROUND)return finish(true);
+const [disp,pic]=S.list[S.i];const w=disp.replace(/ /g,"");S.w=w;S.d=disp;S.pos=0;S.slip=false;S.busy=false;
+$("pic").textContent=pic;$("msg").textContent="Ketuk huruf untuk mengeja katanya!";
+$("slots").innerHTML=[...disp].map(c=>c===" "?'<div style="width:16px"></div>':'<div class="slot"></div>').join("");
+const abc="abcdefghijklmnopqrstuvwxyz".split("").filter(c=>!w.includes(c));
+S.tiles=shuffle([...w,...shuffle(abc).slice(0,LV[S.lv].x)]);
+$("tiles").innerHTML=S.tiles.map((c,i)=>`<button class="tile" data-i="${i}" style="background:${COLS[i%7]};animation-delay:${i*.12}s">${c}</button>`).join("");
+mark();hud();mascot("", "🐻");setTimeout(speakWord,300)}
+function mark(){document.querySelectorAll(".slot").forEach((s,i)=>s.classList.toggle("next",i===S.pos))}
+function speakWord(){say(S.d,1.3)}
+function press(i){if(S.busy)return;const b=document.querySelector(`.tile[data-i="${i}"]`);if(!b||b.classList.contains("used"))return;ac();
+const c=S.tiles[i];
+if(c===S.w[S.pos]){b.classList.add("used");const sl=document.querySelectorAll(".slot")[S.pos];sl.textContent=c;sl.classList.add("full");sl.classList.remove("next");
+document.querySelectorAll(".tile.hint").forEach(t=>t.classList.remove("hint"));sPlace(S.pos);confetti(8,(sl.getBoundingClientRect().left+30)/innerWidth,sl.getBoundingClientRect().top/innerHeight);
+S.pos++;if(S.pos===S.w.length)win();else mark()}
+else{b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake");sBad();S.slip=true;S.streak=0;mascot("sad","🙈");
+$("msg").textContent=OOPS[Math.random()*OOPS.length|0];say(OOPS[Math.random()*OOPS.length|0],1.2);
+if(LV[S.lv].loss){S.hearts--;S.mistakes++;$("hearts").classList.add("pop");setTimeout(()=>$("hearts").classList.remove("pop"),400);if(S.hearts<=0){hud();return finish(false)}}
+hud()}}
+function win(){S.busy=true;S.i++;
+const bonus=S.slip?0:S.streak*5;if(!S.slip)S.streak++;S.best=Math.max(S.best,S.streak);
+const gain=10+S.w.length*2+(S.slip?0:S.streak*5);S.pts+=gain;
+document.querySelectorAll(".slot").forEach((s,k)=>{s.style.animationDelay=k*.08+"s";s.classList.add("win")});
+const ch=CHEERS[Math.random()*CHEERS.length|0];toast(ch+" +"+gain);$("msg").textContent=ch;sOk();confetti(160);setTimeout(()=>confetti(90,.2,.5),250);setTimeout(()=>confetti(90,.8,.5),450);
+mascot("cheer","🥳");say(ch+" "+S.d+"!",1.5);hud();
+let delay=2300;
+if(!S.slip&&S.streak>=2&&S.streak%2===0){setTimeout(()=>{sStreak();toast("🔥 "+S.streak+" berturut-turut!");say("Kamu membara!",1.5);confetti(100)},1500);delay=3300}
+const r=REWARDS.find(r=>S.pts>=r[0]&&!got.includes(r[1]));
+if(r){got.push(r[1]);setTimeout(()=>{sReward();toast("🎁 Hadiah baru! "+r[1]+" "+r[2]);say("Kamu membuka hadiah baru! "+r[2]+"!",1.5);confetti(250,.5,.3);renderRewards()},delay-600);delay+=2100}
+setTimeout(next,delay)}
+function finish(won){S.busy=true;renderRewards();show("s-end");
+const stars=won?(S.mistakes<=1?3:S.mistakes<=3?2:1):1;
+$("endS").textContent="⭐".repeat(stars)+"☆".repeat(3-stars);
+$("m2").textContent=won?"🥳":"🤗";
+$("endT").textContent=won?"Hore, kamu berhasil!":"Usaha bagus!";
+$("endP").textContent=won?`Skormu ${S.pts} poin dan runtunan terbaikmu ${S.best}!`:`Skormu ${S.pts} poin. Ayo coba lagi, kamu pasti bisa!`;
+if(won){say("Hore! Kamu menyelesaikannya! Hebat!",1.5);sReward();confetti(300);setTimeout(()=>confetti(200,.2,.4),400);setTimeout(()=>confetti(200,.8,.4),700)}else{sLose();say("Usaha bagus! Ayo main lagi!",1.2)}}
+
+// ---------- events ----------
+document.querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>start(b.dataset.lv));
+$("tiles").onclick=e=>{const b=e.target.closest(".tile");if(b)press(+b.dataset.i)};
+$("again").onclick=()=>{ac();speakWord()};
+$("hint").onclick=()=>{if(S.busy)return;ac();const c=S.w[S.pos];const t=[...document.querySelectorAll(".tile:not(.used)")].find(t=>t.textContent===c);
+if(t){t.classList.add("hint");S.pts=Math.max(0,S.pts-3);tone(900,.2,"triangle",.3);hud();$("msg").textContent="Coba huruf yang bersinar! (−3 poin)"}};
+$("snd").onclick=()=>{sound=!sound;$("snd").textContent=sound?"🔊 Suara nyala":"🔇 Suara mati";if(sound){ac();tone(800,.2)}else if(window.speechSynthesis)speechSynthesis.cancel()};
+$("home").onclick=()=>{S.busy=true;if(window.speechSynthesis)speechSynthesis.cancel();show("s-start")};
+$("replay").onclick=()=>start(S.lv);
+$("menu").onclick=()=>show("s-start");
+renderRewards();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>

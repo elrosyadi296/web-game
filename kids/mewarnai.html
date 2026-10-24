@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warna Ceria – Game Mewarnai Anak</title>
+<meta name="description" content="Game mewarnai anak yang ceria. Pilih gambar, pilih warna, lalu ketuk area untuk mewarnai!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind via CDN (utilitas); layout penting juga ada di CSS sendiri agar tetap rapi bila CDN gagal dimuat -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--ink:#3b3355;--cream:#fff8ec;--sky:#8fd3ff;--sun:#ffd93d;--orange:#ff9f43;--pink:#ff8fc7;--mint:#7ee8c7;--lilac:#c9b5ff}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:hidden}
+body{font-family:'Fredoka','Baloo 2','Trebuchet MS',system-ui,sans-serif;color:var(--ink);min-height:100vh;padding:14px;
+ background:radial-gradient(circle at 8% 8%,#fff3b0 0,transparent 34%),radial-gradient(circle at 92% 18%,#ffd1ea 0,transparent 34%),radial-gradient(circle at 50% 100%,#c8f5e6 0,transparent 40%),linear-gradient(#bfe6ff,var(--cream)) fixed}
+.wrap{max-width:1180px;margin:0 auto}
+header{text-align:center;margin:4px 0 14px}
+h1{margin:0;font-size:clamp(2rem,7vw,3.4rem);font-weight:700;color:#fff;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;
+ text-shadow:0 4px 0 var(--ink),0 9px 0 rgba(255,159,67,.55);transform:rotate(-1.5deg);display:inline-block}
+header p{margin:14px 0 0;font-weight:600;font-size:1.1rem}
+h2{margin:0 0 10px;font-size:1.3rem}
+.layout{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.layout{grid-template-columns:340px minmax(0,1fr);align-items:start}}
+.card{background:rgba(255,255,255,.92);border:3px solid #fff;border-radius:28px;padding:16px;min-width:0;
+ box-shadow:0 8px 0 rgba(120,100,180,.2),0 18px 30px rgba(80,60,140,.15)}
+.stage{display:grid;gap:14px;min-width:0}
+/* pilihan gambar */
+.tpl-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-height:340px;overflow-y:auto;padding:6px 6px 10px}
+.tpl[hidden]{display:none}.tpl span{font-size:.85rem;text-align:center}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.cat{font:inherit;font-weight:600;font-size:.85rem;color:var(--ink);background:#fff;border:3px solid transparent;border-radius:999px;padding:6px 12px;min-height:40px;cursor:pointer;box-shadow:0 4px 0 rgba(120,100,180,.25);transition:transform .12s}
+.cat:hover{transform:translateY(-2px)}.cat:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(120,100,180,.25)}.cat[aria-pressed=true]{background:var(--sun);border-color:var(--orange)}
+@media(min-width:900px){.tpl-list{grid-template-columns:repeat(2,minmax(0,1fr));max-height:560px}}
+.tpl{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;background:#fff;border:4px solid transparent;border-radius:22px;padding:8px;
+ display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 6px 0 rgba(120,100,180,.25);transition:transform .15s,box-shadow .15s,background .15s}
+.tpl canvas{width:100%;height:auto;aspect-ratio:4/3;border-radius:14px;background:#fff;border:2px dashed #d9cff5}
+.tpl:hover{transform:translateY(-3px) rotate(-1deg)}
+.tpl:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(120,100,180,.25)}
+.tpl[aria-pressed=true]{border-color:var(--orange);background:#fff1d0;transform:translateY(-3px) rotate(-1deg)}
+.help{margin-top:14px;background:#eafaf4;border-radius:20px;padding:10px 14px;font-weight:600}
+.help summary{cursor:pointer;font-weight:700;font-size:1.05rem}
+.help ol{margin:8px 0 2px;padding-left:20px;line-height:1.5}
+/* status */
+.bubble{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#fff7c2,#ffe3f1);border-radius:999px;padding:10px 20px 10px 12px;font-weight:700;font-size:1.1rem;
+ box-shadow:0 6px 0 rgba(255,159,67,.35);border:3px solid #fff}
+.bubble .mascot{font-size:2rem;line-height:1}
+.bubble p{margin:0}
+.bump{animation:bump .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes bump{0%{transform:scale(.94)}60%{transform:scale(1.04) rotate(-.6deg)}100%{transform:scale(1)}}
+/* kanvas */
+.canvas-wrap{width:100%;aspect-ratio:4/3;background:#fff;border-radius:22px;overflow:hidden;border:4px solid var(--sky);box-shadow:inset 0 0 0 3px #fff,0 6px 0 #6fb7e8}
+canvas#board{display:block;width:100%;height:100%;cursor:pointer;touch-action:manipulation}
+canvas#board:focus-visible{outline:5px solid #5b3df5;outline-offset:-5px}
+.progress{height:18px;background:#fff;border-radius:999px;overflow:hidden;border:3px solid #fff;box-shadow:0 3px 0 rgba(120,100,180,.25)}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--sun),var(--pink));border-radius:999px;transition:width .4s}
+.ptext{font-weight:600;margin:6px 4px 0}
+/* palet */
+.current{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:10px}
+.chip{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 3px var(--ink)}
+.palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:10px}
+.swatch{font:inherit;font-weight:600;font-size:.85rem;color:var(--ink);background:transparent;border:0;border-radius:18px;cursor:pointer;min-height:76px;padding:6px 2px;
+ display:flex;flex-direction:column;align-items:center;gap:6px;transition:transform .15s}
+.swatch .dot{position:relative;width:48px;height:48px;border-radius:50%;
+ background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.85) 0,rgba(255,255,255,0) 38%),var(--c);
+ box-shadow:inset 0 -6px 0 rgba(0,0,0,.16),0 5px 0 rgba(0,0,0,.18);transition:transform .15s}
+.swatch:hover .dot{transform:translateY(-3px) scale(1.06)}
+.swatch:active .dot{transform:translateY(3px) scale(.95)}
+.swatch[aria-pressed=true] .dot{outline:5px solid var(--ink);outline-offset:3px;transform:scale(1.12)}
+.swatch[aria-pressed=true] .dot::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;font-size:1.5rem;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.45)}
+/* tombol */
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font:inherit;font-weight:700;font-size:1.1rem;color:#fff;border:0;border-radius:999px;min-height:56px;padding:10px 22px;cursor:pointer;flex:1 1 150px;
+ background:linear-gradient(#ffb25c,var(--orange));box-shadow:0 7px 0 #c9721a,0 14px 18px rgba(201,114,26,.3);text-shadow:0 2px 0 rgba(0,0,0,.2);transition:transform .12s,box-shadow .12s}
+.btn.blue{background:linear-gradient(#7fd0ff,#3fa6f0);box-shadow:0 7px 0 #2a7ab8,0 14px 18px rgba(42,122,184,.3)}
+.btn.purple{background:linear-gradient(#d3c2ff,#a98cf5);box-shadow:0 7px 0 #7a5ccf,0 14px 18px rgba(122,92,207,.3)}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(5px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+button:focus-visible,summary:focus-visible{outline:4px solid #5b3df5;outline-offset:3px}
+/* animasi masuk */
+.pop{animation:popIn .65s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes popIn{from{opacity:0;transform:translateY(26px) scale(.85) rotate(-2deg)}to{opacity:1;transform:none}}
+/* partikel bintang */
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.spark{position:fixed;font-size:var(--s,24px);will-change:transform,opacity;animation:fly var(--d,1000ms) cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes fly{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}15%{opacity:1}
+ 100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.1) rotate(var(--r))}}
+.warn{background:#fff0cf;border-radius:18px;padding:10px 14px;font-weight:600;margin-bottom:12px}
+@media(prefers-reduced-motion:reduce){.pop,.bump{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="pop"><h1>🎨 Warna Ceria</h1><p>Ayo mewarnai bersama! 🌈</p></header>
+  <noscript><div class="warn">Halo! Game ini butuh JavaScript. Yuk aktifkan JavaScript di browsermu. 😊</div></noscript>
+  <div id="warn" class="warn" hidden></div>
+
+  <main class="layout">
+    <aside class="card pop" style="--i:1" aria-label="Pilihan gambar">
+      <h2>🖼️ Pilih Gambar (<span id="count"></span>)</h2>
+      <div id="cats" class="cats" role="group" aria-label="Kategori gambar"></div>
+      <div id="tplList" class="tpl-list"></div>
+      <details class="help" open>
+        <summary>❓ Cara Bermain</summary>
+        <ol>
+          <li>Pilih gambar di sini.</li>
+          <li>Pilih warna kesukaanmu.</li>
+          <li>Ketuk bagian gambar yang putih.</li>
+          <li>Selesai? Tekan Unduh PNG! 💾</li>
+        </ol>
+        <p style="margin:6px 0 0">Tips: di komputer, fokus ke gambar lalu pakai tombol panah dan Enter.</p>
+      </details>
+    </aside>
+
+    <section class="stage" aria-label="Area mewarnai">
+      <div id="status" class="bubble pop" style="--i:2" role="status" aria-live="polite">
+        <span id="mascot" class="mascot" aria-hidden="true">🐥</span><p id="statusText">Halo! Pilih warna, lalu ketuk gambar.</p>
+      </div>
+
+      <div class="card pop" style="--i:3">
+        <div class="canvas-wrap">
+          <canvas id="board" width="1200" height="900" tabindex="0" role="img"
+            aria-label="Gambar untuk diwarnai. Ketuk area putih untuk mewarnai. Pengguna keyboard: tombol panah menggerakkan kursor, Enter mewarnai."></canvas>
+        </div>
+        <div class="progress" style="margin-top:14px"><div id="bar" role="progressbar" aria-label="Kemajuan mewarnai" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+        <p class="ptext" id="ptext">Area berwarna: 0</p>
+      </div>
+
+      <div class="card pop" style="--i:4">
+        <div class="current"><span class="chip" id="chip" aria-hidden="true"></span><span>Warna terpilih: <span id="colorName"></span></span></div>
+        <div id="palette" class="palette" role="group" aria-label="Palet warna"></div>
+      </div>
+
+      <div class="actions pop" style="--i:5">
+        <button id="btnReset" class="btn" type="button" aria-label="Reset: kembalikan gambar ke awal">🧽 Reset</button>
+        <button id="btnSave" class="btn blue" type="button" aria-label="Unduh gambar sebagai PNG">💾 Unduh PNG</button>
+        <button id="btnSound" class="btn purple" type="button" aria-pressed="true" aria-label="Suara">🔊 Suara: Hidup</button>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="fx" aria-hidden="true"></div>
+
+<script>
+(() => {
+'use strict';
+/* ===== Konstanta =====
+   Koordinat gambar dirancang di 800x600 lalu diskalakan 1.5x ke kanvas internal 1200x900.
+   Resolusi internal tetap, CSS hanya mengubah ukuran tampilan, jadi koordinat & hasil unduh selalu tajam. */
+const W = 1200, H = 900, N = W * H, SC = 1.5;
+const MIN_AREA = 300;      // area lebih kecil dari ini (serpihan sempit) tidak dihitung sebagai area yang harus diwarnai
+const LINE_ALPHA = 128;    // piksel garis dengan alpha >= ini dianggap dinding
+const INK = '#2b2540';
+const COLORS = [['Merah','#ff5a5f'],['Jingga','#ff9f43'],['Kuning','#ffd93d'],['Hijau','#6bcb77'],['Hijau Mint','#7ee8c7'],
+  ['Biru Langit','#6ec6ff'],['Biru','#4d7cff'],['Ungu','#b388ff'],['Merah Muda','#ff8fc7'],['Cokelat','#b9835a']];
+const LE = new Uint8Array(new Uint32Array([1]).buffer)[0] === 1;   // cek endianness untuk pack warna
+const pack = hex => { const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
+  return (LE ? (255 << 24 | b << 16 | g << 8 | r) : (r << 24 | g << 16 | b << 8 | 255)) >>> 0; };
+const PACKED = COLORS.map(c => pack(c[1]));
+
+/* ===== Pembangun bentuk (path) ===== */
+const ell = (x, y, rx, ry) => g => g.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2);
+const poly = pts => g => { g.moveTo(pts[0][0], pts[0][1]); for (let i = 1; i < pts.length; i++) g.lineTo(pts[i][0], pts[i][1]); g.closePath(); };
+const rr = (x, y, w, h, r) => g => { g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r);
+  g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+const star = (cx, cy, R) => poly(Array.from({length: 10}, (_, i) => { const a = -Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? R * .45 : R;
+  return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; }));
+const cloud = (x, y, s) => g => { const P = (a, b) => [x + a * s, y + b * s]; g.moveTo(...P(0, 40));
+  g.bezierCurveTo(...P(-30, 40), ...P(-30, 0), ...P(5, 5)); g.bezierCurveTo(...P(10, -30), ...P(60, -30), ...P(65, 0));
+  g.bezierCurveTo(...P(100, -15), ...P(110, 35), ...P(80, 40)); g.closePath(); };
+
+/* ===== Template gambar =====
+   shape(): bentuk tertutup. Isinya "menghapus" garis di bawahnya (algoritma pelukis), lalu diberi garis luar tebal.
+   lines(): garis terbuka (detail). dot(): titik hitam solid (pupil/mur), tidak bisa diwarnai. */
+function drawCat({shape, lines, dot}) {
+  shape(cloud(50, 50, 1.1)); shape(star(700, 90, 32));
+  shape(g => { g.moveTo(530, 440); g.bezierCurveTo(650, 470, 730, 380, 690, 270); g.bezierCurveTo(680, 240, 640, 250, 650, 280);
+    g.bezierCurveTo(675, 350, 640, 400, 520, 380); g.closePath(); });             // ekor
+  shape(ell(400, 410, 155, 135)); shape(ell(400, 445, 85, 75));                   // badan & perut
+  shape(ell(335, 535, 48, 28)); shape(ell(465, 535, 48, 28));                     // kaki
+  shape(poly([[268, 185], [255, 45], [365, 125]])); shape(poly([[278, 150], [272, 88], [328, 118]]));
+  shape(poly([[532, 185], [545, 45], [435, 125]])); shape(poly([[522, 150], [528, 88], [472, 118]]));
+  shape(ell(400, 230, 150, 125));                                                 // kepala
+  shape(ell(345, 222, 27, 32)); shape(ell(455, 222, 27, 32)); dot(351, 229, 13); dot(449, 229, 13);
+  shape(poly([[384, 256], [416, 256], [400, 276]]));
+  lines(g => { g.moveTo(400, 276); g.lineTo(400, 290); g.moveTo(400, 290); g.quadraticCurveTo(385, 306, 368, 292);
+    g.moveTo(400, 290); g.quadraticCurveTo(415, 306, 432, 292);
+    g.moveTo(400, 105); g.lineTo(400, 135); g.moveTo(365, 108); g.lineTo(372, 135); g.moveTo(435, 108); g.lineTo(428, 135);
+    g.moveTo(330, 270); g.lineTo(250, 255); g.moveTo(330, 282); g.lineTo(245, 285); g.moveTo(330, 294); g.lineTo(255, 315);
+    g.moveTo(470, 270); g.lineTo(550, 255); g.moveTo(470, 282); g.lineTo(555, 285); g.moveTo(470, 294); g.lineTo(545, 315); });
+}
+function drawCar({shape, lines, dot}) {
+  shape(poly([[-20, 492], [820, 492], [820, 640], [-20, 640]]));                  // jalan
+  shape(cloud(70, 60, 1.2)); shape(cloud(360, 45, .9)); shape(ell(690, 100, 45, 45));
+  shape(poly([[230, 300], [290, 200], [500, 200], [580, 300]]));                  // kabin
+  shape(rr(100, 300, 600, 130, 40));                                              // bodi
+  shape(poly([[258, 290], [298, 216], [380, 216], [380, 290]])); shape(poly([[400, 216], [490, 216], [543, 290], [400, 290]]));
+  lines(g => { g.moveTo(100, 385); g.lineTo(700, 385); g.moveTo(390, 300); g.lineTo(390, 385); });
+  shape(ell(672, 345, 16, 16)); shape(rr(112, 335, 26, 30, 8));                   // lampu
+  for (const x of [220, 580]) { shape(ell(x, 430, 62, 62)); shape(ell(x, 430, 30, 30)); dot(x, 430, 8); }
+}
+function drawRocket({shape, lines, dot}) {
+  for (const s of [[140, 100, 28], [660, 150, 24], [150, 330, 20], [90, 520, 26]]) shape(star(...s));
+  shape(ell(640, 500, 55, 55)); shape(ell(625, 487, 10, 10)); shape(ell(652, 518, 7, 7));
+  shape(poly([[322, 360], [232, 445], [232, 525], [322, 480]])); shape(poly([[478, 360], [568, 445], [568, 525], [478, 480]]));
+  shape(g => { g.moveTo(350, 480); g.quadraticCurveTo(325, 555, 400, 590); g.quadraticCurveTo(475, 555, 450, 480); g.closePath(); });
+  shape(g => { g.moveTo(375, 495); g.quadraticCurveTo(365, 540, 400, 560); g.quadraticCurveTo(435, 540, 425, 495); g.closePath(); });
+  shape(g => { g.moveTo(400, 40); g.bezierCurveTo(470, 100, 490, 200, 480, 300); g.lineTo(480, 470); g.quadraticCurveTo(480, 490, 460, 490);
+    g.lineTo(340, 490); g.quadraticCurveTo(320, 490, 320, 470); g.lineTo(320, 300); g.bezierCurveTo(310, 200, 330, 100, 400, 40); g.closePath(); });
+  lines(g => { g.moveTo(330, 150); g.quadraticCurveTo(400, 175, 470, 150); g.moveTo(320, 380); g.lineTo(480, 380); g.moveTo(320, 430); g.lineTo(480, 430); });
+  shape(ell(400, 235, 44, 44)); shape(ell(400, 235, 30, 30));
+}
+const TEMPLATES = [
+  {id: 'kucing', cat: 'Hewan', name: 'Kucing', emoji: '🐱', alt: 'Gambar kucing lucu', draw: drawCat},
+  {id: 'mobil', cat: 'Kendaraan', name: 'Mobil', emoji: '🚗', alt: 'Gambar mobil di jalan', draw: drawCar},
+  {id: 'roket', cat: 'Kendaraan', name: 'Roket', emoji: '🚀', alt: 'Gambar roket di luar angkasa', draw: drawRocket}
+];
+
+/* ===== 97 gambar tambahan: generator kecil yang dipakai ulang ===== */
+const elr = (x, y, rx, ry, r) => g => g.ellipse(x, y, rx, ry, r, 0, Math.PI * 2), circ = (x, y, r) => ell(x, y, r, r);
+const lf = (x, y, s) => poly([[x, y], [x + 50 * s, y - 45 * s], [x + 95 * s, y - 10 * s], [x + 45 * s, y + 25 * s]]);
+const G = y => poly([[-20, y], [820, y], [820, 640], [-20, 640]]);
+const tri = a => poly([[a[0], a[1]], [a[2], a[3]], [a[4], a[5]]]);
+const sky = (S, k) => [() => S(cloud(40, 35, 1)), () => S(star(745, 70, 32)), () => S(circ(80, 80, 38))][k % 3]();
+let K = 0;
+// B(kategori, nama, emoji, fn(S,L,D)) : S=bentuk tertutup, L=garis terbuka, D=titik hitam
+const B = (cat, name, emoji, fn) => { const k = K++; TEMPLATES.push({id: name.toLowerCase().replace(/\W+/g, '-'), name, emoji, cat, alt: 'Gambar ' + name.toLowerCase(),
+  draw: h => { sky(h.shape, k); fn(h.shape, h.lines, h.dot); }}); };
+const wheel = (S, D, x, y, r) => { S(circ(x, y, r)); S(circ(x, y, r * .45)); D(x, y, r * .14); };
+
+/* --- Hewan: generator wajah (telinga, moncong, kumis, tambahan) --- */
+const face = (name, emoji, o) => B('Hewan', name, emoji, (S, L, D) => { const er = o.er || 48;
+  if (o.mane) S(ell(400, 265, 185, 170));
+  S(ell(400, 440, 120, 105)); S(ell(345, 540, 42, 24)); S(ell(455, 540, 42, 24));
+  for (const c of o.e) {
+    if (c == 'p') [[268,185,255,45,365,125],[532,185,545,45,435,125]].forEach(a => S(tri(a)));
+    if (c == 'r') [285, 515].forEach(x => { S(circ(x, 155, er)); S(circ(x, 155, er / 2)); });
+    if (c == 'l') [335, 465].forEach(x => S(ell(x, 105, 32, 92)));
+    if (c == 'f') [250, 550].forEach(x => S(ell(x, 275, 34, 82)));
+    if (c == 'h') [[300,175,280,85,345,150],[500,175,520,85,455,150]].forEach(a => S(tri(a)));
+  }
+  S(ell(400, 260, 140, 115));
+  if (o.pa) { S(ell(345, 250, 34, 40)); S(ell(455, 250, 34, 40)); }
+  if (o.fp) S(ell(400, 300, 82, 58));
+  S(ell(350, 248, 22, 26)); S(ell(450, 248, 22, 26)); D(353, 252, 10); D(447, 252, 10);
+  if (o.sn) { S(ell(400, 310, 56, 38)); S(ell(400, 295, 20, 13)); } else S(tri([386, 292, 414, 292, 400, 310]));
+  L(g => { g.moveTo(400, 312); g.lineTo(400, 324); g.moveTo(400, 324); g.quadraticCurveTo(382, 340, 364, 326); g.moveTo(400, 324); g.quadraticCurveTo(418, 340, 436, 326);
+    if (o.w) for (const s of [-1, 1]) { g.moveTo(400 + s * 70, 300); g.lineTo(400 + s * 155, 285); g.moveTo(400 + s * 70, 314); g.lineTo(400 + s * 158, 318); } });
+  if (o.x) o.x(S, L, D);
+});
+face('Anjing', '🐶', {e: 'f', sn: 1, x: S => S(ell(400, 352, 16, 24))});
+face('Kelinci', '🐰', {e: 'l', w: 1, x: S => S(rr(388, 325, 24, 30, 8))});
+face('Beruang', '🐻', {e: 'r', sn: 1});
+face('Panda', '🐼', {e: 'r', pa: 1, sn: 1});
+face('Babi', '🐷', {e: 'p', sn: 1, x: (S, L, D) => { D(391, 296, 4); D(409, 296, 4); }});
+face('Tikus', '🐭', {e: 'r', er: 55, w: 1});
+face('Singa', '🦁', {e: 'r', mane: 1, sn: 1});
+face('Monyet', '🐵', {e: 'r', er: 50, fp: 1});
+face('Koala', '🐨', {e: 'r', er: 64});
+face('Rubah', '🦊', {e: 'p', sn: 1, w: 1});
+face('Harimau', '🐯', {e: 'p', w: 1, x: (S, L) => L(g => { g.moveTo(400,145); g.lineTo(400,180); g.moveTo(360,150); g.lineTo(372,180); g.moveTo(440,150); g.lineTo(428,180); g.moveTo(262,250); g.lineTo(295,255); g.moveTo(538,250); g.lineTo(505,255); })});
+face('Sapi', '🐮', {e: 'hf', sn: 1});
+face('Unicorn', '🦄', {e: 'p', sn: 1, x: S => S(tri([385, 150, 400, 25, 415, 150]))});
+B('Hewan', 'Ikan', '🐟', (S, L, D) => { S(tri([540,300,690,190,690,410])); S(tri([380,210,440,110,490,215])); S(ell(400,300,170,105)); S(tri([400,375,430,450,480,365]));
+  S(circ(300,275,24)); D(305,278,10); L(g => { g.moveTo(232,325); g.quadraticCurveTo(255,345,285,335); g.moveTo(420,230); g.quadraticCurveTo(450,300,420,370); }); S(circ(160,190,18)); S(circ(125,140,12)); });
+B('Hewan', 'Paus', '🐳', (S, L, D) => { S(tri([580,320,690,220,705,335])); S(tri([580,345,695,440,705,335])); S(ell(380,340,230,130));
+  L(g => { g.moveTo(200,400); g.quadraticCurveTo(380,470,560,400); g.moveTo(130,350); g.quadraticCurveTo(150,380,185,372); }); D(190,310,10); S(circ(330,150,22)); S(circ(300,105,15)); S(circ(345,100,11)); });
+B('Hewan', 'Kura-kura', '🐢', (S, L, D) => { S(circ(620,310,55)); S(ell(250,380,45,38)); S(ell(550,380,45,38)); S(tri([225,340,150,360,225,380])); S(rr(230,320,340,50,22));
+  S(g => { g.arc(400,330,170,Math.PI,0); g.closePath(); }); L(g => { g.moveTo(400,160); g.lineTo(400,330); g.moveTo(285,210); g.lineTo(335,330); g.moveTo(515,210); g.lineTo(465,330); g.moveTo(625,335); g.quadraticCurveTo(645,345,660,330); }); D(640,295,8); });
+B('Hewan', 'Bebek', '🦆', (S, L, D) => { S(tri([215,340,130,300,215,430])); S(ell(380,400,190,130)); S(ell(340,400,90,60)); S(circ(520,230,85)); S(ell(615,250,45,20)); D(535,212,10); S(tri([320,520,280,575,360,575])); S(tri([430,520,390,575,470,575])); });
+B('Hewan', 'Penguin', '🐧', (S, L, D) => { S(ell(235,340,32,95)); S(ell(565,340,32,95)); S(ell(340,565,55,22)); S(ell(460,565,55,22)); S(ell(400,330,150,225)); S(ell(400,385,100,150));
+  S(ell(400,200,88,62)); S(circ(360,195,24)); S(circ(440,195,24)); D(364,198,10); D(436,198,10); S(tri([375,235,425,235,400,275])); });
+B('Hewan', 'Burung Hantu', '🦉', (S, L, D) => { S(ell(250,350,38,120)); S(ell(550,350,38,120)); S(tri([280,200,260,70,350,125])); S(tri([520,200,540,70,450,125])); S(ell(400,330,165,230)); S(ell(400,410,110,130));
+  S(circ(335,230,52)); S(circ(465,230,52)); S(circ(335,230,22)); S(circ(465,230,22)); D(338,233,12); D(462,233,12); S(tri([380,275,420,275,400,315])); S(ell(335,555,40,18)); S(ell(465,555,40,18));
+  L(g => { for (const [x, y] of [[350,380],[410,380],[350,440],[410,440]]) { g.moveTo(x,y); g.lineTo(x+20,y+20); g.lineTo(x+40,y); } }); });
+B('Hewan', 'Katak', '🐸', (S, L, D) => { S(ell(230,515,70,35)); S(ell(570,515,70,35)); S(ell(400,400,200,150)); S(circ(300,235,55)); S(circ(500,235,55)); S(circ(300,235,24)); S(circ(500,235,24));
+  D(303,238,12); D(497,238,12); L(g => { g.moveTo(250,410); g.quadraticCurveTo(400,500,550,410); }); D(375,330,6); D(425,330,6); });
+B('Hewan', 'Kupu-kupu', '🦋', (S, L, D) => { S(elr(290,235,150,95,-.45)); S(elr(510,235,150,95,.45)); S(elr(315,395,105,70,.5)); S(elr(485,395,105,70,-.5));
+  S(circ(270,230,30)); S(circ(530,230,30)); S(circ(310,400,22)); S(circ(490,400,22)); S(ell(400,310,24,150));
+  L(g => { g.moveTo(392,162); g.quadraticCurveTo(360,100,325,90); g.moveTo(408,162); g.quadraticCurveTo(440,100,475,90); }); });
+B('Hewan', 'Lebah', '🐝', (S, L, D) => { S(elr(340,190,55,100,-.4)); S(elr(460,190,55,100,.4)); S(ell(400,330,170,120)); S(tri([565,315,625,330,565,345]));
+  L(g => { g.moveTo(350,212); g.lineTo(350,448); g.moveTo(450,212); g.lineTo(450,448); g.moveTo(262,335); g.quadraticCurveTo(290,355,315,345); g.moveTo(300,225); g.quadraticCurveTo(270,160,235,160); }); D(265,305,11); });
+B('Hewan', 'Kepik', '🐞', (S, L, D) => { S(g => { g.arc(400,175,85,Math.PI,0); g.closePath(); }); S(circ(400,340,190)); L(g => { g.moveTo(400,150); g.lineTo(400,530); g.moveTo(350,100); g.quadraticCurveTo(330,60,300,55); g.moveTo(450,100); g.quadraticCurveTo(470,60,500,55); });
+  S(circ(315,290,32)); S(circ(485,290,32)); S(circ(290,410,30)); S(circ(510,410,30)); D(370,165,9); D(430,165,9); });
+B('Hewan', 'Siput', '🐌', (S, L, D) => { S(rr(150,430,500,70,35)); S(ell(210,380,58,95)); S(circ(175,225,16)); S(circ(255,225,16)); L(g => { g.moveTo(190,300); g.lineTo(175,240); g.moveTo(235,300); g.lineTo(255,240); g.moveTo(180,410); g.quadraticCurveTo(205,430,235,415); });
+  S(circ(430,285,150)); S(circ(430,285,98)); S(circ(430,285,48)); D(195,365,8); });
+B('Hewan', 'Gurita', '🐙', (S, L, D) => { [250,325,400,475,550].forEach((x, i) => S(ell(x, 470 + (i % 2) * 25, 33, 85))); S(ell(400,230,150,140)); S(circ(345,235,36)); S(circ(455,235,36)); D(348,238,15); D(452,238,15);
+  L(g => { g.moveTo(350,330); g.quadraticCurveTo(400,365,450,330); }); S(circ(400,150,16)); });
+B('Hewan', 'Gajah', '🐘', (S, L, D) => { S(rr(240,490,70,95,22)); S(rr(430,490,70,95,22)); S(ell(380,380,190,140)); L(g => { g.moveTo(195,330); g.quadraticCurveTo(150,380,175,440); });
+  S(rr(600,300,60,200,30)); S(circ(550,250,105)); S(ell(480,270,65,95)); D(590,230,11); });
+
+/* --- Buah & Sayur --- */
+const F = (n, e, f) => B('Buah', n, e, f);
+F('Apel', '🍎', (S, L) => { S(ell(400,340,150,140)); S(lf(410,210,1)); L(g => { g.moveTo(400,215); g.quadraticCurveTo(392,170,408,140); }); });
+F('Jeruk', '🍊', (S, L, D) => { S(ell(400,340,155,150)); S(lf(400,205,.8)); [[330,330],[455,385],[380,435],[470,300],[335,410]].forEach(p => D(p[0], p[1], 6)); });
+F('Tomat', '🍅', (S, L) => { S(ell(400,350,170,135)); S(star(400,235,70)); L(g => { g.moveTo(400,235); g.lineTo(400,170); }); });
+F('Stroberi', '🍓', (S, L, D) => { S(g => { g.moveTo(400,530); g.bezierCurveTo(200,420,200,240,300,225); g.bezierCurveTo(350,210,385,230,400,245); g.bezierCurveTo(415,230,450,210,500,225); g.bezierCurveTo(600,240,600,420,400,530); g.closePath(); });
+  S(star(400,215,60)); [[340,320],[455,320],[400,370],[320,400],[480,400],[400,450]].forEach(p => D(p[0], p[1], 7)); });
+F('Semangka', '🍉', (S, L, D) => { S(g => { g.arc(400,200,250,0,Math.PI); g.closePath(); }); S(g => { g.arc(400,200,215,0,Math.PI); g.closePath(); }); [[330,320],[400,370],[470,320],[400,280],[300,260],[500,260]].forEach(p => D(p[0], p[1], 8)); });
+F('Pisang', '🍌', (S, L) => { S(g => { g.moveTo(180,300); g.bezierCurveTo(250,520,520,540,640,250); g.lineTo(600,235); g.bezierCurveTo(500,420,300,440,200,260); g.closePath(); }); L(g => { g.moveTo(225,295); g.bezierCurveTo(320,450,520,470,622,243); }); });
+F('Nanas', '🍍', (S, L) => { S(poly([[400,240],[345,110],[375,170],[400,60],[425,170],[455,110]])); S(ell(400,390,115,150)); L(g => { g.moveTo(340,320); g.lineTo(400,380); g.lineTo(460,320); g.moveTo(340,400); g.lineTo(400,460); g.lineTo(460,400); }); });
+F('Anggur', '🍇', (S, L) => { L(g => { g.moveTo(400,150); g.lineTo(400,100); }); S(lf(405,130,1)); [[350,210],[450,210],[300,290],[400,290],[500,290],[350,370],[450,370],[400,450]].forEach(p => S(circ(p[0], p[1], 48))); });
+F('Wortel', '🥕', (S, L) => { S(poly([[400,215],[340,90],[375,150],[400,60],[425,150],[460,90]])); S(g => { g.moveTo(320,230); g.quadraticCurveTo(400,190,480,230); g.lineTo(400,560); g.closePath(); });
+  L(g => { g.moveTo(340,300); g.lineTo(370,305); g.moveTo(462,360); g.lineTo(435,365); g.moveTo(352,420); g.lineTo(378,425); }); });
+F('Jagung', '🌽', (S, L) => { S(ell(400,300,70,175)); S(g => { g.moveTo(400,540); g.quadraticCurveTo(220,480,240,260); g.quadraticCurveTo(330,380,400,420); g.closePath(); }); S(g => { g.moveTo(400,540); g.quadraticCurveTo(580,480,560,260); g.quadraticCurveTo(470,380,400,420); g.closePath(); });
+  L(g => { for (let y = 190; y < 400; y += 45) { g.moveTo(350,y); g.lineTo(450,y); } g.moveTo(400,140); g.lineTo(400,400); }); });
+F('Ceri', '🍒', (S, L) => { S(circ(320,440,72)); S(circ(510,460,72)); L(g => { g.moveTo(320,368); g.quadraticCurveTo(335,230,420,130); g.moveTo(510,388); g.quadraticCurveTo(490,240,420,130); }); S(lf(425,140,.9)); });
+F('Pir', '🍐', (S, L) => { S(ell(400,410,140,125)); S(ell(400,255,88,105)); S(lf(410,150,.8)); L(g => { g.moveTo(402,155); g.quadraticCurveTo(398,120,415,95); }); });
+
+/* --- Kendaraan --- */
+const V = (n, e, f) => B('Kendaraan', n, e, f);
+V('Bus', '🚌', (S, L, D) => { S(G(507)); S(rr(70,180,660,270,35)); [110,230,350,470].forEach(x => S(rr(x,215,100,80,14))); S(rr(610,215,85,200,12)); L(g => { g.moveTo(70,360); g.lineTo(610,360); }); wheel(S, D, 190, 455, 52); wheel(S, D, 600, 455, 52); });
+V('Truk', '🚚', (S, L, D) => { S(G(507)); S(rr(50,170,370,270,14)); S(poly([[420,260],[560,260],[690,340],[690,440],[420,440]])); S(poly([[450,285],[550,285],[630,340],[450,340]])); S(circ(672,400,14));
+  L(g => { g.moveTo(235,170); g.lineTo(235,440); }); [130,310,590].forEach(x => wheel(S, D, x, 457, 50)); });
+V('Ambulans', '🚑', (S, L, D) => { S(G(502)); S(rr(80,200,640,250,40)); S(poly([[540,225],[620,225],[690,300],[540,300]])); S(rr(340,172,70,32,10));
+  S(poly([[210,250],[250,250],[250,290],[290,290],[290,330],[250,330],[250,370],[210,370],[210,330],[170,330],[170,290],[210,290]])); L(g => { g.moveTo(80,400); g.lineTo(720,400); }); wheel(S, D, 210, 450, 52); wheel(S, D, 590, 450, 52); });
+V('Pesawat', '✈️', (S, L, D) => { S(poly([[360,230],[150,370],[150,420],[360,330]])); S(poly([[440,230],[650,370],[650,420],[440,330]])); S(poly([[360,470],[270,540],[270,570],[360,530]])); S(poly([[440,470],[530,540],[530,570],[440,530]]));
+  S(rr(360,60,80,480,40)); L(g => { g.moveTo(360,125); g.lineTo(440,125); }); [180,235,290].forEach(y => S(circ(400,y,16))); });
+V('Kapal', '🚢', (S, L, D) => { S(cloud(420,95,.7)); S(rr(380,170,50,80,6)); S(rr(300,250,200,110,10)); [340,400,460].forEach(x => S(circ(x,305,22))); S(poly([[100,360],[700,360],[620,490],[180,490]])); S(G(468)); });
+V('Kereta', '🚂', (S, L, D) => { S(G(462)); S(rr(80,230,300,200,16)); S(rr(420,230,300,200,16)); L(g => { g.moveTo(380,380); g.lineTo(420,380); }); [105,200,295,445,540,635].forEach(x => S(rr(x,260,70,70,10))); [150,310,490,650].forEach(x => wheel(S, D, x, 430, 32)); });
+V('Helikopter', '🚁', (S, L, D) => { S(poly([[500,310],[700,290],[700,330],[500,360]])); S(circ(700,310,25)); S(ell(380,330,150,90)); S(ell(330,320,60,45)); S(rr(150,190,460,18,9));
+  L(g => { g.moveTo(380,240); g.lineTo(380,208); g.moveTo(250,450); g.lineTo(520,450); g.moveTo(300,415); g.lineTo(290,450); g.moveTo(460,415); g.lineTo(470,450); }); });
+V('Perahu Layar', '⛵', (S, L, D) => { S(tri([400,70,400,350,230,350])); S(tri([420,130,420,350,560,350])); S(poly([[120,370],[680,370],[600,480],[200,480]])); S(G(465)); S(tri([400,70,400,30,450,50])); });
+
+/* --- Bangunan --- */
+const BG = (n, e, f) => B('Bangunan', n, e, f);
+BG('Rumah', '🏠', (S, L, D) => { S(rr(500,140,50,110,4)); S(rr(220,280,360,260,4)); S(tri([190,290,400,120,610,290])); S(circ(400,215,28)); S(rr(360,390,80,150,10)); D(425,470,6);
+  [[255,330],[475,330]].forEach(p => { S(rr(p[0],p[1],70,70,6)); L(g => { g.moveTo(p[0]+35,p[1]); g.lineTo(p[0]+35,p[1]+70); g.moveTo(p[0],p[1]+35); g.lineTo(p[0]+70,p[1]+35); }); }); });
+BG('Kastil', '🏰', (S, L, D) => { S(poly([[100,540],[100,220],[155,90],[210,220],[210,540]])); S(poly([[590,540],[590,220],[645,90],[700,220],[700,540]]));
+  S(poly([[250,540],[250,240],[290,240],[290,265],[330,265],[330,240],[370,240],[370,265],[430,265],[430,240],[470,240],[470,265],[510,265],[510,240],[550,240],[550,540]]));
+  S(rr(130,300,50,70,25)); S(rr(620,300,50,70,25)); S(rr(300,320,40,70,20)); S(rr(460,320,40,70,20)); S(g => { g.moveTo(350,540); g.lineTo(350,450); g.arc(400,450,50,Math.PI,0); g.lineTo(450,540); g.closePath(); }); });
+BG('Lumbung', '🛖', (S, L, D) => { S(poly([[180,540],[180,300],[400,150],[620,300],[620,540]])); S(poly([[330,540],[330,370],[470,370],[470,540]])); S(circ(400,260,32));
+  L(g => { g.moveTo(330,370); g.lineTo(470,540); g.moveTo(470,370); g.lineTo(330,540); }); });
+BG('Tenda', '⛺', (S, L, D) => { S(tri([400,100,150,520,650,520])); S(tri([400,250,330,520,470,520])); S(tri([400,102,400,45,465,68])); });
+BG('Mercusuar', '🗼', (S, L, D) => { S(G(555)); S(poly([[330,540],[360,200],[440,200],[470,540]])); S(rr(345,140,110,60,6)); S(tri([335,140,400,80,465,140])); S(rr(300,520,200,40,6)); S(rr(380,455,40,65,16));
+  L(g => { g.moveTo(349,320); g.lineTo(451,320); g.moveTo(341,430); g.lineTo(459,430); }); });
+
+/* --- Alam --- */
+const AL = (n, e, f) => B('Alam', n, e, f);
+const flower = (name, e, n, off, rx, ry, cr) => AL(name, e, (S, L, D) => { S(poly([[392,330],[408,330],[408,570],[392,570]])); S(elr(345,470,62,26,-.5)); S(elr(455,430,62,26,.5));
+  for (let i = 0; i < n; i++) { const a = i * 2 * Math.PI / n; S(elr(400 + Math.cos(a) * off, 250 + Math.sin(a) * off, rx, ry, a)); } S(circ(400, 250, cr)); });
+flower('Bunga Lima Kelopak', '🌸', 5, 85, 70, 45, 35); flower('Bunga Enam Kelopak', '🌼', 6, 85, 65, 38, 34); flower('Bunga Delapan Kelopak', '🌺', 8, 90, 60, 30, 38);
+flower('Aster', '💮', 12, 92, 55, 17, 40); flower('Bunga Matahari', '🌻', 14, 105, 55, 25, 70);
+AL('Tulip', '🌷', (S, L, D) => { S(poly([[392,350],[408,350],[408,570],[392,570]])); S(elr(345,480,62,26,-.5)); S(elr(455,440,62,26,.5));
+  S(g => { g.moveTo(300,160); g.lineTo(350,215); g.lineTo(400,130); g.lineTo(450,215); g.lineTo(500,160); g.quadraticCurveTo(520,340,400,360); g.quadraticCurveTo(280,340,300,160); g.closePath(); }); });
+AL('Pohon', '🌳', (S, L, D) => { S(rr(365,300,70,260,8)); S(ell(400,210,160,140)); S(circ(340,200,18)); S(circ(450,170,18)); S(circ(430,260,18)); });
+AL('Pohon Cemara', '🎄', (S, L, D) => { S(rr(375,480,50,80,4)); S(poly([[400,290],[240,500],[560,500]])); S(poly([[400,170],[270,360],[530,360]])); S(poly([[400,70],[310,230],[490,230]])); });
+AL('Kaktus', '🌵', (S, L, D) => { S(rr(240,300,60,150,30)); S(rr(240,400,120,50,25)); S(rr(500,220,60,140,30)); S(rr(440,320,120,50,25)); S(rr(350,150,100,420,50)); S(rr(320,540,160,55,8)); });
+AL('Jamur', '🍄', (S, L, D) => { S(rr(340,300,120,220,30)); S(g => { g.moveTo(180,330); g.bezierCurveTo(180,90,620,90,620,330); g.closePath(); }); S(circ(300,230,30)); S(circ(420,180,36)); S(circ(520,260,28)); });
+AL('Matahari', '☀️', (S, L, D) => { for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6, p = (r, d) => [400 + r * Math.cos(a + d), 300 + r * Math.sin(a + d)];
+    S(poly([p(100, -.14), p(235, 0), p(100, .14)])); } S(circ(400,300,110)); D(360,280,10); D(440,280,10); S(circ(335,325,18)); S(circ(465,325,18)); L(g => { g.moveTo(350,340); g.quadraticCurveTo(400,390,450,340); }); });
+AL('Bulan Sabit', '🌙', (S, L, D) => { const r = d => d * Math.PI / 180; S(g => { g.arc(400,300,200,r(-69.4),r(36),true); g.arc(500,270,160,r(67.3),r(259.3),false); g.closePath(); }); S(star(620,160,30)); S(star(650,420,22)); });
+AL('Pelangi', '🌈', (S, L, D) => { [300,250,200,150,100].forEach(r => S(g => { g.arc(400,450,r,Math.PI,0); g.closePath(); })); S(cloud(40,420,1.1)); S(cloud(600,420,1.1)); });
+AL('Gunung', '🏔️', (S, L, D) => { S(tri([60,540,260,180,430,540])); S(tri([300,540,520,120,740,540])); S(poly([[520,120],[470,210],[500,190],[520,225],[545,190],[570,210]])); });
+AL('Manusia Salju', '⛄', (S, L, D) => { S(circ(400,430,130)); S(circ(400,215,90)); S(rr(335,95,130,70,6)); S(rr(310,150,180,25,8)); D(370,205,8); D(430,205,8); S(tri([395,222,395,240,470,232])); S(rr(300,285,200,35,17)); D(400,380,9); D(400,430,9); D(400,480,9);
+  L(g => { g.moveTo(274,400); g.lineTo(170,330); g.moveTo(526,400); g.lineTo(630,330); }); });
+AL('Awan Hujan', '🌧️', (S, L, D) => { S(cloud(230,130,3)); [[300,320],[390,350],[480,320],[345,450],[435,470],[525,450]].forEach(p => S(ell(p[0], p[1], 14, 24))); });
+
+/* --- Benda --- */
+const O = (n, e, f) => B('Benda', n, e, f);
+O('Balon', '🎈', (S, L, D) => { S(ell(400,230,120,150)); S(tri([400,380,380,412,420,412])); L(g => { g.moveTo(400,412); g.quadraticCurveTo(360,480,410,550); }); S(ell(350,170,18,30)); });
+O('Es Krim', '🍦', (S, L, D) => { S(tri([300,300,500,300,400,560])); S(ell(400,300,115,45)); S(circ(400,200,90)); S(circ(400,100,22)); });
+O('Cupcake', '🧁', (S, L, D) => { S(poly([[270,350],[530,350],[490,540],[310,540]])); S(g => { g.moveTo(250,360); g.quadraticCurveTo(200,260,300,250); g.quadraticCurveTo(320,170,400,175); g.quadraticCurveTo(480,170,500,250); g.quadraticCurveTo(600,260,550,360); g.closePath(); });
+  S(circ(400,130,24)); [[340,290],[460,300],[400,260],[360,340],[450,345]].forEach(p => D(p[0], p[1], 5)); });
+O('Hadiah', '🎁', (S, L, D) => { S(rr(220,280,360,260,8)); S(rr(200,230,400,70,8)); S(poly([[375,230],[425,230],[425,540],[375,540]])); S(elr(340,185,60,35,-.4)); S(elr(460,185,60,35,.4)); S(circ(400,205,22)); });
+O('Mahkota', '👑', (S, L, D) => { S(poly([[200,480],[160,200],[290,320],[400,150],[510,320],[640,200],[600,480]])); S(circ(160,190,20)); S(circ(400,140,22)); S(circ(640,190,20));
+  L(g => { g.moveTo(193,430); g.lineTo(607,430); }); S(circ(400,355,28)); S(circ(270,385,20)); S(circ(530,385,20)); });
+O('Payung', '☂️', (S, L, D) => { S(g => { g.arc(400,300,230,Math.PI,0); for (let i = 0; i < 5; i++) g.quadraticCurveTo(630 - i * 92 - 46, 360, 630 - (i + 1) * 92, 300); g.closePath(); });
+  L(g => { for (const x of [262,354,446,538]) { g.moveTo(400,70); g.lineTo(x,300); } g.moveTo(400,300); g.lineTo(400,500); g.arc(370,500,30,0,Math.PI); }); });
+O('Layangan', '🪁', (S, L, D) => { S(poly([[400,60],[560,260],[400,520],[240,260]])); L(g => { g.moveTo(400,60); g.lineTo(400,520); g.moveTo(240,260); g.lineTo(560,260); g.moveTo(400,520); g.quadraticCurveTo(350,570,400,590); }); });
+O('Lolipop', '🍭', (S, L, D) => { S(rr(388,380,24,190,6)); S(circ(400,230,150)); S(circ(400,230,100)); S(circ(400,230,50)); });
+O('Hati', '❤️', (S, L, D) => { S(g => { g.moveTo(400,520); g.bezierCurveTo(100,330,170,100,300,130); g.bezierCurveTo(360,145,390,190,400,220); g.bezierCurveTo(410,190,440,145,500,130); g.bezierCurveTo(630,100,700,330,400,520); g.closePath(); });
+  L(g => { g.moveTo(250,200); g.quadraticCurveTo(255,160,295,160); }); });
+O('Berlian', '💎', (S, L, D) => { S(poly([[250,200],[550,200],[680,320],[400,540],[120,320]])); L(g => { g.moveTo(120,320); g.lineTo(680,320); g.moveTo(250,200); g.lineTo(330,320); g.moveTo(400,200); g.lineTo(330,320); g.moveTo(400,200); g.lineTo(470,320);
+  g.moveTo(550,200); g.lineTo(470,320); g.moveTo(330,320); g.lineTo(400,540); g.moveTo(470,320); g.lineTo(400,540); }); });
+O('Jam', '⏰', (S, L, D) => { S(circ(250,130,40)); S(circ(550,130,40)); S(circ(400,300,200)); S(circ(400,300,170)); L(g => { for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; g.moveTo(400 + 135 * Math.cos(a), 300 + 135 * Math.sin(a)); g.lineTo(400 + 155 * Math.cos(a), 300 + 155 * Math.sin(a)); }
+  g.moveTo(400,300); g.lineTo(400,180); g.moveTo(400,300); g.lineTo(480,340); }); D(400,300,12); });
+O('Pensil', '✏️', (S, L, D) => { S(poly([[220,250],[600,250],[600,350],[220,350]])); S(tri([220,250,100,300,220,350])); S(tri([130,288,100,300,130,312])); S(rr(600,250,60,100,10)); L(g => { g.moveTo(220,300); g.lineTo(600,300); }); });
+O('Buku', '📖', (S, L, D) => { S(poly([[150,200],[390,230],[390,520],[150,490]])); S(poly([[410,230],[650,200],[650,490],[410,520]])); L(g => { for (let i = 0; i < 4; i++) { g.moveTo(190,280 + i * 45); g.lineTo(350,292 + i * 45); g.moveTo(450,292 + i * 45); g.lineTo(610,280 + i * 45); } }); });
+O('Gitar', '🎸', (S, L, D) => { S(rr(370,60,60,300,6)); S(rr(360,20,80,70,12)); S(ell(400,430,150,130)); S(ell(400,330,100,90)); S(circ(400,410,45)); S(rr(350,490,100,18,4)); L(g => { g.moveTo(385,90); g.lineTo(385,490); g.moveTo(415,90); g.lineTo(415,490); }); });
+O('Lampu', '💡', (S, L, D) => { S(circ(400,250,140)); S(rr(350,360,100,70,8)); S(rr(350,430,100,28,6)); S(rr(350,458,100,28,6)); S(rr(370,486,60,24,8));
+  L(g => { g.moveTo(360,370); g.lineTo(360,260); g.quadraticCurveTo(380,220,400,260); g.quadraticCurveTo(420,300,440,260); g.lineTo(440,370); for (let i = 0; i < 9; i++) { const a = -Math.PI * .95 + i * Math.PI * .9 / 8 * 1.0; g.moveTo(400 + 165 * Math.cos(a), 250 + 165 * Math.sin(a)); g.lineTo(400 + 205 * Math.cos(a), 250 + 205 * Math.sin(a)); } }); });
+O('Topi Penyihir', '🧙', (S, L, D) => { S(tri([400,50,300,380,500,380])); S(ell(400,400,250,55)); S(star(400,250,30)); L(g => { g.moveTo(311,335); g.lineTo(489,335); }); });
+O('Cangkir', '☕', (S, L, D) => { S(ell(560,340,55,70)); S(ell(560,340,28,40)); S(g => { g.moveTo(200,250); g.lineTo(200,400); g.quadraticCurveTo(200,500,300,500); g.lineTo(420,500); g.quadraticCurveTo(520,500,520,400); g.lineTo(520,250); g.closePath(); }); S(ell(360,520,230,35));
+  L(g => { g.moveTo(300,200); g.quadraticCurveTo(270,150,300,110); g.moveTo(400,200); g.quadraticCurveTo(370,150,400,110); }); });
+O('Piala', '🏆', (S, L, D) => { S(ell(260,190,45,60)); S(ell(540,190,45,60)); S(g => { g.moveTo(280,120); g.lineTo(520,120); g.quadraticCurveTo(520,330,400,350); g.quadraticCurveTo(280,330,280,120); g.closePath(); }); S(rr(375,350,50,90,4)); S(rr(290,440,220,50,10)); S(star(400,215,50)); });
+
+/* --- Monster & Robot --- */
+const mon = (name, e, o) => B('Monster', name, e, (S, L, D) => { S(ell(215,360,35,90)); S(ell(585,360,35,90)); S(ell(325,545,50,24)); S(ell(475,545,50,24));
+  if (o.h) [[300,190,270,60,350,150],[500,190,530,60,450,150]].forEach(a => S(tri(a)));
+  if (o.a) { L(g => { g.moveTo(400,140); g.lineTo(400,70); }); S(circ(400,55,20)); }
+  S(ell(400,340,175,205));
+  (o.n == 1 ? [[400,250,60]] : o.n == 2 ? [[335,250,42],[465,250,42]] : [[320,245,34],[400,215,34],[480,245,34]]).forEach(p => { S(circ(p[0], p[1], p[2])); D(p[0] + 4, p[1] + 4, p[2] / 2.4); });
+  S(g => { g.moveTo(300,385); g.quadraticCurveTo(400,490,500,385); g.closePath(); });
+  if (o.t) { S(tri([330,392,365,402,345,430])); S(tri([470,392,435,402,455,430])); } });
+mon('Monster Mata Satu', '👁️', {n: 1, h: 1}); mon('Monster Mata Tiga', '👾', {n: 3, a: 1}); mon('Monster Bertanduk', '👹', {n: 2, h: 1, t: 1}); mon('Monster Ramah', '👻', {n: 2, a: 1, t: 1});
+const rob = (name, o) => B('Monster', name, '🤖', (S, L, D) => { S(rr(190,290,50,170,22)); S(rr(560,290,50,170,22)); S(rr(305,490,70,80,10)); S(rr(425,490,70,80,10)); L(g => { g.moveTo(400,100); g.lineTo(400,55); }); S(circ(400,42,16));
+  S(rr(260,280,280,215,20)); S(rr(335,320,130,100,10)); S(circ(375,370,18)); S(circ(425,370,18)); S(o.r ? ell(400,185,115,95) : rr(290,100,220,170,26)); if (!o.r) { S(rr(262,150,28,70,6)); S(rr(510,150,28,70,6)); }
+  S(circ(355,170,28)); S(circ(445,170,28)); D(358,172,12); D(442,172,12); S(rr(350,220,100,26,6)); L(g => { for (const x of [375,400,425]) { g.moveTo(x,220); g.lineTo(x,246); } }); });
+rob('Robot Kotak', {r: 0}); rob('Robot Bulat', {r: 1});
+
+/* --- Bentuk bersarang (lingkaran, kotak, segitiga, segi enam, bintang) + mandala --- */
+const nest = (name, e, sh) => B('Bentuk', name, e, S => [260, 205, 150, 95, 45].forEach(r => S(sh(r))));
+nest('Lingkaran', '⭕', r => circ(400, 300, r)); nest('Kotak', '🟦', r => poly([[400-r,300-r],[400+r,300-r],[400+r,300+r],[400-r,300+r]]));
+nest('Segitiga', '🔺', r => poly([[400,300-r],[400+r*.87,300+r*.5],[400-r*.87,300+r*.5]])); nest('Segi Enam', '⬡', r => poly(Array.from({length: 6}, (_, i) => [400 + r * Math.cos(i * Math.PI / 3), 300 + r * Math.sin(i * Math.PI / 3)])));
+nest('Bintang Bersusun', '⭐', r => star(400, 310, r));
+B('Bentuk', 'Mandala Bunga', '🏵️', S => { for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; S(elr(400 + Math.cos(a) * 190, 300 + Math.sin(a) * 190, 85, 34, a)); } S(circ(400,300,120)); S(circ(400,300,70)); S(circ(400,300,30)); });
+
+
+/* ===== Elemen & status ===== */
+const $ = id => document.getElementById(id);
+const board = $('board'), ctx = board.getContext && board.getContext('2d');
+const colorCanvas = document.createElement('canvas'); colorCanvas.width = W; colorCanvas.height = H;
+const colorCtx = colorCanvas.getContext('2d');
+const stack = new Int32Array(N);              // tumpukan flood fill (dipakai ulang)
+const sessions = {};                          // kemajuan tiap gambar (tersimpan saat berpindah gambar)
+let cur = null, selected = 0, soundOn = true, kbActive = false, audio = null, audioFail = false;
+const kb = {x: W / 2, y: H / 2};
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function warn(msg) { const w = $('warn'); w.textContent = msg; w.hidden = false; }
+function say(text, mascot) {
+  $('statusText').textContent = text; if (mascot) $('mascot').textContent = mascot;
+  const s = $('status'); s.classList.remove('bump'); void s.offsetWidth; s.classList.add('bump');
+}
+
+/* ===== Flood fill berbasis piksel (4 arah) =====
+   Batas koordinat dijaga; `seen` (visited bitmap) mencegah loop tak berujung; dinding = piksel garis. */
+function flood(barrier, start, seen, onPixel, onWall) {
+  let sp = 0; stack[sp++] = start; seen[start] = 1;
+  while (sp) {
+    const i = stack[--sp], x = i % W; onPixel(i);
+    const nb = [x > 0 ? i - 1 : -1, x < W - 1 ? i + 1 : -1, i >= W ? i - W : -1, i < N - W ? i + W : -1];
+    for (let k = 0; k < 4; k++) { const n = nb[k]; if (n < 0 || seen[n]) continue;
+      if (barrier[n]) { if (onWall) onWall(n); continue; }
+      seen[n] = 1; stack[sp++] = n; }
+  }
+}
+
+/* ===== Siapkan template: lapisan garis, peta dinding, dan label area tertutup ===== */
+function paint(t, cw, ch, sc, lw) {
+  const c = document.createElement('canvas'); c.width = cw; c.height = ch;
+  const g = c.getContext('2d'); g.scale(sc, sc); g.lineWidth = lw; g.lineJoin = 'round'; g.lineCap = 'round'; g.strokeStyle = g.fillStyle = INK;
+  const shape = fn => { g.beginPath(); fn(g); g.globalCompositeOperation = 'destination-out'; g.fill(); g.globalCompositeOperation = 'source-over'; g.stroke(); };
+  const lines = fn => { g.beginPath(); fn(g); g.stroke(); };
+  const dot = (x, y, r) => { g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); };
+  t.draw({shape, lines, dot});
+  return {c, g};
+}
+function prepare(t) {
+  if (t.data) return t.data;
+  const {c: line, g} = paint(t, W, H, SC, 5);
+  const a = g.getImageData(0, 0, W, H).data, barrier = new Uint8Array(N);
+  for (let i = 0; i < N; i++) barrier[i] = a[i * 4 + 3] >= LINE_ALPHA ? 1 : 0;      // garis gelap vs area terang (anti-aliasing ditoleransi)
+  // Beri nomor unik pada tiap area tertutup, supaya penyelesaian bisa dideteksi dengan benar
+  const labels = new Int32Array(N), seen = new Uint8Array(N), areas = [0]; let id = 0;
+  for (let i = 0; i < N; i++) if (!barrier[i] && !seen[i]) { id++; let n = 0; flood(barrier, i, seen, p => { labels[p] = id; n++; }); areas[id] = n; }
+  const bg = labels[0], counted = new Set();
+  areas.forEach((n, k) => { if (k && k !== bg && n >= MIN_AREA) counted.add(k); });  // latar tidak wajib diwarnai
+  return t.data = {line, barrier, labels, counted, bg};
+}
+function session(t) {
+  return sessions[t.id] || (sessions[t.id] = (() => { const img = new ImageData(W, H);
+    return {img, pix: new Uint32Array(img.data.buffer), colored: new Set(), done: {first: false, half: false, all: false}}; })());
+}
+
+/* ===== Gambar ke kanvas ===== */
+function render() {
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, W, H);
+  ctx.drawImage(colorCanvas, 0, 0);                    // warna di bawah
+  ctx.drawImage(TPL().data.line, 0, 0);                // garis hitam selalu di atas → tidak pernah tertimpa
+  if (kbActive) { ctx.beginPath(); ctx.arc(kb.x, kb.y, 20, 0, Math.PI * 2); ctx.lineWidth = 8; ctx.strokeStyle = '#fff'; ctx.stroke();
+    ctx.lineWidth = 4; ctx.strokeStyle = '#5b3df5'; ctx.stroke(); }
+}
+const TPL = () => TEMPLATES.find(t => t.id === cur);
+function thumb(t) {
+  const c = t.thumb.getContext('2d'); c.fillStyle = '#fff'; c.fillRect(0, 0, 200, 150);
+  if (t.id === cur) c.drawImage(colorCanvas, 0, 0, 200, 150);
+  c.drawImage((t.data || {}).line || t.base, 0, 0, 200, 150);
+}
+function progress() {
+  const t = TPL(), total = t.data.counted.size, n = session(t).colored.size, pct = total ? Math.round(n * 100 / total) : 0;
+  $('bar').style.width = pct + '%'; $('bar').setAttribute('aria-valuenow', pct);
+  $('ptext').textContent = `Area berwarna: ${n} dari ${total}`;
+}
+
+/* ===== Suara (Web Audio) — dibuat hanya setelah interaksi pengguna ===== */
+function ensureAudio() {
+  if (audio) { if (audio.state === 'suspended') audio.resume(); return audio; }
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) { if (!audioFail) { audioFail = true; $('btnSound').disabled = true; $('btnSound').textContent = '🔇 Suara tidak tersedia'; warn('Browsermu belum mendukung suara, tapi kamu tetap bisa mewarnai! 🎨'); } return null; }
+  try { audio = new AC(); } catch (e) { audioFail = true; return null; }
+  return audio;
+}
+function tone(f, at, dur, type, vol) {
+  const a = audio, o = a.createOscillator(), g = a.createGain(), t0 = a.currentTime + at;
+  o.type = type || 'sine'; o.frequency.value = f; g.gain.setValueAtTime(0.0001, t0);
+  g.gain.exponentialRampToValueAtTime(vol || .18, t0 + .02); g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+  o.connect(g); g.connect(a.destination); o.start(t0); o.stop(t0 + dur + .05);
+}
+function sfx(kind) {
+  if (!soundOn || !ensureAudio()) return;
+  if (kind === 'pop') tone(440 + selected * 55, 0, .15, 'triangle', .16);
+  else if (kind === 'miss') tone(180, 0, .15, 'sine', .12);
+  else if (kind === 'win') [523, 659, 784, 1047, 1319].forEach((f, i) => tone(f, i * .11, .28, 'triangle', .2));
+}
+
+/* ===== Partikel bintang (elemen dihapus setelah animasi selesai) ===== */
+function sparks(x, y, count) {
+  const fx = $('fx'), icons = ['⭐', '✨', '🌟', '💫'];
+  if (reduceMotion) count = Math.ceil(count / 3);
+  for (let i = 0; i < count && fx.childElementCount < 150; i++) {
+    const s = document.createElement('span'), ang = Math.random() * Math.PI * 2, dist = 70 + Math.random() * 170;
+    s.className = 'spark'; s.textContent = icons[i % 4]; s.style.left = x + 'px'; s.style.top = y + 'px';
+    s.style.setProperty('--dx', Math.cos(ang) * dist + 'px'); s.style.setProperty('--dy', Math.sin(ang) * dist - 40 + 'px');
+    s.style.setProperty('--r', (Math.random() * 360 - 180) + 'deg'); s.style.setProperty('--s', (18 + Math.random() * 20) + 'px');
+    s.style.setProperty('--d', (800 + Math.random() * 600) + 'ms');
+    const rm = () => s.remove(); s.addEventListener('animationend', rm); setTimeout(rm, 2000);
+    fx.appendChild(s);
+  }
+}
+
+/* ===== Mewarnai ===== */
+const CHEERS = ['Bagus sekali! 🌈', 'Warnamu cantik! 🎨', 'Terus semangat! ⭐', 'Keren! Lanjut area lain ya 😄', 'Wah, ceria sekali! 🌟'];
+function fillAt(px, py, cx, cy) {
+  const t = TPL(), d = t.data, s = session(t);
+  const x = Math.min(W - 1, Math.max(0, Math.floor(px))), y = Math.min(H - 1, Math.max(0, Math.floor(py))), idx = y * W + x;
+  if (d.barrier[idx]) { say('Itu garis hitam. Ketuk di dalam area putih ya! 😊', '🐥'); sfx('miss'); return; }
+  const color = PACKED[selected];
+  // isi area, termasuk 1 lapis piksel garis di tepinya (tersembunyi di bawah garis, jadi tak ada celah putih)
+  flood(d.barrier, idx, new Uint8Array(N), p => { s.pix[p] = color; }, p => { s.pix[p] = color; });
+  const id = d.labels[idx]; if (d.counted.has(id)) s.colored.add(id);
+  colorCtx.putImageData(s.img, 0, 0); render(); progress(); thumb(t);
+  const total = d.counted.size, n = s.colored.size, r = board.getBoundingClientRect();
+  const bx = cx ?? r.left + r.width / 2, by = cy ?? r.top + r.height / 2;
+  if (total && n === total && !s.done.all) {
+    s.done = {first: true, half: true, all: true}; say('🎉 Hebat sekali! Semua area sudah berwarna!', '🏆');
+    sparks(r.left + r.width / 2, r.top + r.height / 2, 45); sfx('win');
+  } else if (!s.done.half && total && n >= Math.ceil(total / 2)) {
+    s.done.half = s.done.first = true; say('Setengah jalan! Kamu hebat! 🌟', '🦄'); sparks(bx, by, 22); sfx('win');
+  } else if (!s.done.first && n >= 1) {
+    s.done.first = true; say('Warna pertamamu! Cantik sekali! ✨', '🐣'); sparks(bx, by, 12); sfx('win');
+  } else {
+    say(id === d.bg ? 'Latarnya jadi cantik! 🌤️' : CHEERS[Math.floor(Math.random() * CHEERS.length)], '😺'); sparks(bx, by, 4); sfx('pop');
+  }
+}
+function resetCurrent() {
+  const s = session(TPL()); s.img.data.fill(0); s.colored.clear(); s.done = {first: false, half: false, all: false};   // pencapaian ikut dibersihkan
+  colorCtx.putImageData(s.img, 0, 0); render(); progress(); thumb(TPL());
+  say('Gambar bersih lagi! Ayo mewarnai dari awal ✨', '🧽'); sfx('miss');
+}
+function download() {
+  const t = TPL(), k = kbActive; kbActive = false; render();
+  let url; try { url = board.toDataURL('image/png'); } catch (e) { kbActive = k; render(); warn('Maaf, gambar belum bisa diunduh di browser ini.'); return; }
+  kbActive = k; render();
+  if ('download' in document.createElement('a')) { const a = document.createElement('a'); a.href = url; a.download = `warna-ceria-${t.id}.png`; document.body.appendChild(a); a.click(); a.remove(); }
+  else { window.open(url, '_blank'); warn('Tekan lama pada gambar untuk menyimpannya.'); }
+  say('Gambarmu tersimpan! Keren! 💾', '🎁'); const r = $('btnSave').getBoundingClientRect(); sparks(r.left + r.width / 2, r.top, 10); sfx('win');
+}
+function selectTemplate(id) {
+  if (id === cur) return;
+  cur = id; const t = TPL(); prepare(t);
+  colorCtx.putImageData(session(t).img, 0, 0); render(); progress();
+  document.querySelectorAll('.tpl').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.id === id)));
+  board.setAttribute('aria-label', `${t.alt} untuk diwarnai. Ketuk area putih untuk mewarnai. Pengguna keyboard: tombol panah menggerakkan kursor, Enter mewarnai.`);
+  say(`Kamu memilih ${t.name}! Pilih warna lalu ketuk gambar.`, t.emoji);
+}
+function selectColor(i, quiet) {
+  selected = i; document.querySelectorAll('.swatch').forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  $('chip').style.background = COLORS[i][1]; $('colorName').textContent = COLORS[i][0];
+  if (!quiet) { say(`Warna ${COLORS[i][0]} dipilih! Sekarang ketuk gambar.`, '🖍️'); sfx('pop'); }
+}
+
+/* ===== Inisialisasi: semua listener dipasang SEKALI (delegasi) ===== */
+function init() {
+  if (!ctx || typeof ImageData !== 'function' || !ctx.ellipse) { warn('Maaf, browsermu belum mendukung game ini. Coba buka dengan Chrome, Edge, Firefox, atau Safari terbaru ya! 🙏'); return; }
+  const list = $('tplList');
+  TEMPLATES.forEach(t => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'tpl'; b.dataset.id = t.id; b.setAttribute('aria-pressed', 'false');
+    b.setAttribute('aria-label', `Pilih gambar ${t.name}`);
+    t.thumb = document.createElement('canvas'); t.thumb.width = 200; t.thumb.height = 150; t.thumb.setAttribute('aria-hidden', 'true');
+    const l = document.createElement('span'); l.textContent = `${t.emoji} ${t.name}`; b.append(t.thumb, l); list.appendChild(b); t.btn = b; t.base = paint(t, 200, 150, .25, 7).c; thumb(t);
+  });
+  const pal = $('palette');
+  COLORS.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'swatch'; b.dataset.i = i;
+    b.setAttribute('aria-label', `Warna ${c[0]}`); b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="dot" style="--c:${c[1]}"></span><span>${c[0]}</span>`; pal.appendChild(b); });
+  const CATS = [['Semua','🌈'],['Hewan','🐾'],['Buah','🍎'],['Kendaraan','🚗'],['Bangunan','🏠'],['Alam','🌳'],['Benda','🎁'],['Monster','👾'],['Bentuk','🔷']], cats = $('cats');
+  CATS.forEach(([n, e], i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'cat'; b.dataset.cat = n; b.setAttribute('aria-pressed', String(i === 0)); b.textContent = `${e} ${n}`; cats.appendChild(b); });
+  cats.addEventListener('click', e => { const b = e.target.closest('.cat'); if (!b) return; const c = b.dataset.cat;
+    cats.querySelectorAll('.cat').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    TEMPLATES.forEach(t => { t.btn.hidden = !(c === 'Semua' || t.cat === c); }); list.scrollTop = 0; });
+
+  list.addEventListener('click', e => { const b = e.target.closest('.tpl'); if (b) selectTemplate(b.dataset.id); });
+  pal.addEventListener('click', e => { const b = e.target.closest('.swatch'); if (b) selectColor(+b.dataset.i); });
+  board.addEventListener('pointerdown', () => { kbActive = false; });
+  board.addEventListener('click', e => { if (e.detail === 0) return;           // klik dari keyboard ditangani keydown
+    const r = board.getBoundingClientRect(); fillAt((e.clientX - r.left) * W / r.width, (e.clientY - r.top) * H / r.height, e.clientX, e.clientY); });
+  board.addEventListener('keydown', e => {
+    const step = e.shiftKey ? 60 : 20, mv = {ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step]}[e.key];
+    if (mv) { e.preventDefault(); kbActive = true; kb.x = Math.min(W - 1, Math.max(0, kb.x + mv[0])); kb.y = Math.min(H - 1, Math.max(0, kb.y + mv[1])); render(); }
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); kbActive = true; const r = board.getBoundingClientRect();
+      fillAt(kb.x, kb.y, r.left + kb.x * r.width / W, r.top + kb.y * r.height / H); }
+  });
+  board.addEventListener('blur', () => { if (kbActive) { kbActive = false; render(); } });
+  $('btnReset').addEventListener('click', resetCurrent);
+  $('btnSave').addEventListener('click', download);
+  $('btnSound').addEventListener('click', () => {
+    soundOn = !soundOn; const b = $('btnSound'); b.setAttribute('aria-pressed', String(soundOn)); b.textContent = soundOn ? '🔊 Suara: Hidup' : '🔇 Suara: Mati';
+    if (soundOn) sfx('pop'); say(soundOn ? 'Suara dinyalakan! 🎵' : 'Suara dimatikan. 🤫', soundOn ? '🎵' : '🤫');
+  });
+  $('count').textContent = TEMPLATES.length; selectColor(0, true); selectTemplate('kucing');
+}
+init();
+})();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spelly the Bear’s Spelling Adventure</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--ink:#3b1f6b;--pink:#ff6fb5;--sun:#ffd23f;--sky:#3ec6ff;--mint:#3ddc97;--tang:#ff8a3d;--grape:#8a5cf6;--cream:#fff8e7}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+body{margin:0;min-height:100vh;font-family:'Fredoka','Comic Sans MS','Trebuchet MS',sans-serif;font-weight:700;color:var(--ink);
+background:radial-gradient(circle at 20% 10%,#ffe3f1 0,transparent 40%),radial-gradient(circle at 85% 90%,#d8f3ff 0,transparent 45%),linear-gradient(160deg,#ffd6ec,#fff1b8 55%,#c9f5e0);overflow-x:hidden}
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg i{position:absolute;font-style:normal;font-size:28px;opacity:.55;animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-24px) rotate(20deg)}}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:12px 14px 28px}
+.screen{display:none}.screen.on{display:block}
+h1{font-size:clamp(34px,9vw,58px);margin:4px 0;text-align:center;line-height:1;color:var(--grape);text-shadow:0 4px 0 #fff,0 7px 0 var(--pink)}
+.sub{text-align:center;font-size:20px;margin:6px 0 14px}
+.mascot{font-size:110px;text-align:center;animation:bob 1.6s ease-in-out infinite;display:block;line-height:1.1}
+.mascot.small{font-size:64px}
+@keyframes bob{50%{transform:translateY(-14px) rotate(-5deg)}}
+.cheer{animation:cheer .9s ease!important}
+@keyframes cheer{30%{transform:translateY(-50px) rotate(360deg) scale(1.3)}60%{transform:translateY(0) scale(.9)}}
+.sad{animation:wob .6s ease!important}
+@keyframes wob{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+.btn{display:block;width:100%;border:0;border-radius:30px;padding:18px;margin:12px 0;font:inherit;font-size:28px;color:#fff;cursor:pointer;
+box-shadow:0 8px 0 rgba(0,0,0,.2);transition:transform .1s,box-shadow .1s;text-shadow:0 2px 0 rgba(0,0,0,.18)}
+.btn:active{transform:translateY(7px);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.btn small{display:block;font-size:16px;opacity:.95}
+.b-easy{background:var(--mint)}.b-med{background:var(--tang)}.b-hard{background:var(--pink)}.b-go{background:var(--grape)}.b-sky{background:var(--sky)}
+.hud{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pill{background:#fff;border-radius:24px;padding:6px 14px;font-size:20px;box-shadow:0 4px 0 rgba(0,0,0,.12);border:3px solid var(--sun)}
+.hearts{font-size:26px;letter-spacing:2px}
+.hearts .lost{filter:grayscale(1);opacity:.35}
+.pop{animation:pop .4s}
+@keyframes pop{50%{transform:scale(1.4)}}
+.bar{height:20px;background:#fff;border-radius:12px;border:3px solid var(--grape);margin:10px 0;overflow:hidden}
+.bar div{height:100%;width:0;background:repeating-linear-gradient(45deg,var(--pink),var(--pink) 12px,var(--sun) 12px,var(--sun) 24px);transition:width .5s;border-radius:8px}
+.rewards{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.rw{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:24px;border:3px dashed #c9b6ee;filter:grayscale(1);opacity:.6}
+.rw.got{filter:none;opacity:1;border:3px solid var(--sun);background:#fff6c9;animation:pop .6s}
+.card{background:var(--cream);border:6px solid #fff;border-radius:36px;box-shadow:0 10px 0 rgba(138,92,246,.35);padding:12px;margin:10px 0;text-align:center}
+.pic{font-size:clamp(90px,26vw,150px);line-height:1.1;display:inline-block;animation:bob 2s ease-in-out infinite}
+.say{font-size:22px;padding:8px 22px;border:0;border-radius:24px;background:var(--sky);color:#fff;font-family:inherit;font-weight:700;box-shadow:0 5px 0 rgba(0,0,0,.2);cursor:pointer;margin:2px}
+.say:active{transform:translateY(4px);box-shadow:none}
+.slots,.tiles{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.slot{width:clamp(48px,14vw,72px);height:clamp(58px,17vw,84px);border-radius:18px;border:4px dashed var(--grape);background:#fff;display:grid;place-items:center;font-size:clamp(34px,10vw,52px);text-transform:uppercase}
+.slot.next{border-color:var(--pink);animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.slot.full{border:4px solid var(--mint);background:#e6fff3;animation:pop .35s}
+.slot.win{animation:dance .6s ease infinite alternate}
+@keyframes dance{to{transform:translateY(-14px) rotate(8deg)}}
+.tile{width:clamp(58px,17vw,84px);height:clamp(58px,17vw,84px);border:0;border-radius:22px;font:inherit;font-size:clamp(34px,11vw,54px);text-transform:uppercase;color:#fff;cursor:pointer;
+box-shadow:0 7px 0 rgba(0,0,0,.25);text-shadow:0 3px 0 rgba(0,0,0,.2);animation:hop 1.4s ease-in-out infinite}
+@keyframes hop{50%{transform:translateY(-9px)}}
+.tile:active{transform:translateY(6px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.tile.used{visibility:hidden}
+.tile.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
+.tile.hint{outline:6px solid var(--sun);animation:pulse .5s infinite}
+.msg{min-height:34px;font-size:26px;color:var(--grape)}
+.toast{position:fixed;left:50%;top:30%;transform:translate(-50%,-50%) scale(0);z-index:50;background:#fff;border:6px solid var(--sun);border-radius:36px;padding:18px 28px;font-size:34px;text-align:center;box-shadow:0 12px 0 rgba(0,0,0,.2);pointer-events:none}
+.toast.show{animation:toast 1.9s ease forwards}
+@keyframes toast{15%{transform:translate(-50%,-50%) scale(1.15) rotate(-3deg)}25%{transform:translate(-50%,-50%) scale(1)}80%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(0)}}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.top{display:flex;gap:8px}.top .pill{flex:1;text-align:center;font-size:18px;cursor:pointer}
+.big{font-size:64px;text-align:center}
+@media (prefers-reduced-motion:reduce){.bg i{animation:none}}
+</style></head><body>
+<div class="bg" id="bg"></div><canvas id="cv"></canvas><div class="toast" id="toast"></div>
+<main>
+<section class="screen on" id="s-start">
+<h1>Spelly’s Spelling Adventure!</h1>
+<span class="mascot" id="m0">🐻</span>
+<p class="sub">Hi friend! Listen, look and spell the word! (979 words to discover)</p>
+<button class="btn b-easy" data-lv="easy">🌱 Easy<small>5 hearts · short words (3–4 letters)</small></button>
+<button class="btn b-med" data-lv="med">🔥 Medium<small>4 hearts · medium words (5–6 letters) + tricky letters</small></button>
+<button class="btn b-hard" data-lv="hard">🚀 Hard<small>3 hearts · long words (7+ letters) + lots of tricky letters</small></button>
+<div class="rewards" id="rw0"></div>
+</section>
+
+<section class="screen" id="s-game">
+<div class="top"><span class="pill" id="home">🏠 Home</span><span class="pill" id="snd">🔊 Sound on</span></div>
+<div class="hud" style="margin-top:8px">
+<span class="pill">⭐ <span id="pts">0</span></span>
+<span class="pill" id="streak">🔥 0</span>
+<span class="pill hearts" id="hearts"></span></div>
+<div class="bar"><div id="prog"></div></div>
+<div class="rewards" id="rw1"></div>
+<div class="card">
+<span class="mascot small" id="m1">🐻</span>
+<div class="pic" id="pic"></div><br>
+<button class="say" id="again">🔊 Say it again</button>
+<button class="say" id="hint" style="background:var(--tang)">💡 Hint</button>
+<div class="slots" id="slots"></div>
+<div class="msg" id="msg"></div>
+</div>
+<div class="tiles" id="tiles"></div>
+</section>
+
+<section class="screen" id="s-end">
+<h1 id="endT">Hooray!</h1>
+<div class="big" id="endS"></div>
+<span class="mascot" id="m2">🐻</span>
+<p class="sub" id="endP"></p>
+<div class="rewards" id="rw2"></div>
+<button class="btn b-go" id="replay">🎈 Play again</button>
+<button class="btn b-sky" id="menu">🏠 Pick a level</button>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const WORDS=[["monkey","🐵"],["gorilla","🦍"],["orangutan","🦧"],["dog","🐶"],["guide dog","🦮"],["service dog","🐕‍🦺"],["poodle","🐩"],["wolf","🐺"],["fox","🦊"],["raccoon","🦝"],["cat","🐱"],["lion","🦁"],["tiger","🐯"],["leopard","🐆"],["horse","🐴"],["moose","🫎"],["donkey","🫏"],["racehorse","🐎"],["unicorn","🦄"],["zebra","🦓"],["deer","🦌"],["bison","🦬"],["cow","🐮"],["water buffalo","🐃"],["boar","🐗"],["pig nose","🐽"],["ram","🐏"],["ewe","🐑"],["sheep","🐑"],["goat","🐐"],["camel","🐪"],["llama","🦙"],["giraffe","🦒"],["elephant","🐘"],["mammoth","🦣"],["rhinoceros","🦏"],["hippopotamus","🦛"],["mouse","🐭"],["rat","🐀"],["hamster","🐹"],["rabbit","🐰"],["chipmunk","🐿️"],["beaver","🦫"],["hedgehog","🦔"],["bat","🦇"],["bear","🐻"],["polar bear","🐻‍❄️"],["koala","🐨"],["panda","🐼"],["sloth","🦥"],["otter","🦦"],["skunk","🦨"],["kangaroo","🦘"],["badger","🦡"],["paw prints","🐾"],["feet","🐾"],["turkey","🦃"],["chicken","🐔"],["rooster","🐓"],["hatching chick","🐣"],["baby chick","🐤"],["hatched chick","🐥"],["bird","🐦"],["penguin","🐧"],["dove","🕊️"],["eagle","🦅"],["duck","🦆"],["swan","🦢"],["owl","🦉"],["dodo","🦤"],["feather","🪶"],["flamingo","🦩"],["peacock","🦚"],["parrot","🦜"],["wing","🪽"],["raven","🐦‍⬛"],["crow","🐦‍⬛"],["goose","🪿"],["frog","🐸"],["crocodile","🐊"],["turtle","🐢"],["lizard","🦎"],["snake","🐍"],["dragon","🐲"],["sauropod","🦕"],["spouting whale","🐳"],["whale","🐳"],["dolphin","🐬"],["flipper","🐬"],["seal","🦭"],["fish","🐟"],["tropical fish","🐠"],["blowfish","🐡"],["shark","🦈"],["octopus","🐙"],["spiral shell","🐚"],["shell","🐚"],["coral","🪸"],["jellyfish","🪼"],["snail","🐌"],["butterfly","🦋"],["bug","🐛"],["ant","🐜"],["honeybee","🐝"],["bee","🐝"],["beetle","🪲"],["lady beetle","🐞"],["cricket","🦗"],["cockroach","🪳"],["spider","🕷️"],["spider web","🕸️"],["scorpion","🦂"],["mosquito","🦟"],["fly","🪰"],["worm","🪱"],["bouquet","💐"],["cherry blossom","🌸"],["flower","💮"],["lotus","🪷"],["rosette","🏵️"],["rose","🌹"],["wilted flower","🥀"],["hibiscus","🌺"],["sunflower","🌻"],["blossom","🌼"],["tulip","🌷"],["hyacinth","🪻"],["seedling","🌱"],["potted plant","🪴"],["evergreen tree","🌲"],["deciduous tree","🌳"],["palm tree","🌴"],["cactus","🌵"],["herb","🌿"],["shamrock","☘️"],["maple leaf","🍁"],["fallen leaf","🍂"],["leaves","🍃"],["empty nest","🪹"],["mushroom","🍄"],["grapes","🍇"],["melon","🍈"],["watermelon","🍉"],["tangerine","🍊"],["orange","🍊"],["lemon","🍋"],["banana","🍌"],["pineapple","🍍"],["mango","🥭"],["apple","🍎"],["pear","🍐"],["peach","🍑"],["cherries","🍒"],["strawberry","🍓"],["blueberries","🫐"],["kiwi fruit","🥝"],["tomato","🍅"],["olive","🫒"],["coconut","🥥"],["avocado","🥑"],["eggplant","🍆"],["potato","🥔"],["carrot","🥕"],["corn","🌽"],["hot pepper","🌶️"],["bell pepper","🫑"],["cucumber","🥒"],["leafy green","🥬"],["broccoli","🥦"],["garlic","🧄"],["onion","🧅"],["peanuts","🥜"],["beans","🫘"],["chestnut","🌰"],["ginger root","🫚"],["pea pod","🫛"],["bread","🍞"],["croissant","🥐"],["baguette bread","🥖"],["flatbread","🫓"],["pretzel","🥨"],["bagel","🥯"],["pancakes","🥞"],["waffle","🧇"],["cheese wedge","🧀"],["cheese","🧀"],["poultry leg","🍗"],["bacon","🥓"],["hamburger","🍔"],["french fries","🍟"],["fries","🍟"],["pizza","🍕"],["hot dog","🌭"],["hotdog","🌭"],["sandwich","🥪"],["taco","🌮"],["burrito","🌯"],["tamale","🫔"],["falafel","🧆"],["egg","🥚"],["cooking","🍳"],["fried egg","🍳"],["stew","🍲"],["fondue","🫕"],["salad","🥗"],["popcorn","🍿"],["butter","🧈"],["salt","🧂"],["canned food","🥫"],["bento box","🍱"],["bento","🍱"],["rice cracker","🍘"],["rice ball","🍙"],["cooked rice","🍚"],["rice","🍚"],["curry rice","🍛"],["curry","🍛"],["steaming bowl","🍜"],["ramen","🍜"],["spaghetti","🍝"],["sweet potato","🍠"],["oden","🍢"],["sushi","🍣"],["fried shrimp","🍤"],["fish cake","🍥"],["moon cake","🥮"],["dango","🍡"],["dumpling","🥟"],["fortune cookie","🥠"],["takeout box","🥡"],["crab","🦀"],["lobster","🦞"],["shrimp","🦐"],["squid","🦑"],["oyster","🦪"],["icecream","🍦"],["shaved ice","🍧"],["ice cream","🍨"],["doughnut","🍩"],["cookie","🍪"],["birthday cake","🎂"],["birthday","🎂"],["shortcake","🍰"],["cake","🍰"],["cupcake","🧁"],["pie","🥧"],["chocolate bar","🍫"],["candy","🍬"],["lollipop","🍭"],["custard","🍮"],["honey pot","🍯"],["baby bottle","🍼"],["milk glass","🥛"],["hot beverage","☕"],["coffee","☕"],["teapot","🫖"],["tea","🍵"],["champagne","🍾"],["tumbler glass","🥃"],["pouring liquid","🫗"],["bubble tea","🧋"],["beverage box","🧃"],["mate","🧉"],["ice","🧊"],["ice cube","🧊"],["chopsticks","🥢"],["spoon","🥄"],["jar","🫙"],["amphora","🏺"],["earth africa","🌍"],["earth americas","🌎"],["earth asia","🌏"],["world map","🗺️"],["japan","🗾"],["compass","🧭"],["mountain snow","🏔️"],["mountain","⛰️"],["volcano","🌋"],["mount fuji","🗻"],["camping","🏕️"],["beach umbrella","🏖️"],["desert","🏜️"],["desert island","🏝️"],["national park","🏞️"],["stadium","🏟️"],["brick","🧱"],["bricks","🧱"],["rock","🪨"],["wood","🪵"],["hut","🛖"],["houses","🏘️"],["derelict house","🏚️"],["house","🏠"],["office","🏢"],["post office","🏣"],["hospital","🏥"],["bank","🏦"],["love hotel","🏩"],["school","🏫"],["factory","🏭"],["castle","🏰"],["wedding","💒"],["tokyo tower","🗼"],["church","⛪"],["mosque","🕌"],["hindu temple","🛕"],["synagogue","🕍"],["shinto shrine","⛩️"],["kaaba","🕋"],["fountain","⛲"],["tent","⛺"],["foggy","🌁"],["cityscape","🏙️"],["sunrise","🌅"],["city sunset","🌆"],["sunset","🌇"],["city sunrise","🌇"],["hot springs","♨️"],["carousel horse","🎠"],["ferris wheel","🎡"],["roller coaster","🎢"],["barber pole","💈"],["barber","💈"],["circus tent","🎪"],["locomotive","🚂"],["railway car","🚃"],["bullet train","🚅"],["train","🚆"],["metro","🚇"],["light rail","🚈"],["station","🚉"],["tram","🚊"],["monorail","🚝"],["tram car","🚋"],["oncoming bus","🚍"],["trolleybus","🚎"],["minibus","🚐"],["ambulance","🚑"],["fire engine","🚒"],["police car","🚓"],["taxi","🚕"],["oncoming taxi","🚖"],["automobile","🚗"],["car","🚗"],["pickup truck","🛻"],["delivery truck","🚚"],["truck","🚚"],["tractor","🚜"],["racing car","🏎️"],["motorcycle","🏍️"],["motor scooter","🛵"],["auto rickshaw","🛺"],["bicycle","🚲"],["bike","🚲"],["kick scooter","🛴"],["skateboard","🛹"],["roller skate","🛼"],["bus stop","🚏"],["motorway","🛣️"],["railway track","🛤️"],["oil drum","🛢️"],["fuel pump","⛽"],["wheel","🛞"],["rotating light","🚨"],["traffic light","🚥"],["stop sign","🛑"],["construction","🚧"],["anchor","⚓"],["ring buoy","🛟"],["sailboat","⛵"],["boat","⛵"],["canoe","🛶"],["speedboat","🚤"],["passenger ship","🛳️"],["ferry","⛴️"],["motor boat","🛥️"],["ship","🚢"],["airplane","✈️"],["small airplane","🛩️"],["flight arrival","🛬"],["parachute","🪂"],["seat","💺"],["helicopter","🚁"],["aerial tramway","🚡"],["satellite","🛰️"],["rocket","🚀"],["flying saucer","🛸"],["bellhop bell","🛎️"],["luggage","🧳"],["hourglass done","⌛"],["hourglass","⌛"],["watch","⌚"],["alarm clock","⏰"],["stopwatch","⏱️"],["timer clock","⏲️"],["new moon","🌑"],["moon","🌔"],["full moon","🌕"],["crescent moon","🌙"],["thermometer","🌡️"],["sun","☀️"],["sunny","☀️"],["sun with","🌞"],["ringed planet","🪐"],["star","⭐"],["glowing star","🌟"],["shooting star","🌠"],["stars","🌠"],["milky way","🌌"],["cloud","☁️"],["partly sunny","⛅"],["tornado","🌪️"],["fog","🌫️"],["wind","🌬️"],["wind blowing","🌬️"],["cyclone","🌀"],["rainbow","🌈"],["umbrella","☂️"],["open umbrella","☂️"],["high voltage","⚡"],["zap","⚡"],["snowflake","❄️"],["snowman","☃️"],["comet","☄️"],["fire","🔥"],["droplet","💧"],["water wave","🌊"],["ocean","🌊"],["christmas tree","🎄"],["fireworks","🎆"],["sparkler","🎇"],["firecracker","🧨"],["sparkles","✨"],["balloon","🎈"],["party popper","🎉"],["tada","🎉"],["confetti ball","🎊"],["tanabata tree","🎋"],["bamboo","🎍"],["japanese dolls","🎎"],["dolls","🎎"],["carp streamer","🎏"],["flags","🎏"],["wind chime","🎐"],["rice scene","🎑"],["envelope","🧧"],["ribbon","🎀"],["wrapped gift","🎁"],["gift","🎁"],["tickets","🎟️"],["ticket","🎫"],["military medal","🎖️"],["medal military","🎖️"],["trophy","🏆"],["sports medal","🏅"],["medal sports","🏅"],["soccer ball","⚽"],["soccer","⚽"],["baseball","⚾"],["softball","🥎"],["basketball","🏀"],["volleyball","🏐"],["football","🏈"],["rugby football","🏉"],["tennis","🎾"],["flying disc","🥏"],["bowling","🎳"],["cricket game","🏏"],["field hockey","🏑"],["ice hockey","🏒"],["lacrosse","🥍"],["ping pong","🏓"],["badminton","🏸"],["boxing glove","🥊"],["goal net","🥅"],["in hole","⛳"],["golf","⛳"],["ice skate","⛸️"],["fishing pole","🎣"],["diving mask","🤿"],["running shirt","🎽"],["skis","🎿"],["ski","🎿"],["sled","🛷"],["curling stone","🥌"],["bullseye","🎯"],["dart","🎯"],["yo yo","🪀"],["kite","🪁"],["crystal ball","🔮"],["magic wand","🪄"],["video game","🎮"],["joystick","🕹️"],["slot machine","🎰"],["game die","🎲"],["puzzle piece","🧩"],["jigsaw","🧩"],["teddy bear","🧸"],["pinata","🪅"],["mirror ball","🪩"],["nesting dolls","🪆"],["spade suit","♠️"],["spades","♠️"],["heart suit","♥️"],["hearts","♥️"],["diamond suit","♦️"],["diamonds","♦️"],["club suit","♣️"],["clubs","♣️"],["chess pawn","♟️"],["joker","🃏"],["mahjong","🀄"],["framed picture","🖼️"],["artist palette","🎨"],["art","🎨"],["thread","🧵"],["sewing needle","🪡"],["yarn","🧶"],["knot","🪢"],["glasses","👓"],["eyeglasses","👓"],["sunglasses","🕶️"],["goggles","🥽"],["lab coat","🥼"],["safety vest","🦺"],["necktie","👔"],["tshirt","👕"],["shirt","👕"],["jeans","👖"],["scarf","🧣"],["gloves","🧤"],["coat","🧥"],["socks","🧦"],["dress","👗"],["kimono","👘"],["sari","🥻"],["swim brief","🩲"],["shorts","🩳"],["womans clothes","👚"],["purse","👛"],["handbag","👜"],["clutch bag","👝"],["pouch","👝"],["shopping bags","🛍️"],["shopping","🛍️"],["backpack","🎒"],["school satchel","🎒"],["thong sandal","🩴"],["mans shoe","👞"],["running shoe","👟"],["athletic shoe","👟"],["hiking boot","🥾"],["flat shoe","🥿"],["high heel","👠"],["womans sandal","👡"],["ballet shoes","🩰"],["womans boot","👢"],["hair pick","🪮"],["crown","👑"],["womans hat","👒"],["top hat","🎩"],["tophat","🎩"],["graduation cap","🎓"],["mortar board","🎓"],["billed cap","🧢"],["lipstick","💄"],["ring","💍"],["gem stone","💎"],["gem","💎"],["muted speaker","🔇"],["sound","🔉"],["loud sound","🔊"],["loudspeaker","📢"],["megaphone","📣"],["mega","📣"],["postal horn","📯"],["no bell","🔕"],["musical score","🎼"],["musical note","🎵"],["musical notes","🎶"],["notes","🎶"],["level slider","🎚️"],["control knobs","🎛️"],["microphone","🎤"],["headphone","🎧"],["headphones","🎧"],["radio","📻"],["saxophone","🎷"],["accordion","🪗"],["guitar","🎸"],["trumpet","🎺"],["violin","🎻"],["banjo","🪕"],["drum","🥁"],["long drum","🪘"],["maracas","🪇"],["flute","🪈"],["mobile phone","📱"],["iphone","📱"],["calling","📲"],["telephone","☎️"],["phone","☎️"],["pager","📟"],["fax machine","📠"],["fax","📠"],["battery","🔋"],["low battery","🪫"],["electric plug","🔌"],["laptop","💻"],["computer","💻"],["printer","🖨️"],["keyboard","⌨️"],["computer mouse","🖱️"],["trackball","🖲️"],["computer disk","💽"],["minidisc","💽"],["floppy disk","💾"],["optical disk","💿"],["dvd","📀"],["abacus","🧮"],["movie camera","🎥"],["film frames","🎞️"],["film strip","🎞️"],["film projector","📽️"],["clapper board","🎬"],["clapper","🎬"],["television","📺"],["camera","📷"],["camera flash","📸"],["video camera","📹"],["videocassette","📼"],["vhs","📼"],["mag right","🔎"],["candle","🕯️"],["light bulb","💡"],["bulb","💡"],["flashlight","🔦"],["paper lantern","🏮"],["lantern","🏮"],["diya lamp","🪔"],["closed book","📕"],["open book","📖"],["book","📖"],["books","📚"],["notebook","📓"],["ledger","📒"],["scroll","📜"],["newspaper","📰"],["newspaper roll","🗞️"],["bookmark tabs","📑"],["bookmark","🔖"],["label","🏷️"],["money bag","💰"],["moneybag","💰"],["coin","🪙"],["yen banknote","💴"],["yen","💴"],["dollar","💵"],["euro banknote","💶"],["euro","💶"],["pound banknote","💷"],["pound","💷"],["credit card","💳"],["receipt","🧾"],["chart","💹"],["email","📧"],["outbox tray","📤"],["inbox tray","📥"],["package","📦"],["mailbox","📫"],["mailbox closed","📪"],["postbox","📮"],["ballot box","🗳️"],["pencil","✏️"],["nib","✒️"],["fountain pen","🖋️"],["pen","🖊️"],["paintbrush","🖌️"],["crayon","🖍️"],["memo","📝"],["briefcase","💼"],["file folder","📁"],["calendar","📅"],["date","📅"],["spiral notepad","🗒️"],["card index","📇"],["bar chart","📊"],["clipboard","📋"],["pushpin","📌"],["round pushpin","📍"],["paperclip","📎"],["paperclips","🖇️"],["straight ruler","📏"],["scissors","✂️"],["file cabinet","🗄️"],["wastebasket","🗑️"],["locked","🔒"],["lock","🔒"],["unlocked","🔓"],["unlock","🔓"],["key","🔑"],["old key","🗝️"],["hammer","🔨"],["pick","⛏️"],["boomerang","🪃"],["shield","🛡️"],["carpentry saw","🪚"],["wrench","🔧"],["screwdriver","🪛"],["gear","⚙️"],["clamp","🗜️"],["compression","🗜️"],["balance scale","⚖️"],["scales","⚖️"],["cane","🦯"],["probing cane","🦯"],["link","🔗"],["hook","🪝"],["toolbox","🧰"],["magnet","🧲"],["ladder","🪜"],["alembic","⚗️"],["test tube","🧪"],["petri dish","🧫"],["dna","🧬"],["microscope","🔬"],["telescope","🔭"],["crutch","🩼"],["stethoscope","🩺"],["door","🚪"],["elevator","🛗"],["mirror","🪞"],["window","🪟"],["bed","🛏️"],["chair","🪑"],["plunger","🪠"],["shower","🚿"],["bathtub","🛁"],["mouse trap","🪤"],["razor","🪒"],["lotion bottle","🧴"],["safety pin","🧷"],["broom","🧹"],["basket","🧺"],["bucket","🪣"],["soap","🧼"],["bubbles","🫧"],["toothbrush","🪥"],["sponge","🧽"],["shopping cart","🛒"],["headstone","🪦"],["nazar amulet","🧿"],["hamsa","🪬"],["moai","🗿"],["moyai","🗿"],["placard","🪧"],["andorra","🇦🇩"],["afghanistan","🇦🇫"],["anguilla","🇦🇮"],["albania","🇦🇱"],["armenia","🇦🇲"],["angola","🇦🇴"],["antarctica","🇦🇶"],["argentina","🇦🇷"],["american samoa","🇦🇸"],["austria","🇦🇹"],["australia","🇦🇺"],["aruba","🇦🇼"],["aland islands","🇦🇽"],["azerbaijan","🇦🇿"],["barbados","🇧🇧"],["bangladesh","🇧🇩"],["belgium","🇧🇪"],["burkina faso","🇧🇫"],["bulgaria","🇧🇬"],["bahrain","🇧🇭"],["burundi","🇧🇮"],["benin","🇧🇯"],["st barthelemy","🇧🇱"],["bermuda","🇧🇲"],["brunei","🇧🇳"],["bolivia","🇧🇴"],["brazil","🇧🇷"],["bahamas","🇧🇸"],["bhutan","🇧🇹"],["bouvet island","🇧🇻"],["botswana","🇧🇼"],["belarus","🇧🇾"],["belize","🇧🇿"],["canada","🇨🇦"],["cocos islands","🇨🇨"],["congo kinshasa","🇨🇩"],["switzerland","🇨🇭"],["cote divoire","🇨🇮"],["cook islands","🇨🇰"],["chile","🇨🇱"],["cameroon","🇨🇲"],["china","🇨🇳"],["colombia","🇨🇴"],["costa rica","🇨🇷"],["cuba","🇨🇺"],["cape verde","🇨🇻"],["curacao","🇨🇼"],["cyprus","🇨🇾"],["czechia","🇨🇿"],["czech republic","🇨🇿"],["germany","🇩🇪"],["diego garcia","🇩🇬"],["djibouti","🇩🇯"],["denmark","🇩🇰"],["dominica","🇩🇲"],["algeria","🇩🇿"],["ceuta melilla","🇪🇦"],["ecuador","🇪🇨"],["estonia","🇪🇪"],["egypt","🇪🇬"],["western sahara","🇪🇭"],["eritrea","🇪🇷"],["spain","🇪🇸"],["ethiopia","🇪🇹"],["european union","🇪🇺"],["finland","🇫🇮"],["fiji","🇫🇯"],["micronesia","🇫🇲"],["faroe islands","🇫🇴"],["france","🇫🇷"],["gabon","🇬🇦"],["united kingdom","🇬🇧"],["grenada","🇬🇩"],["georgia","🇬🇪"],["french guiana","🇬🇫"],["guernsey","🇬🇬"],["ghana","🇬🇭"],["gibraltar","🇬🇮"],["greenland","🇬🇱"],["gambia","🇬🇲"],["guinea","🇬🇳"],["guadeloupe","🇬🇵"],["greece","🇬🇷"],["guatemala","🇬🇹"],["guam","🇬🇺"],["guinea bissau","🇬🇼"],["guyana","🇬🇾"],["hong kong","🇭🇰"],["honduras","🇭🇳"],["croatia","🇭🇷"],["haiti","🇭🇹"],["hungary","🇭🇺"],["canary islands","🇮🇨"],["indonesia","🇮🇩"],["ireland","🇮🇪"],["israel","🇮🇱"],["india","🇮🇳"],["iraq","🇮🇶"],["iran","🇮🇷"],["iceland","🇮🇸"],["italy","🇮🇹"],["jersey","🇯🇪"],["jamaica","🇯🇲"],["jordan","🇯🇴"],["kenya","🇰🇪"],["kyrgyzstan","🇰🇬"],["cambodia","🇰🇭"],["kiribati","🇰🇮"],["comoros","🇰🇲"],["north korea","🇰🇵"],["south korea","🇰🇷"],["kuwait","🇰🇼"],["cayman islands","🇰🇾"],["kazakhstan","🇰🇿"],["laos","🇱🇦"],["lebanon","🇱🇧"],["st lucia","🇱🇨"],["liechtenstein","🇱🇮"],["sri lanka","🇱🇰"],["liberia","🇱🇷"],["lesotho","🇱🇸"],["lithuania","🇱🇹"],["luxembourg","🇱🇺"],["latvia","🇱🇻"],["libya","🇱🇾"],["morocco","🇲🇦"],["monaco","🇲🇨"],["moldova","🇲🇩"],["montenegro","🇲🇪"],["st martin","🇲🇫"],["madagascar","🇲🇬"],["macedonia","🇲🇰"],["mali","🇲🇱"],["myanmar","🇲🇲"],["mongolia","🇲🇳"],["macau","🇲🇴"],["martinique","🇲🇶"],["mauritania","🇲🇷"],["montserrat","🇲🇸"],["malta","🇲🇹"],["mauritius","🇲🇺"],["maldives","🇲🇻"],["malawi","🇲🇼"],["mexico","🇲🇽"],["malaysia","🇲🇾"],["mozambique","🇲🇿"],["namibia","🇳🇦"],["new caledonia","🇳🇨"],["niger","🇳🇪"],["norfolk island","🇳🇫"],["nigeria","🇳🇬"],["nicaragua","🇳🇮"],["netherlands","🇳🇱"],["norway","🇳🇴"],["nepal","🇳🇵"],["nauru","🇳🇷"],["niue","🇳🇺"],["new zealand","🇳🇿"],["oman","🇴🇲"],["panama","🇵🇦"],["peru","🇵🇪"],["philippines","🇵🇭"],["pakistan","🇵🇰"],["poland","🇵🇱"],["puerto rico","🇵🇷"],["portugal","🇵🇹"],["palau","🇵🇼"],["paraguay","🇵🇾"],["qatar","🇶🇦"],["reunion","🇷🇪"],["romania","🇷🇴"],["serbia","🇷🇸"],["russia","🇷🇺"],["rwanda","🇷🇼"],["saudi arabia","🇸🇦"],["seychelles","🇸🇨"],["sudan","🇸🇩"],["sweden","🇸🇪"],["singapore","🇸🇬"],["st helena","🇸🇭"],["slovenia","🇸🇮"],["slovakia","🇸🇰"],["sierra leone","🇸🇱"],["san marino","🇸🇲"],["senegal","🇸🇳"],["somalia","🇸🇴"],["suriname","🇸🇷"],["south sudan","🇸🇸"],["el salvador","🇸🇻"],["sint maarten","🇸🇽"],["syria","🇸🇾"],["eswatini","🇸🇿"],["swaziland","🇸🇿"],["chad","🇹🇩"],["togo","🇹🇬"],["thailand","🇹🇭"],["tajikistan","🇹🇯"],["tokelau","🇹🇰"],["timor leste","🇹🇱"],["turkmenistan","🇹🇲"],["tunisia","🇹🇳"],["tonga","🇹🇴"],["tuvalu","🇹🇻"],["taiwan","🇹🇼"],["tanzania","🇹🇿"],["ukraine","🇺🇦"],["uganda","🇺🇬"],["united nations","🇺🇳"],["united states","🇺🇸"],["uruguay","🇺🇾"],["uzbekistan","🇺🇿"],["vatican city","🇻🇦"],["venezuela","🇻🇪"],["vietnam","🇻🇳"],["vanuatu","🇻🇺"],["wallis futuna","🇼🇫"],["samoa","🇼🇸"],["kosovo","🇽🇰"],["yemen","🇾🇪"],["mayotte","🇾🇹"],["south africa","🇿🇦"],["zambia","🇿🇲"],["zimbabwe","🇿🇼"]];
+const LV={easy:{h:5,x:0,loss:0,f:n=>n<=4},med:{h:4,x:3,loss:1,f:n=>n>=5&&n<=6},hard:{h:3,x:6,loss:1,f:n=>n>=7}};
+const REWARDS=[[40,"🌟","Gold Star"],[100,"🦄","Unicorn"],[180,"🚀","Rocket"],[280,"🏆","Trophy"],[400,"👑","Crown"]];
+const CHEERS=["Awesome!", "Wonderful!", "Fantastic!", "Great job!", "Amazing!", "Super star!", "Brilliant!"];
+const OOPS=["Oops! Try again!", "Almost! You can do it!", "Not quite, try another letter!", "Keep going, you’re doing great!"];
+const COLS=["#ff6fb5","#3ec6ff","#ff8a3d","#3ddc97","#8a5cf6","#f5b800","#ef476f"];
+const ROUND=10;
+let S={},sound=true,got=JSON.parse("[]"),AC=null;
+
+// background stars
+["⭐","✨","🎈","🌈","🦋","🌸","☁️","💖"].forEach((e,i)=>{for(let k=0;k<3;k++){const n=document.createElement("i");n.textContent=e;n.style.left=Math.random()*95+"%";n.style.top=Math.random()*95+"%";n.style.animationDelay=(-Math.random()*7)+"s";n.style.fontSize=(20+Math.random()*26)+"px";$("bg").appendChild(n)}});
+
+// ---------- sound ----------
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC}
+function tone(f,d=.15,type="sine",v=.3,t0=0,slide=0){if(!sound)return;const a=ac();if(!a)return;const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+t0;
+o.type=type;o.frequency.setValueAtTime(f,t);if(slide)o.frequency.exponentialRampToValueAtTime(f*slide,t+d);
+g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+d+.02)}
+const N=[523,587,659,698,784,880,988,1047,1175,1319];
+const sPlace=i=>{tone(N[Math.min(i,9)],.18,"triangle",.4);tone(N[Math.min(i,9)]*2,.1,"sine",.18,.04)};
+const sOk=()=>[523,659,784,1047,1319].forEach((f,i)=>tone(f,.25,"square",.2,i*.09));
+const sBad=()=>{tone(220,.25,"sawtooth",.3,0,.5);tone(165,.3,"sawtooth",.25,.12,.5)};
+const sStreak=()=>[784,988,1175,1568,1976].forEach((f,i)=>tone(f,.2,"triangle",.35,i*.07));
+const sReward=()=>{[523,659,784,1047,784,1047,1319,1568].forEach((f,i)=>tone(f,.3,"square",.22,i*.11));tone(262,1,"triangle",.3,0)};
+const sLose=()=>[392,330,262,196].forEach((f,i)=>tone(f,.35,"triangle",.35,i*.25));
+function say(t,pitch=1.4){if(!sound||!window.speechSynthesis)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.85;u.pitch=pitch;u.volume=1;speechSynthesis.speak(u)}catch(e){}}
+
+// ---------- confetti ----------
+const cv=$("cv"),cx=cv.getContext("2d");let P=[],raf=0;
+function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener("resize",size);
+function confetti(n=120,x=.5,y=.35){for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,s=6+Math.random()*12;
+P.push({x:innerWidth*x,y:innerHeight*y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,r:Math.random()*6.3,vr:Math.random()*.4-.2,w:8+Math.random()*10,c:COLS[i%7],e:Math.random()<.2?["⭐","🎉","💖"][i%3]:null,life:140})}
+if(!raf)loop()}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.life-->0);
+P.forEach(p=>{p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.life/30);
+if(p.e){cx.font="26px serif";cx.fillText(p.e,-13,10)}else{cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.w/4,p.w,p.w/2)}cx.restore()});
+raf=P.length?requestAnimationFrame(loop):0}
+
+// ---------- helpers ----------
+function toast(t){const e=$("toast");e.textContent=t;e.classList.remove("show");void e.offsetWidth;e.classList.add("show")}
+function mascot(cls,face){["m1"].forEach(id=>{const m=$(id);if(face)m.textContent=face;m.classList.remove("cheer","sad");void m.offsetWidth;if(cls)m.classList.add(cls)})}
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("on"));$(id).classList.add("on");scrollTo(0,0)}
+function renderRewards(){["rw0","rw1","rw2"].forEach(id=>{$(id).innerHTML=REWARDS.map(r=>`<div class="rw ${got.includes(r[1])?"got":""}" title="${r[2]} at ${r[0]} points">${r[1]}</div>`).join("")})}
+function hud(){$("pts").textContent=S.pts;$("streak").textContent="🔥 "+S.streak;
+$("hearts").innerHTML=Array.from({length:LV[S.lv].h},(_,i)=>`<span class="${i<S.hearts?"":"lost"}">❤️</span>`).join("");
+$("prog").style.width=(S.i/ROUND*100)+"%"}
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+// ---------- game ----------
+function start(lv){ac();S={lv,pts:0,streak:0,best:0,hearts:LV[lv].h,i:0,list:shuffle(WORDS.filter(w=>LV[lv].f(w[0].replace(/ /g,'').length))).slice(0,ROUND),clean:0,mistakes:0,busy:false};
+renderRewards();show("s-game");say("Let’s spell!");setTimeout(next,900)}
+function next(){if(S.i>=ROUND)return finish(true);
+const [disp,pic]=S.list[S.i];const w=disp.replace(/ /g,"");S.w=w;S.d=disp;S.pos=0;S.slip=false;S.busy=false;
+$("pic").textContent=pic;$("msg").textContent="Tap the letters to spell the word!";
+$("slots").innerHTML=[...disp].map(c=>c===" "?'<div style="width:16px"></div>':'<div class="slot"></div>').join("");
+const abc="abcdefghijklmnopqrstuvwxyz".split("").filter(c=>!w.includes(c));
+S.tiles=shuffle([...w,...shuffle(abc).slice(0,LV[S.lv].x)]);
+$("tiles").innerHTML=S.tiles.map((c,i)=>`<button class="tile" data-i="${i}" style="background:${COLS[i%7]};animation-delay:${i*.12}s">${c}</button>`).join("");
+mark();hud();mascot("", "🐻");setTimeout(speakWord,300)}
+function mark(){document.querySelectorAll(".slot").forEach((s,i)=>s.classList.toggle("next",i===S.pos))}
+function speakWord(){say(S.d,1.3)}
+function press(i){if(S.busy)return;const b=document.querySelector(`.tile[data-i="${i}"]`);if(!b||b.classList.contains("used"))return;ac();
+const c=S.tiles[i];
+if(c===S.w[S.pos]){b.classList.add("used");const sl=document.querySelectorAll(".slot")[S.pos];sl.textContent=c;sl.classList.add("full");sl.classList.remove("next");
+document.querySelectorAll(".tile.hint").forEach(t=>t.classList.remove("hint"));sPlace(S.pos);confetti(8,(sl.getBoundingClientRect().left+30)/innerWidth,sl.getBoundingClientRect().top/innerHeight);
+S.pos++;if(S.pos===S.w.length)win();else mark()}
+else{b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake");sBad();S.slip=true;S.streak=0;mascot("sad","🙈");
+$("msg").textContent=OOPS[Math.random()*OOPS.length|0];say(OOPS[Math.random()*OOPS.length|0],1.2);
+if(LV[S.lv].loss){S.hearts--;S.mistakes++;$("hearts").classList.add("pop");setTimeout(()=>$("hearts").classList.remove("pop"),400);if(S.hearts<=0){hud();return finish(false)}}
+hud()}}
+function win(){S.busy=true;S.i++;
+const bonus=S.slip?0:S.streak*5;if(!S.slip)S.streak++;S.best=Math.max(S.best,S.streak);
+const gain=10+S.w.length*2+(S.slip?0:S.streak*5);S.pts+=gain;
+document.querySelectorAll(".slot").forEach((s,k)=>{s.style.animationDelay=k*.08+"s";s.classList.add("win")});
+const ch=CHEERS[Math.random()*CHEERS.length|0];toast(ch+" +"+gain);$("msg").textContent=ch;sOk();confetti(160);setTimeout(()=>confetti(90,.2,.5),250);setTimeout(()=>confetti(90,.8,.5),450);
+mascot("cheer","🥳");say(ch+" "+S.d+"!",1.5);hud();
+let delay=2300;
+if(!S.slip&&S.streak>=2&&S.streak%2===0){setTimeout(()=>{sStreak();toast("🔥 "+S.streak+" in a row!");say("You’re on fire!",1.5);confetti(100)},1500);delay=3300}
+const r=REWARDS.find(r=>S.pts>=r[0]&&!got.includes(r[1]));
+if(r){got.push(r[1]);setTimeout(()=>{sReward();toast("🎁 New reward! "+r[1]+" "+r[2]);say("You unlocked a new reward! "+r[2]+"!",1.5);confetti(250,.5,.3);renderRewards()},delay-600);delay+=2100}
+setTimeout(next,delay)}
+function finish(won){S.busy=true;renderRewards();show("s-end");
+const stars=won?(S.mistakes<=1?3:S.mistakes<=3?2:1):1;
+$("endS").textContent="⭐".repeat(stars)+"☆".repeat(3-stars);
+$("m2").textContent=won?"🥳":"🤗";
+$("endT").textContent=won?"You did it!":"Good try!";
+$("endP").textContent=won?`You scored ${S.pts} points and your best streak was ${S.best}!`:`You scored ${S.pts} points. Let’s try again, you can do it!`;
+if(won){say("Hooray! You finished! Great job!",1.5);sReward();confetti(300);setTimeout(()=>confetti(200,.2,.4),400);setTimeout(()=>confetti(200,.8,.4),700)}else{sLose();say("Good try! Let’s play again!",1.2)}}
+
+// ---------- events ----------
+document.querySelectorAll("[data-lv]").forEach(b=>b.onclick=()=>start(b.dataset.lv));
+$("tiles").onclick=e=>{const b=e.target.closest(".tile");if(b)press(+b.dataset.i)};
+$("again").onclick=()=>{ac();speakWord()};
+$("hint").onclick=()=>{if(S.busy)return;ac();const c=S.w[S.pos];const t=[...document.querySelectorAll(".tile:not(.used)")].find(t=>t.textContent===c);
+if(t){t.classList.add("hint");S.pts=Math.max(0,S.pts-3);tone(900,.2,"triangle",.3);hud();$("msg").textContent="Try the glowing letter! (−3 points)"}};
+$("snd").onclick=()=>{sound=!sound;$("snd").textContent=sound?"🔊 Sound on":"🔇 Sound off";if(sound){ac();tone(800,.2)}else if(window.speechSynthesis)speechSynthesis.cancel()};
+$("home").onclick=()=>{S.busy=true;if(window.speechSynthesis)speechSynthesis.cancel();show("s-start")};
+$("replay").onclick=()=>start(S.lv);
+$("menu").onclick=()=>show("s-start");
+renderRewards();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>

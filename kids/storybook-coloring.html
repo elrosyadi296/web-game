@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Storybook Coloring</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#ffe9f3;--bg2:#dff3ff;--ink:#4a2f7a;--card:#fff;--sh:#4a2f7a33;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2b2050;--bg2:#12304a;--ink:#fff1fa;--card:#3b2f66;--sh:#0008}}
+:root[data-theme="dark"]{--bg1:#2b2050;--bg2:#12304a;--ink:#fff1fa;--card:#3b2f66;--sh:#0008}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'Fredoka','Baloo 2','Comic Sans MS',system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2));background-color:#ffe9f3;overflow-x:hidden}
+h1{margin:14px 12px 4px;text-align:center;font-size:clamp(1.5rem,5vw,2.4rem);text-shadow:0 3px 0 #fff8,0 6px 10px var(--sh);animation:drop .8s cubic-bezier(.2,1.4,.4,1) both}
+.sub{text-align:center;margin:0 0 10px;opacity:.8;animation:drop .8s .15s both}
+main{max-width:560px;margin:0 auto;padding:0 12px 24px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.paper{width:100%;max-width:480px;aspect-ratio:1;background:#fff;border-radius:30px;padding:10px;box-shadow:0 0 0 8px #fff,0 0 0 13px #ff9ec4,0 28px 38px -14px var(--sh);transform:perspective(900px) rotateX(4deg);animation:rise .9s .25s cubic-bezier(.2,1.3,.4,1) both}
+svg{width:100%;height:100%;display:block;touch-action:manipulation}
+.f{fill:#fff;stroke:#222;stroke-width:2.2;stroke-linejoin:round;cursor:pointer;transform-box:fill-box;transform-origin:center}
+.f:hover{filter:brightness(.96)}
+.l{fill:none;stroke:#222;stroke-width:2;stroke-linecap:round;pointer-events:none}
+.d{fill:#222;pointer-events:none}
+.pop{animation:pop .35s}
+.tools{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:480px;animation:rise .8s .45s both}
+.sw{width:40px;height:40px;border-radius:50%;border:3px solid #fff;cursor:pointer;background-image:radial-gradient(circle at 30% 28%,#fff9,#0000 55%);box-shadow:0 5px 0 #0003,0 8px 10px var(--sh);transition:transform .15s}
+.sw:hover{transform:translateY(-3px)}
+.sw.on{transform:translateY(-5px) scale(1.18);outline:4px solid var(--ink)}
+.btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;animation:rise .8s .55s both}
+.btn{font:inherit;font-weight:600;padding:10px 18px;border:0;border-radius:16px;color:#fff;background:#7b5cff;cursor:pointer;box-shadow:0 6px 0 #4b33b8,0 10px 14px var(--sh);transition:transform .1s,box-shadow .1s}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 #4b33b8}
+.btn.b2{background:#ff6b9d;box-shadow:0 6px 0 #c23b6c,0 10px 14px var(--sh)}
+.btn.b3{background:#2ec4b6;box-shadow:0 6px 0 #1a8a80,0 10px 14px var(--sh)}
+.shelf{display:flex;gap:16px;overflow-x:auto;width:100%;padding:14px 10px 22px;justify-content:safe center;perspective:800px}
+.book{flex:0 0 112px;height:150px;border:0;border-radius:6px 14px 14px 6px;color:#fff;font:inherit;font-weight:700;font-size:.78rem;line-height:1.1;padding:10px 8px 8px 16px;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;text-align:left;transform:rotateY(-24deg);transform-origin:left;transition:transform .3s,box-shadow .3s;box-shadow:-6px 8px 0 #0002,8px 14px 20px var(--sh);border-left:10px solid #0003;animation:rise .7s both}
+.book i{font-style:normal;font-size:2.3rem;text-align:center}
+.book:hover,.book.on{transform:rotateY(0) translateY(-8px) scale(1.06)}
+.book.on{outline:4px solid #fff}
+@keyframes rise{from{opacity:0;transform:translateY(40px) scale(.92)}}
+#intro{position:fixed;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));background:linear-gradient(160deg,var(--bg1),var(--bg2));background-color:#ffe9f3;transition:opacity .6s,transform .6s;overflow:hidden}
+#intro.out{opacity:0;transform:scale(1.15);pointer-events:none}
+#intro h2{font-size:clamp(2rem,9vw,3.6rem);margin:8px 0;text-shadow:0 4px 0 #fff9,0 10px 18px var(--sh);animation:drop .9s cubic-bezier(.2,1.4,.4,1) both}
+#intro p{max-width:420px;margin:6px 0;animation:rise .8s .3s both}
+.hero{font-size:5rem;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 12px 8px var(--sh))}
+.steps{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+.steps span{background:var(--card);padding:8px 14px;border-radius:14px;box-shadow:0 5px 0 #0002,0 8px 12px var(--sh);animation:rise .7s both}
+.go{font-size:1.4rem;padding:14px 34px;animation:rise .8s .9s both,bob 2s 1.7s ease-in-out infinite}
+.fl{position:absolute;font-size:2.2rem;animation:bob 4s ease-in-out infinite}
+.nav{display:flex;align-items:center;gap:10px;animation:rise .8s .5s both}
+#pn{font-weight:600;min-width:150px;text-align:center}
+footer{text-align:center;padding:10px 12px 22px;font-weight:600;opacity:.85}
+@keyframes bob{50%{transform:translateY(-14px)}}
+@keyframes drop{from{opacity:0;transform:translateY(-30px)}}
+@keyframes pop{50%{transform:scale(1.08)}}
+</style>
+</head>
+<body>
+<section id="intro"><span class="fl" style="left:8%;top:12%">🦋</span><span class="fl" style="right:9%;top:18%;animation-delay:.8s">⭐</span><span class="fl" style="left:12%;bottom:14%;animation-delay:1.4s">🐠</span><span class="fl" style="right:12%;bottom:12%;animation-delay:2s">🚀</span><div class="hero">🎨</div><h2>My Storybook Coloring</h2><p>Open a magic book, pick your favorite colors and bring every picture to life!</p><p><b>4 books · 1,000 pages</b></p><div class="steps"><span style="animation-delay:.5s">1️⃣ Choose a book</span><span style="animation-delay:.65s">2️⃣ Pick a color</span><span style="animation-delay:.8s">3️⃣ Tap to paint</span></div><button class="btn go" id="go">▶ Start Coloring</button></section>
+<h1>🎨 My Storybook Coloring</h1>
+<p class="sub">Pick a color, then tap a shape to paint it!</p>
+<main>
+<div class="paper"><svg id="s" viewBox="0 0 400 400" role="img" aria-label="Coloring page"></svg></div>
+<div class="tools" id="pal"></div>
+<div class="nav"><button class="btn b3" id="pv">◀</button><span id="pn"></span><button class="btn b3" id="nx">▶</button><button class="btn b2" id="rd">🎲</button></div>
+<div class="btns">
+<button class="btn b3" id="un">↩ Undo</button>
+<button class="btn" id="mg">✨ Magic</button>
+<button class="btn b2" id="cl">🧽 Clear</button>
+</div>
+<div class="shelf" id="sh"></div>
+</main>
+<footer>created by 296Studios.</footer>
+<script>
+const $=s=>document.querySelector(s);
+const st=(x,y,r)=>{let p='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,q=i%2?r*.45:r;p+=(i?'L':'M')+(x+q*Math.cos(a)).toFixed(1)+' '+(y+q*Math.sin(a)).toFixed(1)}return `<path class="f" d="${p}Z"/>`};
+const fl=(x,y)=>{let s=`<path class="l" d="M${x} ${y+6}V${y+26}"/>`;for(let i=0;i<5;i++){const a=i*1.2566;s+=`<circle class="f" cx="${(x+9*Math.cos(a)).toFixed(1)}" cy="${(y+9*Math.sin(a)).toFixed(1)}" r="7"/>`}return s+`<circle class="f" cx="${x}" cy="${y}" r="5"/>`};
+const bub=(x,y,r)=>`<circle class="f" cx="${x}" cy="${y}" r="${r}"/>`;
+function frame(inner){let b='';for(let i=0;i<28;i++){const a=i*Math.PI*2/28;b+=`<circle class="f" cx="${(200+180*Math.cos(a)).toFixed(1)}" cy="${(200+180*Math.sin(a)).toFixed(1)}" r="7.5"/>`}
+return `<defs><clipPath id="c"><circle cx="200" cy="200" r="165"/></clipPath></defs><path class="f" fill-rule="evenodd" d="M8 200a192 192 0 1 0 384 0a192 192 0 1 0-384 0zM32 200a168 168 0 1 0 336 0a168 168 0 1 0-336 0z"/>${b}<circle class="l" cx="200" cy="200" r="196"/><circle class="f" cx="200" cy="200" r="165"/><g clip-path="url(#c)">${inner}</g><circle class="l" cx="200" cy="200" r="165"/>`}
+const scenes=[
+{n:"Fairies, Animals, Butterflies & More",e:"🧚",c:"linear-gradient(145deg,#ff8fc7,#9b5de5)",
+d:`<path class="f" d="M30 300Q200 230 370 300V380H30Z"/><path class="f" d="M300 85a40 40 0 1 0 32 66a32 32 0 1 1-32-66z"/>
+<ellipse class="f" cx="160" cy="180" rx="40" ry="20" transform="rotate(-30 160 180)"/><ellipse class="f" cx="240" cy="180" rx="40" ry="20" transform="rotate(30 240 180)"/>
+<ellipse class="f" cx="170" cy="215" rx="28" ry="14" transform="rotate(25 170 215)"/><ellipse class="f" cx="230" cy="215" rx="28" ry="14" transform="rotate(-25 230 215)"/>
+<path class="f" d="M200 195L160 285Q200 300 240 285Z"/><path class="l" d="M190 288V312M210 288V312"/><circle class="f" cx="200" cy="168" r="21"/>
+<path class="f" d="M178 168Q178 138 202 138Q226 138 222 168Q214 152 200 152Q186 154 178 168Z"/><circle class="d" cx="193" cy="171" r="2"/><circle class="d" cx="207" cy="171" r="2"/><path class="l" d="M194 179Q200 184 206 179"/>
+<path class="l" d="M238 220L276 182"/>${st(282,172,16)}
+<path class="f" d="M65 305Q95 250 125 305Z"/><rect class="f" x="88" y="305" width="14" height="24" rx="5"/><path class="f" d="M285 320Q315 270 345 320Z"/><rect class="f" x="308" y="320" width="14" height="24" rx="5"/>
+<ellipse class="f" cx="110" cy="120" rx="14" ry="9" transform="rotate(-25 110 120)"/><ellipse class="f" cx="132" cy="120" rx="14" ry="9" transform="rotate(25 132 120)"/><path class="l" d="M121 112V132"/>
+${fl(235,330)}${fl(150,335)}${st(90,75,9)}${st(230,80,7)}`},
+{n:"Ocean Friends",e:"🐠",c:"linear-gradient(145deg,#4cc9f0,#3a86ff)",
+d:`<path class="l" d="M40 60Q60 50 80 60T120 60T160 60T200 60T240 60T280 60"/><path class="f" d="M30 330Q120 305 200 330T370 325V380H30Z"/>
+<path class="f" d="M240 190L290 150V230Z"/><path class="f" d="M105 190Q170 120 240 190Q170 260 105 190Z"/><path class="f" d="M165 140Q185 118 205 150Z"/><circle class="d" cx="135" cy="182" r="4"/><path class="l" d="M175 160Q190 190 175 220M200 165Q212 190 200 215"/>
+<path class="f" d="M70 265L50 250V280Z"/><ellipse class="f" cx="95" cy="265" rx="26" ry="14"/><circle class="d" cx="108" cy="262" r="2.5"/>
+<ellipse class="f" cx="275" cy="95" rx="26" ry="14"/><path class="f" d="M300 95L322 79V111Z"/><circle class="d" cx="262" cy="92" r="2.5"/>
+<path class="f" d="M60 370Q40 330 60 300Q80 270 62 235L80 235Q100 270 80 300Q62 330 85 370Z"/><path class="f" transform="translate(250 0)" d="M60 370Q40 330 60 300Q80 270 62 235L80 235Q100 270 80 300Q62 330 85 370Z"/>
+${st(205,345,18)}${bub(150,120,8)}${bub(168,92,6)}${bub(300,200,9)}${bub(318,172,6)}${bub(110,200,5)}`},
+{n:"Storytime Garden",e:"📖",c:"linear-gradient(145deg,#ffd60a,#ff9f1c)",
+d:`<circle class="f" cx="320" cy="90" r="24"/><path class="l" d="M320 50V40M320 130V140M280 90H270M360 90H370M292 62l-7-7M348 118l7 7M348 62l7-7M292 118l-7 7"/>
+<path class="f" d="M55 110H100L115 330H40Z"/><path class="f" d="M25 110Q15 60 65 55Q85 28 130 48Q180 40 190 85Q210 112 165 125Q125 142 85 125Q40 138 25 110Z"/>
+<path class="f" d="M300 300Q200 270 30 300V380H370V300Z"/>
+<path class="f" d="M122 104L106 96L108 110Z"/><ellipse class="f" cx="140" cy="102" rx="20" ry="13"/><circle class="f" cx="158" cy="92" r="10"/><path class="f" d="M166 90L178 94L166 98Z"/><circle class="d" cx="160" cy="90" r="2"/>
+<ellipse class="f" cx="178" cy="340" rx="18" ry="9"/><ellipse class="f" cx="242" cy="340" rx="18" ry="9"/>
+<path class="f" d="M165 308Q168 255 210 255Q252 255 255 308Z"/><circle class="f" cx="210" cy="215" r="34"/>
+<path class="f" d="M176 215Q172 172 212 177Q250 175 244 215Q238 196 212 196Q190 196 176 215Z"/><circle class="d" cx="199" cy="224" r="2.5"/><circle class="d" cx="221" cy="224" r="2.5"/><path class="l" d="M201 236Q210 243 219 236"/>
+<path class="f" d="M172 292L210 280L248 292V328L210 316L172 328Z"/><path class="l" d="M210 280V316"/>
+<text class="d" x="285" y="190" font-size="28">♪</text><text class="d" x="312" y="240" font-size="24">♪</text>${fl(300,330)}<path class="l" d="M70 330l-4-10M76 330l2-12M82 330l5-9"/>`},
+{n:"Space Pals",e:"🚀",c:"linear-gradient(145deg,#7b5cff,#1b1464)",
+d:`${st(90,75,10)}${st(210,60,8)}${st(60,210,7)}${st(345,200,9)}${st(330,70,7)}
+<circle class="f" cx="110" cy="140" r="30"/><ellipse class="l" cx="110" cy="140" rx="50" ry="12" transform="rotate(-20 110 140)"/>
+<circle class="f" cx="305" cy="130" r="26"/><circle class="f" cx="297" cy="124" r="6"/><circle class="f" cx="314" cy="140" r="4"/>
+<path class="f" d="M30 320Q200 280 370 320V380H30Z"/><ellipse class="f" cx="105" cy="338" rx="22" ry="8"/><ellipse class="f" cx="300" cy="346" rx="28" ry="9"/>
+<path class="f" d="M180 250Q200 325 220 250Z"/><path class="f" d="M162 210L118 275L162 252Z"/><path class="f" d="M238 210L282 275L238 252Z"/>
+<path class="f" d="M200 85Q250 140 240 252H160Q150 140 200 85Z"/><path class="f" d="M160 232H240V252H160Z"/><circle class="f" cx="200" cy="175" r="20"/><circle class="l" cx="200" cy="175" r="12"/>`}
+];
+const pal=['#ff4d6d','#ff8fab','#ff9f1c','#ffd60a','#a7e05a','#2ecc71','#2ec4b6','#4cc9f0','#3a86ff','#7b5cff','#c77dff','#8b5a2b','#f4c9a0','#222222','#ffffff'];
+const PAGES=250;
+const rngf=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const ri=(r,a,b)=>a+Math.floor(r()*(b-a+1));
+const E=(x,y,a,b,t=0)=>`<ellipse class="f" cx="${x}" cy="${y}" rx="${a}" ry="${b}"${t?` transform="rotate(${t} ${x} ${y})"`:''}/>`;
+const P=d=>`<path class="f" d="${d}"/>`,L=d=>`<path class="l" d="${d}"/>`,D=(x,y,r=3)=>`<circle class="d" cx="${x}" cy="${y}" r="${r}"/>`,R=(x,y,w,h,q=4)=>`<rect class="f" x="${x}" y="${y}" width="${w}" height="${h}" rx="${q}"/>`;
+const ht=(x,y,s)=>{s*=.7;return P(`M${x} ${y+s*.9}C${x-s*1.6} ${y-s*.2} ${x-s*.6} ${y-s*1.2} ${x} ${y-s*.4}C${x+s*.6} ${y-s*1.2} ${x+s*1.6} ${y-s*.2} ${x} ${y+s*.9}Z`)};
+const cd=(x,y)=>P(`M${x-26} ${y+10}Q${x-38} ${y-8} ${x-16} ${y-8}Q${x-10} ${y-26} ${x+8} ${y-14}Q${x+30} ${y-18} ${x+28} ${y+2}Q${x+40} ${y+10} ${x+26} ${y+12}Z`);
+const bf=r=>{const w=ri(r,26,36),h=ri(r,16,24),n=ri(r,2,4);let s=E(150,150,w+14,h+10,-30)+E(250,150,w+14,h+10,30)+E(160,235,w,h,25)+E(240,235,w,h,-25);for(let i=0;i<n;i++)s+=bub(128+i*10,140+i*12,5)+bub(272-i*10,140+i*12,5);return s+E(200,200,9,48)+L('M196 155Q180 120 165 118M204 155Q220 120 235 118')+bub(165,118,4)+bub(235,118,4)};
+const fw=r=>{const n=ri(r,5,9),q=ri(r,26,36);let s=P('M196 200Q190 280 200 345L208 345Q214 280 204 200Z')+E(160,290,30,12,-30)+E(248,270,30,12,30);for(let i=0;i<n;i++){const a=i*6.2832/n;s+=E(Math.round(200+56*Math.cos(a)),Math.round(165+56*Math.sin(a)),q,16,Math.round(a*57.3))}return s+bub(200,165,24)+bub(200,165,10)};
+const fc=(r,t)=>{let s='';if(t==0)s+=P('M130 170L128 105L182 138Z')+P('M270 170L272 105L218 138Z');if(t==1)s+=E(165,105,18,55,-8)+E(235,105,18,55,8);if(t==2)s+=bub(138,140,26)+bub(262,140,26);if(t==3)s+=L('M170 130L150 85M230 130L250 85')+bub(150,82,8)+bub(250,82,8);s+=t==3?E(200,205,82,76)+E(168,198,18,24)+E(232,198,18,24)+D(168,200,8)+D(232,200,8):bub(200,200,80)+D(168,192,8)+D(232,192,8);s+=P('M192 214H208L200 224Z')+L('M200 224Q190 242 178 236M200 224Q210 242 222 236')+bub(145,222,11)+bub(255,222,11);if(t==0)s+=L('M120 210H85M122 225L90 240M280 210H315M278 225L310 240');return s};
+const ow=r=>{const q=ri(r,22,32);return E(128,230,22,55,12)+E(272,230,22,55,-12)+P('M80 322Q200 305 320 322V338Q200 322 80 338Z')+E(200,215,70,90)+E(180,312,12,6)+E(220,312,12,6)+P('M140 150L135 105L180 135Z')+P('M260 150L265 105L220 135Z')+L('M170 250Q185 262 200 250Q215 262 230 250M175 280Q190 292 205 280Q220 292 235 280')+bub(168,180,q)+bub(232,180,q)+D(168,182,10)+D(232,182,10)+P('M192 198H208L200 218Z')};
+const ho=r=>{const t=ri(r,0,1);return R(240,130,22,50)+bub(251,115,8)+P('M120 200H280V310H120Z')+P(t?'M105 205L200 120L295 205Z':'M100 205L150 130H250L300 205Z')+P('M185 310V252Q200 236 215 252V310Z')+D(208,282)+R(138,225,32,32)+R(230,225,32,32)+L('M154 225V257M138 241H170M246 225V257M230 241H262')+bub(200,175,12)};
+const tr=r=>{const k=ri(r,3,6),A=[[170,150],[228,172],[150,208],[250,215],[200,120],[200,210]];return P('M185 345L192 220H208L215 345Z')+bub(200,160,62)+bub(148,205,46)+bub(252,205,46)+A.slice(0,k).map(a=>bub(a[0],a[1],9)).join('')};
+const fh=r=>{const th=ri(r,40,60);return P(`M250 200L310 ${200-th}V${200+th}Z`)+P('M90 200Q160 120 250 200Q160 280 90 200Z')+P('M150 150Q175 115 205 160Z')+P('M160 250Q185 282 200 245Z')+D(125,190,5)+L('M145 172Q165 200 145 228M180 150Q200 200 180 250M208 160Q228 200 208 240')};
+const tu=r=>P('M110 235Q110 135 200 135Q290 135 290 235Z')+P('M110 235H290Q290 258 200 258Q110 258 110 235Z')+E(135,262,26,13,20)+E(265,262,26,13,-20)+bub(310,205,25)+D(318,199,3)+L('M312 215Q320 218 325 214')+bub(200,185,22)+bub(150,205,15)+bub(250,205,15);
+const je=r=>{const n=ri(r,4,6);let s='';for(let i=0;i<n;i++){const x=Math.round(135+i*130/(n-1));s+=P(`M${x-8} 200Q${x-20} 250 ${x} 280Q${x+10} 300 ${x-6} 330L${x+6} 330Q${x+22} 300 ${x+10} 275Q${x-8} 245 ${x+8} 200Z`)}return s+P('M120 205Q120 100 200 100Q280 100 280 205Z')+bub(165,150,12)+bub(222,138,9)+bub(245,175,8)+D(170,185,5)+D(230,185,5)+L('M190 195Q200 205 210 195')};
+const ro=r=>{const n=ri(r,1,3),ys=[[175],[155,200],[140,175,210]][n-1];return P('M180 250Q200 325 220 250Z')+P('M162 210L118 275L162 252Z')+P('M238 210L282 275L238 252Z')+P('M200 85Q250 140 240 252H160Q150 140 200 85Z')+P('M160 232H240V252H160Z')+ys.map(y=>bub(200,y,n>2?11:n>1?14:20)).join('')};
+const pl=r=>{const t=ri(r,-30,30);return bub(200,200,70)+bub(175,175,14)+bub(228,228,10)+bub(225,170,8)+`<ellipse class="l" cx="200" cy="200" rx="115" ry="24" transform="rotate(${t} 200 200)"/>`+bub(305,115,20)+st(100,105,16)};
+const ba=r=>{const n=ri(r,3,5);let s='';for(let i=0;i<n;i++){const x=Math.round(110+i*180/(n-1)),y=140+(i%2)*35;s+=L(`M${x} ${y+40}Q${x+10} 270 200 330`)+E(x,y,32,40)+P(`M${x-6} ${y+46}L${x} ${y+38}L${x+6} ${y+46}Z`)}return s};
+const cu=r=>P('M130 230L150 335H250L270 230Z')+L('M165 240L172 328M200 240V330M235 240L228 328')+E(200,225,75,22)+E(200,190,60,20)+E(200,158,42,18)+bub(200,128,14)+L('M200 114Q205 100 215 98M150 200l6 4M240 195l6-4M190 170l5 5M215 175l6-3');
+const SUB=[[bf,fw,r=>fc(r,ri(r,0,2)),ow,ho,tr],[fh,tu,je,fh,tu],[ho,tr,ba,cu,ow,fw,r=>fc(r,2)],[ro,pl,r=>fc(r,3),ro,pl]];
+const DEC=[[st,ht,(x,y)=>fl(x,y)],[bub,st,ht],[(x,y)=>cd(x,y),st,ht,(x,y)=>fl(x,y)],[st,st,bub,ht]];
+function fr(t,inner){if(!t)return frame(inner);let ring='',b='',top='',cl,bg;
+if(t==1){for(let i=0;i<20;i++){const a=i*Math.PI/10;b+=`<circle class="f" cx="${(200+172*Math.cos(a)).toFixed(1)}" cy="${(200+172*Math.sin(a)).toFixed(1)}" r="23"/>`}cl='<circle cx="200" cy="200" r="152"/>';bg='<circle class="f" cx="200" cy="200" r="152"/>'}
+else if(t==2){ring='<path class="f" fill-rule="evenodd" d="M10 200a190 196 0 1 0 380 0a190 196 0 1 0-380 0zM34 200a166 172 0 1 0 332 0a166 172 0 1 0-332 0z"/>';top=st(200,20,15)+st(200,380,15);cl='<ellipse cx="200" cy="200" rx="166" ry="172"/>';bg='<ellipse class="f" cx="200" cy="200" rx="166" ry="172"/>'}
+else{ring='<path class="f" fill-rule="evenodd" d="M60 10H340Q390 10 390 60V340Q390 390 340 390H60Q10 390 10 340V60Q10 10 60 10ZM60 38H340Q362 38 362 60V340Q362 362 340 362H60Q38 362 38 340V60Q38 38 60 38Z"/>'+bub(26,26,11)+bub(374,26,11)+bub(26,374,11)+bub(374,374,11);cl='<rect x="38" y="38" width="324" height="324" rx="22"/>';bg='<rect class="f" x="38" y="38" width="324" height="324" rx="22"/>'}
+return `<defs><clipPath id="c">${cl}</clipPath></defs>${ring}${b}${bg}<g clip-path="url(#c)">${inner}</g>${top}${bg.replace('class="f"','class="l"')}`}
+function genPage(b,n){const r=rngf(b*7919+n*104729+7),t=ri(r,0,3);let s=r()>.3?P('M30 335Q200 '+ri(r,295,320)+' 370 335V385H30Z'):'';const pool=DEC[b],nd=ri(r,5,9);for(let i=0;i<nd;i++){const a=r()*6.283,d=ri(r,115,150);s+=pool[ri(r,0,pool.length-1)](Math.round(200+d*Math.cos(a)),Math.round(200+d*Math.sin(a)),ri(r,8,13))}const sub=SUB[b],sc=(.8+r()*.2).toFixed(2);s+=`<g transform="translate(200 200) scale(${sc}) translate(-200 -200)">${sub[ri(r,0,sub.length-1)](r)}</g>`;return fr(t,s)}
+let cur=0,col=pal[0];const pg=scenes.map(()=>0),saved={},stacks={},K=()=>cur+':'+pg[cur];
+const svg=$('#s'),fills=()=>[...svg.querySelectorAll('.f')];
+function paint(el,c,i){el.style.fill=c;el.classList.remove('pop');void el.getBoundingClientRect();el.classList.add('pop')}
+function render(){const k=K();saved[k]=saved[k]||{};svg.innerHTML=pg[cur]?genPage(cur,pg[cur]):frame(scenes[cur].d);fills().forEach((el,i)=>{if(saved[k][i])el.style.fill=saved[k][i]});$('#pn').textContent=scenes[cur].e+' Page '+(pg[cur]+1)+' / '+PAGES;
+document.querySelectorAll('.book').forEach((b,i)=>b.classList.toggle('on',i===cur))}
+function setFill(i,c){const k=K(),el=fills()[i];(stacks[k]=stacks[k]||[]).push([i,saved[k][i]||'#ffffff']);saved[k][i]=c;paint(el,c)}
+svg.addEventListener('click',e=>{const el=e.target.closest('.f');if(!el)return;setFill(fills().indexOf(el),col)});
+$('#pal').innerHTML=pal.map((c,i)=>`<button class="sw${i?'':' on'}" style="background-color:${c}" data-c="${c}" aria-label="${i==14?'Eraser':'Color '+(i+1)}"></button>`).join('');
+$('#pal').onclick=e=>{const b=e.target.closest('.sw');if(!b)return;col=b.dataset.c;document.querySelectorAll('.sw').forEach(s=>s.classList.toggle('on',s===b))};
+$('#un').onclick=()=>{const k=K(),p=(stacks[k]||[]).pop();if(!p)return;saved[k][p[0]]=p[1];paint(fills()[p[0]],p[1])};
+$('#cl').onclick=()=>{const k=K();saved[k]={};stacks[k]=[];render()};
+$('#pv').onclick=()=>{pg[cur]=(pg[cur]+PAGES-1)%PAGES;render()};
+$('#nx').onclick=()=>{pg[cur]=(pg[cur]+1)%PAGES;render()};
+$('#rd').onclick=()=>{pg[cur]=Math.floor(Math.random()*PAGES);render()};
+$('#go').onclick=()=>{$('#intro').classList.add('out');setTimeout(()=>$('#intro').remove(),700)};
+$('#mg').onclick=()=>fills().forEach((el,i)=>{if(!saved[K()][i]){const c=pal[Math.floor(Math.random()*14)];setFill(i,c)}});
+$('#sh').innerHTML=scenes.map((s,i)=>`<button class="book" style="background:${s.c};animation-delay:${.5+i*.12}s" data-i="${i}"><i>${s.e}</i><span>${s.n}</span></button>`).join('');
+$('#sh').onclick=e=>{const b=e.target.closest('.book');if(!b)return;cur=+b.dataset.i;render()};
+render();
+</script>
+<script src="kids-nav.js" defer></script>
+</body>
+</html>
